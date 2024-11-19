@@ -8,6 +8,7 @@ interface GodItemProps {
     name: string;
     blurb: string;
     imageUrl: any;
+    abilities: any;
   };
 }
 

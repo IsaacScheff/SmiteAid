@@ -1,8 +1,15 @@
+interface Ability {
+    name: string;
+    description: string;
+    buffs: string[],
+    imageUrl: any; 
+}
 export interface God {
     name: string;
     blurb: string;
     imageUrl: any;
     description?: string;
+    abilities: Ability[];
 }
 
 let selectedGod: God | null = null;
