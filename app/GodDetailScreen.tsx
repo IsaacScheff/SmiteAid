@@ -30,7 +30,34 @@ const GodDetailScreen: React.FC = () => {
                 <Text style={styles.class}>{god.class}</Text>
             </View>
             <Text style={styles.description}>{god.description || "No description available."}</Text>
-            {/* Add other parts of the UI */}
+
+            {/* Abilities Section */}
+            <Text style={styles.sectionTitle}>Abilities</Text>
+            <View style={styles.abilitiesContainer}>
+                {god.abilities.map((ability, index) => (
+                    <TouchableOpacity
+                        key={index}
+                        style={styles.abilityItem}
+                        onPress={() => setSelectedAbility(index === selectedAbility ? null : index)}
+                        activeOpacity={1} // Prevent opacity change
+                    >
+                        <Image source={ability.imageUrl} style={styles.abilityImage} />
+                        <Text style={styles.abilityName}>{ability.name}</Text>
+                        {selectedAbility === index && (
+                            <View>
+                                <Text style={styles.abilityDescription}>{ability.description}</Text>
+                                <View style={styles.buffsContainer}>
+                                    {ability.buffs.map((buff, buffIndex) => (
+                                        <Text key={buffIndex} style={styles.buffText}>
+                                            {`• ${buff}`}
+                                        </Text>
+                                    ))}
+                                </View>
+                            </View>
+                        )}
+                    </TouchableOpacity>
+                ))}
+            </View>
         </ScrollView>
     );
 };
@@ -66,6 +93,49 @@ const styles = StyleSheet.create({
         color: '#666',
         marginTop: 10,
         textAlign: 'center',
+    },
+    sectionTitle: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginTop: 30,
+        marginBottom: 10,
+    },
+    abilitiesContainer: {
+        width: '100%',
+        alignItems: 'center',
+    },
+    abilityItem: {
+        width: '90%',
+        alignItems: 'center',
+        marginVertical: 10,
+        padding: 10,
+    },
+    abilityImage: {
+        width: 80,
+        height: 80,
+    },
+    abilityName: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginTop: 10,
+    },
+    abilityDescription: {
+        fontSize: 14,
+        color: '#666',
+        marginTop: 5,
+        textAlign: 'center',
+    },
+    buffsContainer: {
+        marginTop: 10,
+        padding: 10,
+        backgroundColor: '#f0f8ff',
+        borderRadius: 8,
+    },
+    buffText: {
+        fontSize: 14,
+        color: '#008080',
+        marginBottom: 5,
+        textAlign: 'left',
     },
 });
 
