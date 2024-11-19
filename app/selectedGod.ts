@@ -1,3 +1,5 @@
+import { GodClass } from "./godsData";
+
 interface Ability {
     name: string;
     description: string;
@@ -6,6 +8,7 @@ interface Ability {
 }
 export interface God {
     name: string;
+    class: GodClass
     blurb: string;
     imageUrl: any;
     description?: string;
