@@ -1,12 +1,14 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import { Link } from 'expo-router';
+import { setSelectedGod } from './selectedGod'; 
 
 interface GodItemProps {
-    god: {
-        name: string;
-        description: string;
-        imageUrl: any;
-    };
+  god: {
+    name: string;
+    blurb: string;
+    imageUrl: any;
+  };
 }
 
 const GodItem: React.FC<GodItemProps> = ({ god }) => {
@@ -14,7 +16,13 @@ const GodItem: React.FC<GodItemProps> = ({ god }) => {
         <View style={styles.container}>
             <Image source={god.imageUrl} style={styles.image} />
             <Text style={styles.name}>{god.name}</Text>
-            <Text style={styles.description}>{god.description}</Text>
+            <Text style={styles.blurb}>{god.blurb}</Text>
+            <Link 
+                href="/GodDetailScreen"
+                onPress={() => setSelectedGod(god)}
+                style={styles.link}>
+                View Details
+            </Link>
         </View>
     );
 };
@@ -36,11 +44,16 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginTop: 10
     },
-    description: {
+    blurb: {
         fontSize: 14,
         color: '#666',
         marginTop: 5,
         textAlign: 'center'
+    },
+    link: {
+        fontSize: 16,
+        color: '#ffd33d',
+        marginTop: 10
     }
 });
 
