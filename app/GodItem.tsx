@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
@@ -28,20 +27,17 @@ interface GodItemProps {
 const GodItem: React.FC<GodItemProps> = ({ god }) => {
     return (
         <View style={styles.container}>
-            <Image source={god.imageUrl} style={styles.image} />
+            <Link 
+                href="/GodDetailScreen"
+                onPress={() => setSelectedGod(god)}>
+                <Image source={god.imageUrl} style={styles.image} />
+            </Link>
             <Text style={styles.name}>{god.name}</Text>
-            {/* Added class and icon */}
             <View style={styles.classContainer}>
                 <Ionicons name={classIcons[god.class]} size={16} color="#888" />
                 <Text style={styles.class}>{god.class}</Text>
             </View>
             <Text style={styles.blurb}>{god.blurb}</Text>
-            <Link 
-                href="/GodDetailScreen"
-                onPress={() => setSelectedGod(god)}
-                style={styles.link}>
-                View Details
-            </Link>
         </View>
     );
 };

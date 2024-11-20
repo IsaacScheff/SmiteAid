@@ -1,7 +1,7 @@
 interface Ability {
     name: string;
     description: string;
-    buffs: string[];
+    buffs: string[]; //could maybe more accurately be thought of as "stats" or "info"
     imageUrl: any; 
 }
 export enum GodClass {
@@ -558,11 +558,148 @@ const gods: God[] = [
                 imageUrl: require('../assets/images/ao_kuang_ult.png'),
             },
         ]
+    },
+    {
+        name: "Aphrodite",
+        class: GodClass.Mage,
+        range: Range.Ranged,
+        blurb: "",
+        imageUrl: require('../assets/images/aphrodite.png'),
+        abilities: [
+            {
+                name: "Center of Attention (Passive)",
+                description: "Aphrodite gains 4 Physical Protection and 4 Magical Protection for each friendly or enemy god within 70 feet of her.",
+                buffs: [
+                    "Radius: 70",
+                ],
+                imageUrl: require('../assets/images/aphrodite_p.png'),
+            },
+            {
+                name: "Kiss",
+                description: "Aphrodite blows a kiss to an allied god, making them her soul mate and giving them both increased movement speed. If it hits an ally, it has a reduced 1s cooldown. If the kiss hits an enemy god, they are Damaged, Stunned and Aphrodite's soul mate gets jealous, increasing their damage. Also Aphrodite's soul mate gains 50% of her MP5 and 10% of her Physical and Magical Protections.",
+                buffs: [
+                    "Damage: 40/60/80/100/120 (+25% of your Magical Power)",
+                    "Movement Speed: 6/7/8/9/10%",
+                    "Stun Duration: 1s",
+                    "Jealousy Damage Increase: 5/7.5/10/12.5/15%",
+                    "Jealousy Duration: 5s",
+                    "Range: 55",
+                    "Cooldown: 14/13.5/13/12.5/12 seconds",
+                    "If Aphrodite and the linked ally are more than 70 units apart for 2s, the link is broken."
+                ],
+                imageUrl: require('../assets/images/aphrodite_1.png'),
+            },
+            {
+                name: "Back Off!",
+                description: "Agitated by all the attention, Aphrodite commands enemies to get away from her, doing damage around her, slowing them by 25% for 2s and knocking them back to 25 units from her.  If Aphrodite has a soul mate, an explosion originates on them in addition, dealing damage as well as slowing enemies.  If an enemy would be hit by both blasts, they will only be affected by the one originating from Aphrodite.",
+                buffs: [
+                    "Damage: 80/140/200/260/320 (+85% of your Magical Power)",
+                    "Soul Mate Damage: 80/140/200/260/320 (+70% of your Magical Power)",
+                    "Slow: 25%",
+                    "Radius: 20",
+                    "Cooldown: 14/13.5/13/12.5/12 seconds"
+                ],
+                imageUrl: require('../assets/images/aphrodite_2.png'),
+            },
+            {
+                name: "Love Birds",
+                description: "Aphrodite calls forth a flock of beautiful doves that fly forward in the area in front of her. The doves circle around all enemies in the path, damaging enemies every .5s for 3s. Aphrodite and her soul mate receive healing when cast and decreased ability cooldowns.",
+                buffs: [
+                    "Damage per Tick: 15/25/35/45/55 (+15% of your Magical Power)",
+                    "Heal per Tick: 7/10/13/16/19 + 2 per level",
+                    "Cooldown Decrease: 0.2s per Tick",
+                    "Range: 70",
+                    "Cooldown: 16 seconds"
+                ],
+                imageUrl: require('../assets/images/aphrodite_3.png'),
+            },
+            {
+                name: "Undying Love (Ultimate)",
+                description: "Aphrodite pledges undying love to herself and her soul mate, refreshing half of the original cooldown of Love Birds. While this is active, her and her soul mate are invulnerable to all damage and gain the Jealousy effect for a short duration. All Crowd Control effects are also removed when activated.",
+                buffs: [
+                    "Invulnerability Duration: .8/1.1/1.4/1.7/2s",
+                    "Cooldown: 90 seconds",
+                    "Can be used while under crowd control. Grants CC immunity."
+                ],
+                imageUrl: require('../assets/images/aphrodite_ult.png'),
+            },
+        ]
+    },
+    {
+        name: "Apollo",
+        class: GodClass.Hunter,
+        range: Range.Ranged,
+        blurb: "",
+        imageUrl: require('../assets/images/apollo.png'),
+        abilities: [
+            {
+                name: "Audacity (Passive)",
+                description: "After 10 successful Basic Attacks, Apollo gains Audacity, increasing his Attack Speed by 100% and his Basic Attack projectile speed for the next 5 Basic Attacks (hit or miss) he makes. Apollo also gains 1 stack of Audacity for each successful damaging ability on Enemy gods.",
+                buffs: [
+                    "Attack Speed Buff: 100%",
+                    "Buff Duration: 5 Basic Attacks",
+                    "Apollo's basic attacks while the buff is active have +20% projectile speed."
+                ],
+                imageUrl: require('../assets/images/apollo_p.png'),
+            },
+            {
+                name: "So Beatiful",
+                description: "Apollo strums a single chord on his lyre. It's so beautiful it hurts, and all enemies in a long range line take damage.",
+                buffs: [
+                    "Damage: 90/150/210/270/330 (+90% of your Physical Power)",
+                    "Range: 55",
+                    "Cooldown: 11 seconds",
+                    "Projectile speed of 150."
+                ],
+                imageUrl: require('../assets/images/apollo_1.png'),
+            },
+            {
+                name: "Serenade",
+                description: "Apollo uses his amazing voice to Mesmerize all nearby enemies and bolster himself with additional protections. Any damage done breaks the effect.",
+                buffs: [
+                    "Mesmerize: 1.5/1.7/1.9/2.1/2.3s",
+                    "Buff Lifetime: 5s",
+                    "Protections: 10/15/20/25/30",
+                    "Radius: 20",
+                    "Cooldown: 15/14.5/14/13.5/13 seconds",
+                    "Mesmerize only breaks from damage dealt by gods."
+                ],
+                imageUrl: require('../assets/images/apollo_2.png'),
+            },
+            {
+                name: "The Moves",
+                description: "Apollo runs forward and slides on his knees, dealing damage, knocking aside all enemies and adding a stack of Audacity for each enemy hit. At the end of the slide, the movement speed is decreased for enemies and increased for himself and allies.",
+                buffs: [
+                    "Damage: 70/115/160/205/250 (+60% of your Physical Power)",
+                    "Movement Speed Buff/Debuff: 15/17.5/20/22.5/25%",
+                    "Buff Duration: 5s",
+                    "Range/Radius: 45/20",
+                    "Cooldown: 15 seconds",
+                    "Has a knockback strength of 250, a prefire time of 0.15s and dash time of 0.58s.",
+                    "Only the dash deals damage"
+                ],
+                imageUrl: require('../assets/images/apollo_3.png'),
+            },
+            {
+                name: "Across the Sky (Ultimate)",
+                description: "Apollo rides his chariot across the sky, choosing when to land, dealing damage every .15s for .6s as he lands. Enemies hit by the last tick of the landing will also be knocked up.",
+                buffs: [
+                    "Damage per Tick: 70/95/120/145/170 (+25% of your Physical Power)",
+                    "Range/Radius: 60/20",
+                    "Cooldown: 110 seconds",
+                    "Apollo is immune to crowd control while channeling and untargetable, but not invulnerable while in the air.",
+                    "Won't go on cooldown if Apollo dies before taking off."
+                ],
+                imageUrl: require('../assets/images/apollo_ult.png'),
+            },
+        ]
     }
+    
   
     //{
     //     name: "God Template",
     //     class: GodClass.,
+    //     range: Range.,
     //     blurb: "",
     //     imageUrl: require('../assets/images/.png'),
     //     abilities: [
