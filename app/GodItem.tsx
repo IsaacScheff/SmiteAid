@@ -3,7 +3,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
 import { setSelectedGod } from './selectedGod'; 
-import { GodClass } from './godsData';
+import { GodClass, Range } from './godsData';
 import { Ionicons } from '@expo/vector-icons';
 
 const classIcons: Record<GodClass, keyof typeof Ionicons.glyphMap> = {
@@ -18,6 +18,7 @@ interface GodItemProps {
   god: {
     name: string;
     class: GodClass;
+    range: Range
     blurb: string;
     imageUrl: any;
     abilities: any;

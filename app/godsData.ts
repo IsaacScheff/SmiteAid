@@ -11,9 +11,14 @@ export enum GodClass {
     Mage = "Mage",
     Warrior = "Warrior",
 }
+export enum Range {
+    Ranged = "Ranged",
+    Melee = "Melee",
+}
 export interface God {
     name: string;
     class: GodClass;
+    range: Range;
     blurb: string;
     imageUrl: any;  // 'any' is used here for image require
     description?: string
@@ -24,6 +29,7 @@ const gods: God[] = [
     {
         name: "Achilles",
         class: GodClass.Warrior,
+        range: Range.Melee,
         blurb: "Bruiser warrior, can be anywhere from full tank to damage dealer",
         imageUrl: require('../assets/images/achilles.png'),
         abilities: [
@@ -89,6 +95,7 @@ const gods: God[] = [
     {
         name: "Agni",
         class: GodClass.Mage,
+        range: Range.Ranged,
         blurb: "Description of Agni here",
         imageUrl: require('../assets/images/agni.png'),
         abilities: [
@@ -150,6 +157,7 @@ const gods: God[] = [
     {
         name: "Ah Muzen Cab",
         class: GodClass.Hunter,
+        range: Range.Ranged,
         blurb: "blurb",
         imageUrl: require('../assets/images/ah_muzen_cab.png'),
         abilities: [
@@ -219,6 +227,7 @@ const gods: God[] = [
     {
         name: "Ah Puch",
         class: GodClass.Mage,
+        range: Range.Ranged,
         blurb: "hockey puch",
         imageUrl: require('../assets/images/ah_puch.png'),
         abilities: [
@@ -286,6 +295,7 @@ const gods: God[] = [
     {
         name: "Amaterasu",
         class: GodClass.Warrior,
+        range: Range.Melee,
         blurb: "Ama <3",
         imageUrl: require('../assets/images/amaterasu.png'),
         abilities: [
@@ -354,6 +364,7 @@ const gods: God[] = [
     {
         name: "Anhur",
         class: GodClass.Hunter,
+        range: Range.Ranged,
         blurb: "",
         imageUrl: require('../assets/images/anhur.png'),
         abilities: [
@@ -419,6 +430,7 @@ const gods: God[] = [
     {
         name: "Anubis",
         class: GodClass.Mage,
+        range: Range.Ranged,
         blurb: "",
         imageUrl: require('../assets/images/anubis.png'),
         abilities: [
@@ -483,6 +495,7 @@ const gods: God[] = [
     {
         name: "Ao Kuang",
         class: GodClass.Mage,
+        range: Range.Melee,
         blurb: "",
         imageUrl: require('../assets/images/ao_kuang.png'),
         abilities: [

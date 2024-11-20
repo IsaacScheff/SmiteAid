@@ -29,6 +29,8 @@ const GodDetailScreen: React.FC = () => {
                 <Ionicons name={classIcons[god.class]} size={20} color="#888" />
                 <Text style={styles.class}>{god.class}</Text>
             </View>
+            {/* Display range */}
+            <Text style={styles.range}>{god.range}</Text>
             <Text style={styles.description}>{god.description || "No description available."}</Text>
 
             {/* Abilities Section */}
@@ -39,7 +41,7 @@ const GodDetailScreen: React.FC = () => {
                         key={index}
                         style={styles.abilityItem}
                         onPress={() => setSelectedAbility(index === selectedAbility ? null : index)}
-                        activeOpacity={1} // Prevent opacity change
+                        activeOpacity={1}
                     >
                         <Image source={ability.imageUrl} style={styles.abilityImage} />
                         <Text style={styles.abilityName}>{ability.name}</Text>
@@ -87,6 +89,12 @@ const styles = StyleSheet.create({
         fontStyle: 'italic',
         color: '#888',
         marginLeft: 5,
+    },
+    range: {
+        fontSize: 16,
+        color: '#555',
+        marginTop: 5,
+        fontStyle: 'italic',
     },
     description: {
         fontSize: 16,

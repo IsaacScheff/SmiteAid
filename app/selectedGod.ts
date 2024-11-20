@@ -1,4 +1,4 @@
-import { GodClass } from "./godsData";
+import { GodClass, Range } from "./godsData";
 
 interface Ability {
     name: string;
@@ -9,6 +9,7 @@ interface Ability {
 export interface God {
     name: string;
     class: GodClass
+    range: Range;
     blurb: string;
     imageUrl: any;
     description?: string;
