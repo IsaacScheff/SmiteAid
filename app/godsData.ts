@@ -30,7 +30,8 @@ const gods: God[] = [
         name: "Achilles",
         class: GodClass.Warrior,
         range: Range.Melee,
-        blurb: "Bruiser warrior, can be anywhere from full tank to damage dealer",
+        blurb: "High Single Target Damage, High Mobility",
+        description: "Bruiser warrior, can be anywhere from full tank to damage dealer",
         imageUrl: require('../assets/images/achilles.png'),
         abilities: [
             {
@@ -96,7 +97,7 @@ const gods: God[] = [
         name: "Agni",
         class: GodClass.Mage,
         range: Range.Ranged,
-        blurb: "Description of Agni here",
+        blurb: "High Area Damage",
         imageUrl: require('../assets/images/agni.png'),
         abilities: [
             {
@@ -158,7 +159,7 @@ const gods: God[] = [
         name: "Ah Muzen Cab",
         class: GodClass.Hunter,
         range: Range.Ranged,
-        blurb: "blurb",
+        blurb: "High Movement Speed, High Attack Speed",
         imageUrl: require('../assets/images/ah_muzen_cab.png'),
         abilities: [
             {
@@ -228,7 +229,7 @@ const gods: God[] = [
         name: "Ah Puch",
         class: GodClass.Mage,
         range: Range.Ranged,
-        blurb: "hockey puch",
+        blurb: "High Area Damage",
         imageUrl: require('../assets/images/ah_puch.png'),
         abilities: [
             {
@@ -296,7 +297,7 @@ const gods: God[] = [
         name: "Amaterasu",
         class: GodClass.Warrior,
         range: Range.Melee,
-        blurb: "Ama <3",
+        blurb: "High Mobility, High Area Damage",
         imageUrl: require('../assets/images/amaterasu.png'),
         abilities: [
             {
@@ -365,7 +366,7 @@ const gods: God[] = [
         name: "Anhur",
         class: GodClass.Hunter,
         range: Range.Ranged,
-        blurb: "",
+        blurb: "High Single Target Damage",
         imageUrl: require('../assets/images/anhur.png'),
         abilities: [
             {
@@ -431,7 +432,7 @@ const gods: God[] = [
         name: "Anubis",
         class: GodClass.Mage,
         range: Range.Ranged,
-        blurb: "",
+        blurb: "High Area Damage",
         imageUrl: require('../assets/images/anubis.png'),
         abilities: [
             {
@@ -496,7 +497,7 @@ const gods: God[] = [
         name: "Ao Kuang",
         class: GodClass.Mage,
         range: Range.Melee,
-        blurb: "",
+        blurb: "High Single Target Damage",
         imageUrl: require('../assets/images/ao_kuang.png'),
         abilities: [
             {
@@ -563,7 +564,7 @@ const gods: God[] = [
         name: "Aphrodite",
         class: GodClass.Mage,
         range: Range.Ranged,
-        blurb: "",
+        blurb: "High Sustain",
         imageUrl: require('../assets/images/aphrodite.png'),
         abilities: [
             {
@@ -629,7 +630,7 @@ const gods: God[] = [
         name: "Apollo",
         class: GodClass.Hunter,
         range: Range.Ranged,
-        blurb: "",
+        blurb: "High Mobility",
         imageUrl: require('../assets/images/apollo.png'),
         abilities: [
             {
@@ -691,6 +692,76 @@ const gods: God[] = [
                     "Won't go on cooldown if Apollo dies before taking off."
                 ],
                 imageUrl: require('../assets/images/apollo_ult.png'),
+            },
+        ]
+    },
+    {
+        name: "Arachne",
+        class: GodClass.Assassin,
+        range: Range.Melee,
+        blurb: "High Single Target Damage, Great Jungler",
+        imageUrl: require('../assets/images/arachne.png'),
+        abilities: [
+            {
+                name: "Predator (Passive)",
+                description: "Arachne's Basic Attacks gain 1.25% Physical damage for every 5% of a target's missing Health.",
+                buffs: [
+                    ""
+                ],
+                imageUrl: require('../assets/images/arachne_p.png'),
+            },
+            {
+                name: "Venemous Bite",
+                description: "Upon activation, Arachne's next Basic Attack within 5s does additional damage and infects the target with Venom, dealing damage over time, lowering their healing received and healing Arachne every 0.5s for 3s.",
+                buffs: [
+                    "Initial Damage: 50/75/100/125/150 (+35% of your Physical Power)",
+                    "Damage per Tick: 10/18/26/34/42 (+8% of your Physical Power)",
+                    "Healing Reduction: 40%",
+                    "Healing per Tick: 8/15/22/29/36",
+                    "Cooldown: 15/14/13/12/11 seconds"
+                ],
+                imageUrl: require('../assets/images/arachne_1.png'),
+            },
+            {
+                name: "Cocoon",
+                description: "Arachne spindles her webbing, increasing her Attack Speed for 4s. If 3 enhanced Basic Attacks hit the same target, that target is Stunned and have their Cooldowns increased.",
+                buffs: [
+                    "Attack Speed: 20/30/40/50/60%",
+                    "Stun Duration: 1/1.1/1.2/1.3/1.4s",
+                    "Cooldown Increase: 2s",
+                    "Cooldown: 14 seconds"
+                ],
+                imageUrl: require('../assets/images/arachne_2.png'),
+            },
+            {
+                name: "Web",
+                description: "Arachne shoots a line of Web forward. She is Immune to Slows and moves faster on Web. If the Web reaches max range a Web trap will spawn. Enemy gods who walk through the trap or get hit by the projectile are Slowed by 15%, revealed to Arachne, leave a trail of Web behind them, and are attacked by Pet Broodlings. Arachne can only have 3 Web traps or projectiles active at a time.",
+                buffs: [
+                    "Slow Duration: 4/4.5/5/5.5/6s",
+                    "Movement Speed: 40%",
+                    "Gains third broodling when ability is maxed",
+                    "Broodling Damage: 20/30/40/50/60 (+20% of your Physical Power) per hit",
+                    "Web Lifetime: 240s",
+                    "Range: 45",
+                    "Cooldown: 14/13.5/13/12.5/12 seconds",
+                    "Enemies are revealed to Arachne for 8s."
+                ],
+                imageUrl: require('../assets/images/arachne_3.png'),
+            },
+            {
+                name: "Night Crawler (Ultimate)",
+                description: "Arachne flips up to her infinite web, hanging upside down above the lane and increasing her movement speed. She may leap off the web to deal damage to all enemies in the target area and create a large web around the target area. The web area provides the same slow to enemies and benefit to Arachne as her Web Trail. Arachne may activate Ability 1 and 2 while running on this web.",
+                buffs: [
+                    "Damage: 150/250/350/450/550 (110% of your Physical Power)",
+                    "Duration on Web: 5s",
+                    "Movement Speed: 40%",
+                    "Web Radius: 25",
+                    "Radius: 15",
+                    "Range: 50",
+                    "Cooldown: 90/85/80/75/70 seconds",
+                    "Arachne is immune to crowd control and untargetable while using this ability."
+                ],
+                imageUrl: require('../assets/images/arachne_ult.png'),
             },
         ]
     }
