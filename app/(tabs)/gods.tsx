@@ -35,13 +35,14 @@ const GodsScreen: React.FC = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#c1d4e0'
     },
     searchBar: {
         height: 40,
         borderColor: '#ccc',
         borderWidth: 1,
         borderRadius: 5,
-        margin: 10,
+        margin: 1,
         paddingHorizontal: 10,
         backgroundColor: '#fff',
     },

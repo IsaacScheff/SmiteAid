@@ -17,7 +17,7 @@ interface GodItemProps {
   god: {
     name: string;
     class: GodClass;
-    range: Range
+    range: Range;
     blurb: string;
     imageUrl: any;
     abilities: any;
@@ -34,7 +34,7 @@ const GodItem: React.FC<GodItemProps> = ({ god }) => {
             </Link>
             <Text style={styles.name}>{god.name}</Text>
             <View style={styles.classContainer}>
-                <Ionicons name={classIcons[god.class]} size={16} color="#888" />
+                <Ionicons name={classIcons[god.class]} size={16} color="black" />
                 <Text style={styles.class}>{god.class}</Text>
             </View>
             <Text style={styles.blurb}>{god.blurb}</Text>
@@ -46,13 +46,13 @@ const styles = StyleSheet.create({
     container: {
         padding: 10,
         alignItems: 'center',
-        borderBottomWidth: 1,
+        borderBottomWidth: 3,
         borderBottomColor: '#ccc'
     },
     image: {
         width: 100,
         height: 100,
-        borderRadius: 50
+        borderRadius: 10
     },
     name: {
         fontSize: 18,
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     class: {
         fontSize: 14,
         fontStyle: 'italic',
-        color: '#888',
+        color: 'black',
         marginLeft: 5, // Spacing between icon and text
     },
     blurb: {
