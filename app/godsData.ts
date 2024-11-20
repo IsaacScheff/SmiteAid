@@ -764,6 +764,213 @@ const gods: God[] = [
                 imageUrl: require('../assets/images/arachne_ult.png'),
             },
         ]
+    },
+    {
+        name: "Ares",
+        class: GodClass.Guardian,
+        range: Range.Melee,
+        blurb: "High Crowd Control, High Defense",
+        imageUrl: require('../assets/images/ares.png'),
+        abilities: [
+            {
+                name: "Blessed Presence (Passive)",
+                description: "Each completed aura item that Ares owns grants him 40 additional Magical Power. Additionally, Ares gains bonus Basic Attack damage per level.",
+                buffs: [
+                    "Grants a total of 240 Magical Power when built all T3 aura items."
+                ],
+                imageUrl: require('../assets/images/ares_p.png'),
+            },
+            {
+                name: "Shackles",
+                description: "Chains extend from Ares' shield, doing damage to all enemies in its path. Hitting a god shackles them to Ares, Cripples them, preventing movement abilities, dealing the same damage every second while slowing them by 15% and buffing Ares. While shackled, Ares can fire another chain for free within 2s. Jungle Camps take an extra +40% damage.",
+                buffs: [
+                    "Minion Damage: 70/90/110/130/150 (+15% of your Magical Power)",
+                    "God Damage per Tick: 20/40/60/80/100 (+15% of your Magical Power)",
+                    "Speed Buff per Target Shackled: 15%",
+                    "Duration: 4s",
+                    "Max Shackles: 3",
+                    "Range: 55",
+                    "Cooldown: 15/14.5/14/13.5/13 seconds",
+                    "The shackles can go through walls and are lost if either Ares or the shackled enemy move further than 65 units."
+                ],
+                imageUrl: require('../assets/images/ares_1.png'),
+            },
+            {
+                name: "Bolster Defenses",
+                description: "Ares strengthens the defenses of himself and all nearby allies for 6s, granting Basic Attack Damage, Protections, HP5, and reducing Crowd Control durations. For each shackled enemy, the Protection Buffs are increased.",
+                buffs: [
+                    "Protections: 20/25/30/35/40",
+                    "CC Reduction: 30%",
+                    "Basic Attack Damage: 0/5/10/15/20",
+                    "Shackle Bonus: 7",
+                    "HP5: 25/30/35/40/45",
+                    "Radius: 35",
+                    "Cooldown: 15 seconds",
+                    "Cooldown begins as soon as it's been used."
+                ],
+                imageUrl: require('../assets/images/ares_2.png'),
+            },
+            {
+                name: "Searing Flesh",
+                description: "Flames pour forth from Ares' shield, engulfing enemies in a cone in front of him causing damage every .5s for 4s. Ares is immune to Knockback for the duration.",
+                buffs: [
+                    "Damage per Tick: 15/20/25/30/35 (+8% of your Magical Power)",
+                    "% Max Health per Tick (Gods): 1/1/2/2/3%",
+                    "% Max Health per Tick (Minions): 4%",
+                    "Range: 35",
+                    "Cooldown: 12 seconds",
+                    "Won't go into cooldown until the effect ends."
+                ],
+                imageUrl: require('../assets/images/ares_3.png'),
+            },
+            {
+                name: "No Escape (Ultimate)",
+                description: "Ares throws chains out to all enemy gods in an area around him, gaining Crowd Control immunity and Damage Mitigation. All enemies hit by the chains are pulled to Ares after 2.5s, taking damage and are Stunned.",
+                buffs: [
+                    "Chains and pulls targets through walls.",
+                    "Ares suffers a 30% Movement Speed Slow while channeling.",
+                    "Radius: 35",
+                    "Cooldown: 90 seconds"
+                ],
+                imageUrl: require('../assets/images/ares_ult.png'),
+            },
+        ]
+    },
+    {
+        name: "Artemis",
+        class: GodClass.Hunter,
+        range: Range.Ranged,
+        blurb: "High Single Target Damage",
+        imageUrl: require('../assets/images/artemis.png'),
+        abilities: [
+            {
+                name: "Still Target (Passive)",
+                description: "Artemis deals 15% increased Basic Attack damage to gods and 30% to minions who are afflicted by Crowd Control.",
+                buffs: [
+                    "Does not include knockbacks/knockups, blinds or grabs."
+                ],
+                imageUrl: require('../assets/images/artemis_p.png'),
+            },
+            {
+                name: "Transgressor's Fate",
+                description: "Artemis places a trap on the ground. Enemy gods coming within 5 units of her traps activate them, Rooting, Crippling, and revealing the enemy god while dealing damage every second for 3s.",
+                buffs: [
+                    "Damage per Tick: 35/48/61/74/87 (+30% of your Physical Power)",
+                    "Root: 2s",
+                    "Max Traps: 4",
+                    "Range/Radius: 40/5",
+                    "Cooldown: 14/13/12/11/10 seconds"
+                ],
+                imageUrl: require('../assets/images/artemis_1.png'),
+            },
+            {
+                name: "Vengeful Assault",
+                description: "Artemis attacks at a furious pace, increasing her Attack and Movement Speed significantly. Additionally, Artemis cleanses herself of slows and becomes immune to Slows for 0.6s when activated.",
+                buffs: [
+                    "Attack Speed: 40/50/60/70/80%",
+                    "Movement Speed: 25%",
+                    "Duration: 3/3.5/4/4.5/5s",
+                    "Cooldown: 14 seconds"
+                ],
+                imageUrl: require('../assets/images/artemis_2.png'),
+            },
+            {
+                name: "Suppress the Insolent",
+                description: "Artemis fires a volley into a ground target, suppressing all of her enemies. Enemies caught within the volley are damaged and are Slowed.",
+                buffs: [
+                    "Damage: 100/150/200/250/300 (+75% of your Physical Power)",
+                    "Slow: 25%",
+                    "Slow Duration: 2s",
+                    "Range/Radius: 55/15",
+                    "Cooldown: 9 seconds"
+                ],
+                imageUrl: require('../assets/images/artemis_3.png'),
+            },
+            {
+                name: "Calydonian Boar (Ultimate)",
+                description: "Artemis summons the great Calydonian Boar on her enemies, doing damage to the nearest enemy god and Stunning them, and itself. The boar is immune until it hits the first god and then continues to charge other gods for its lifetime. Artemis is also immune to Crowd Control for 1.5s.",
+                buffs: [
+                    "Damage: 150/220/290/360/430 (+90% of your Physical Power)",
+                    "Stun: 1.1/1.2/1.3/1.4/1.5s",
+                    "Boar Lifetime: 6s",
+                    "Radius: 60",
+                    "Cooldown: 90 seconds"
+                ],
+                imageUrl: require('../assets/images/artemis_ult.png'),
+            },
+        ]
+    },
+    {
+        name: "Artio",
+        class: GodClass.Guardian,
+        range: Range.Melee,
+        blurb: "High Crowd Control, High Sustain",
+        imageUrl: require('../assets/images/artio.png'),
+        abilities: [
+            {
+                name: "Decompose (Passive)",
+                description: "Enemy gods hit by Artio's Druid or Bear damaging abilities will begin to decompose. This effect decreases their Physical and Magical Protections. This effect stacks.",
+                buffs: [
+                    "Protections Debuff Per Stack: 3%",
+                    "Max Stacks: 4",
+                    "Duration: 6s",
+                    "Applies up to 12% Protection reduction."
+                ],
+                imageUrl: require('../assets/images/artio_p.png'),
+            },
+            {
+                name: "Energy Surge (Maul Prey)",
+                description: "Druid: Artio pulses out a strong wave of energy that damages enemies. She will heal herself and allies within 65 units for each enemy god hit by this ability.\nBear Form: Artio slashes twice with her claws, damaging enemies with each swipe.",
+                buffs: [
+                    "Druid Damage: 70/105/140/175/210 (+35% of your Magical Power)",
+                    "Druid Heal: 40/60/80/100/120",
+                    "Bear Damage Per Swipe: 40/70/100/130/160 (+30% of your Magical Power)",
+                    "Range: 25",
+                    "Cooldown: 12 seconds"
+                ],
+                imageUrl: require('../assets/images/artio_1.png'),
+            },
+            {
+                name: "Entangling Vines (Ferocious Roar)",
+                description: "Druid Form: Artio creates a thicket of vines around herself that cripples enemy gods and decreases their Magical or Physical Power as long as they are in the area.\nBear Form: Artio lets out a ferocious roar that Stuns all nearby enemies and increases her own Physical and Magical Protections for 4s.",
+                buffs: [
+                    "Druid Area Duration: 4/4.5/5/5.5/6s",
+                    "Druid Power Debuff: 9/10.5/12/13.5/15%",
+                    "Bear Stun Duration: 1/1.1/1.2/1.3/1.4s",
+                    "Bear Self Buff: 25/30/35/40/45 Protections",
+                    "Radius: 20",
+                    "Cooldown: 15 seconds",
+                    "Entangling Vines also persists through death."
+                ],
+                imageUrl: require('../assets/images/artio_2.png'),
+            },
+            {
+                name: "Life Tap (Heavy Charge)",
+                description: "Druid Form: Artio channels for 2s, draining the life from enemies. While channeling she deals damage up to 5 times and heals herself up to 5 times. Each hit increasingly Slows enemies and enemies hit all 5 times are Rooted for 1s.\nBear Form: Artio charges forward at an increased movement speed for 3s. Enemies she charges through take damage and are Slowed for 2s.",
+                buffs: [
+                    "Druid Damage Per Hit: 15/30/45/60/75 (+15% of your Magical Power)",
+                    "Druid Heal Per Hit: 10/15/20/25/30",
+                    "Druid Slow: 10%",
+                    "Bear Damage: 75/120/165/210/255 (+55% of your Magical Power)",
+                    "Bear Slow: 30%",
+                    "Range: 55",
+                    "Cooldown: 15 seconds",
+                    "Artio moves 100% faster while using Heavy Charge."
+                ],
+                imageUrl: require('../assets/images/artio_3.png'),
+            },
+            {
+                name: "Shapeshift (Ultimate)",
+                description: "Active: Artio Shapeshifts between her Druid stance and Bear stance.\nPassive: Every time Artio hits at least 1 enemy with an ability she gains 1 stack of Invigoration. Invigoration stacks increase her Movement Speed and MP5. Stacks last 6s, and stack up to 8 times.",
+                buffs: [
+                    "Movement Speed Per Stack: 1/1.5/2/2.5/3%",
+                    "MP5 Per Stack: 2/4/6/8/10",
+                    "Cooldown: 1 second",
+                    "Artio starts in druid stance and respawns in whatever stance she was currently in."
+                ],
+                imageUrl: require('../assets/images/artio_ult.png'),
+            },
+        ]
     }
     
   

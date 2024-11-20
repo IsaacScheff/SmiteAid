@@ -7,8 +7,8 @@ import { GodClass } from './godsData';
 // Map class to icon with type assertion
 const classIcons: Record<GodClass, keyof typeof Ionicons.glyphMap> = {
     [GodClass.Assassin]: "skull-outline",
-    [GodClass.Guardian]: "shield-outline",
-    [GodClass.Hunter]: "send-outline",
+    [GodClass.Guardian]: "shield-half",
+    [GodClass.Hunter]: "send",
     [GodClass.Mage]: "flame-outline",
     [GodClass.Warrior]: "eyedrop-outline",
 };
