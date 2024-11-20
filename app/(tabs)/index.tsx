@@ -1,36 +1,43 @@
-import { Text, View, StyleSheet } from "react-native";
+import React from 'react';
+import { Text, View, StyleSheet, Button } from "react-native";
 import { Link } from 'expo-router';
+import { useTheme } from '../../theme/ThemeContext';
 
-export default function Index() {
+const IndexContent: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();  // Directly use toggleTheme from the context
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home</Text>
-      <Link href="./about" style={styles.button}>
+    <View style={[styles.container, { backgroundColor: theme.background }]}>
+      <Text style={[styles.text, { color: theme.text }]}>Home</Text>
+      <Link href="./about" style={[styles.button, { color: theme.text }]}>
         Go to About screen
       </Link>
-      <Link href="./gods" style={styles.button}>
+      <Link href="./gods" style={[styles.button, { color: theme.text }]}>
         Go to Gods screen
       </Link>
-      <Link href="./items" style={styles.button}>
+      <Link href="./items" style={[styles.button, { color: theme.text }]}>
         Go to Items screen
       </Link>
+      <Button title="Toggle Theme" onPress={toggleTheme} color={theme.primary} />
     </View>
   );
 }
 
+export default IndexContent;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#25292e',
     alignItems: 'center',
     justifyContent: 'center',
   },
   text: {
-    color: '#fff',
+    fontSize: 20,
+    // color removed here; it will be set dynamically based on theme
   },
   button: {
     fontSize: 20,
     textDecorationLine: 'underline',
-    color: '#fff',
+    // color removed here; it will be set dynamically based on theme
   },
 });

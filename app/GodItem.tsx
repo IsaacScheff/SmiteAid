@@ -4,6 +4,7 @@ import { Link } from 'expo-router';
 import { setSelectedGod } from './selectedGod'; 
 import { GodClass, Range } from './godsData';
 import { Ionicons } from '@expo/vector-icons';
+import { useTheme } from '../theme/ThemeContext'; 
 
 const classIcons: Record<GodClass, keyof typeof Ionicons.glyphMap> = {
     [GodClass.Assassin]: "skull-outline",
@@ -25,19 +26,22 @@ interface GodItemProps {
 }
 
 const GodItem: React.FC<GodItemProps> = ({ god }) => {
+    const { theme } = useTheme();
+
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { borderBottomColor: theme.secondary }]}>
             <Link 
                 href="/GodDetailScreen"
-                onPress={() => setSelectedGod(god)}>
+                onPress={() => setSelectedGod(god)}
+                style={styles.link}>
                 <Image source={god.imageUrl} style={styles.image} />
             </Link>
-            <Text style={styles.name}>{god.name}</Text>
+            <Text style={[styles.name, { color: theme.text }]}>{god.name}</Text>
             <View style={styles.classContainer}>
-                <Ionicons name={classIcons[god.class]} size={16} color="black" />
-                <Text style={styles.class}>{god.class}</Text>
+                <Ionicons name={classIcons[god.class]} size={16} color={theme.text} />
+                <Text style={[styles.class, { color: theme.text }]}>{god.class}</Text>
             </View>
-            <Text style={styles.blurb}>{god.blurb}</Text>
+            <Text style={[styles.blurb, { color: theme.text }]}>{god.blurb}</Text>
         </View>
     );
 };
@@ -47,7 +51,6 @@ const styles = StyleSheet.create({
         padding: 10,
         alignItems: 'center',
         borderBottomWidth: 3,
-        borderBottomColor: '#ccc'
     },
     image: {
         width: 100,
@@ -67,19 +70,16 @@ const styles = StyleSheet.create({
     class: {
         fontSize: 14,
         fontStyle: 'italic',
-        color: 'black',
         marginLeft: 5, // Spacing between icon and text
     },
     blurb: {
         fontSize: 14,
-        color: '#666',
+        textAlign: 'center',
         marginTop: 5,
-        textAlign: 'center'
     },
     link: {
         fontSize: 16,
-        color: '#ffd33d',
-        marginTop: 10
+        marginTop: 10,
     }
 });
 

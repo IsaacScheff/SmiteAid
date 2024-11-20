@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { ScrollView, TextInput, StyleSheet, View } from 'react-native';
 import GodItem from '../GodItem';
 import gods from '../godsData';
+import { useTheme } from '../../theme/ThemeContext'; 
 
 const GodsScreen: React.FC = () => {
-    const [searchQuery, setSearchQuery] = useState<string>(''); // State for the search query
-    const [filteredGods, setFilteredGods] = useState(gods); // State for the filtered list of gods
+    const { theme } = useTheme(); 
+    console.log("Current theme in GodsScreen:", theme);
+    const [searchQuery, setSearchQuery] = useState<string>('');
+    const [filteredGods, setFilteredGods] = useState(gods);
 
     const handleSearch = (query: string) => {
         setSearchQuery(query);
@@ -16,10 +19,11 @@ const GodsScreen: React.FC = () => {
     };
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
             <TextInput
-                style={styles.searchBar}
+                style={[styles.searchBar, { backgroundColor: theme.surface, color: theme.text }]}
                 placeholder="Search gods..."
+                placeholderTextColor={theme.text}
                 value={searchQuery}
                 onChangeText={handleSearch}
             />
@@ -35,7 +39,6 @@ const GodsScreen: React.FC = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#c1d4e0'
     },
     searchBar: {
         height: 40,
@@ -44,7 +47,6 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         margin: 1,
         paddingHorizontal: 10,
-        backgroundColor: '#fff',
     },
 });
 
