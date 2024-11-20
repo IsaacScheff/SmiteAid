@@ -216,8 +216,338 @@ const gods: God[] = [
             },
         ]
     },
+    {
+        name: "Ah Puch",
+        class: GodClass.Mage,
+        blurb: "hockey puch",
+        imageUrl: require('../assets/images/ah_puch.png'),
+        abilities: [
+            {
+                name: "Hollow Ground (Passive)",
+                description: "Ah Puch is closely attuned with the dead and may exhume corpses at his will. When walking over a decaying corpse, Ah Puch lowers the cooldown of Undead Surge and Corpse Explosion by 1s, restores 4% of his maximum Health and 3% of his maximum Mana.",
+                buffs: [
+                    "Enemy gods and the Fire Giant can destroy the corpses with 2 Basic Attacks.",
+                    "Ah Puch can have up to 6 corpses (with a maximum duration of 45s) and placing more than 6 will cause the oldest ones to disappear."
+                ],
+                imageUrl: require('../assets/images/ah_puch_p.png'),
+            },
+            {
+                name: "Undead Surge",
+                description: "Ah Puch raises up to two decaying corpses from the underworld that surge forward exploding on anything they touch, when they reach max distance, or when Ah Puch reactivates Undead Surge dealing damage and slowing targets hit. Enemies hit also have their healing reduced by 40% for 5s. The corpses collapse after exploding remaining behind.",
+                buffs: [
+                    "Damage: 90/110/130/150/170 (+35% of your Magical Power)",
+                    "Slow: 20/25/30/35/40%",
+                    "Slow Duration: 2s",
+                    "Range/Radius: 60/20",
+                    "Cooldown: 11 seconds"
+                ],
+                imageUrl: require('../assets/images/ah_puch_1.png'),
+            },
+            {
+                name: "Corpse Explosion",
+                description: "Ah Puch causes the target area to explode dealing damage. Corpse Explosion also causes any decaying corpses in the area to explode.",
+                buffs: [
+                    "Initial Damage: 60/70/80/90/100 (+30% of your Magical Power)",
+                    "Damage per Corpse: 55/80/105/130/155 (+25% of your Magical Power)",
+                    "Range/Radius: 55/20, 25",
+                    "Cooldown: 8 seconds"
+                ],
+                imageUrl: require('../assets/images/ah_puch_2.png'),
+            },
+            {
+                name: "Fleeting Breath",
+                description: "Ah Puch throws a charm from the underworld which awakens a decaying corpse that applies miasma to targets in an area and falls to the ground, remaining behind. Targets take damage every second. After the duration, targets take additional damage and are stunned if they were healed by an ability during the initial duration.",
+                buffs: [
+                    "Damage per Tick: 30/40/50/60/70 (+20% of your Magical Power)",
+                    "Additional Damage: 50/100/150/200/250 (+40% of your Magical Power)",
+                    "Stun Duration: 1.5s",
+                    "Duration: 4s",
+                    "Range/Radius: 55/13",
+                    "Cooldown: 10 seconds"
+                ],
+                imageUrl: require('../assets/images/ah_puch_3.png'),
+            },
+            {
+                name: "Empty the Crypts (Ultimate)",
+                description: "Ah Puch unleashes an army of Wraiths from the Ninth Hell that swarm forward, damaging enemies and reducing their Healing and Damage Dealt.",
+                buffs: [
+                    "Damage per Wraith: 50/60/70/80/90 (+15% of your Magical Power)",
+                    "Duration: 6s",
+                    "Damage Reduction: 3% per Stack",
+                    "Healing Reduction: 20% per Stack",
+                    "Max Stacks: 3",
+                    "Range: 75",
+                    "Cooldown: 90 seconds"
+                ],
+                imageUrl: require('../assets/images/ah_puch_ult.png'),
+            },
+        ]
+    },
+    {
+        name: "Amaterasu",
+        class: GodClass.Warrior,
+        blurb: "Ama <3",
+        imageUrl: require('../assets/images/amaterasu.png'),
+        abilities: [
+            {
+                name: "Illuminating Strike (Passive)",
+                description: "Amaterasu illuminates enemies she hits with basic attacks. After 3 hits on the same target the enemy gains an aura, exposing their weaknesses and causing them to take more damage from all sources. Any other enemies that come near the afflicted target are weakened as well.",
+                buffs: [
+                    "Weakening Aura: 10% Increased Damage Taken",
+                    "Stack/Aura Duration: 6s",
+                    "Max Auras Possible: 3",
+                    "Radius: 30",
+                    "Stacks up to 30% increased damage taken."
+                ],
+                imageUrl: require('../assets/images/amaterasu_p.png'),
+            },
+            {
+                name: "Divine Presence",
+                description: "Amaterasu harnesses the power of her jewel, gaining Attack Speed and healing herself every second for 4 seconds. She also creats a persistent aura that buffs nearby allied gods. Every time this ability is activated the aura switches between Valor and Benevolence.",
+                buffs: [
+                    "Heal Per Tick: 15/25/35/45/55",
+                    "Attack Speed: 15/17.5/20/22.5/25%",
+                    "Benevolence Aura: 9/12/15/18/21% Move Speed",
+                    "Valor Aura: 14/18/22/26/30 Bonus Power",
+                    "Radius: 30",
+                    "Cooldown: 9 seconds"
+                ],
+                imageUrl: require('../assets/images/amaterasu_1.png'),
+            },
+            {
+                name: "Heavenly Reflection",
+                description: "Amaterasu charges her mirror for 5 seconds. While the mirror is charging she takes decreased damage. By activating the ability again or at the end of 5 seconds she will fire her mirror straight ahead, dealing damage. The mirror can be charged by successfully attacking enemies or from taking damage, and will deal up to double the base damage when fully charged.",
+                buffs: [
+                    "Self Damage Mitigation: 7/9/11/13/15%",
+                    "Mirror Damage: 70/105/140/175/210 (+60% of your Physical Power)",
+                    "Full Charge Damage: 140/210/280/350/420",
+                    "Range: 55",
+                    "Cooldown: 12/11.5/11/10.5/10 seconds"
+                ],
+                imageUrl: require('../assets/images/amaterasu_2.png'),
+            },
+            {
+                name: "Glorious Charge",
+                description: "Amaterasu shines light off of her sacred blade, silencing all enemies in front of her. She then dashes forward while dealing damage, piercing through minions or stopping at the first god hit.",
+                buffs: [
+                    "Silence Duration: 1s",
+                    "Dash Damage: 80/135/190/245/300 (+60% of your Physical Power)",
+                    "Range: 55",
+                    "Cooldown: 15 seconds"
+                ],
+                imageUrl: require('../assets/images/amaterasu_3.png'),
+            },
+            {
+                name: "Dazzling Offense (Ultimate)",
+                description: "Amaterasu focuses the power of the heavens into an impressive 3 strike combination attack. The 2nd hit will do 20% more base damage and slow enemies by 30%. The 3rd hit will do 40% more base damage and stun enemies. She must hit an enemy with the 1st hit to receive the increased damage and CC on the 2nd hit. The same rule applies to the 2nd and 3rd hits.",
+                buffs: [
+                    "Damage per Strike: 100/140/180/220/260 (+50% of your Physical Power)",
+                    "Slow Duration: 2s",
+                    "Stun Duration: 2s",
+                    "Radius: 35",
+                    "Cooldown: 90/85/80/75/70 seconds"
+                ],
+                imageUrl: require('../assets/images/amaterasu_ult.png'),
+            },
+        ]
+    },
+    {
+        name: "Anhur",
+        class: GodClass.Hunter,
+        blurb: "",
+        imageUrl: require('../assets/images/anhur.png'),
+        abilities: [
+            {
+                name: "Enfeeble (Passive)",
+                description: "Anhur's spear attacks reduce the enemy target's Physical Protection for 3 seconds.",
+                buffs: [
+                    "Physical Protection Debuff: 20",
+                    "The debuff duration refreshes per (spear) attack."
+                ],
+                imageUrl: require('../assets/images/anhur_p.png'),
+            },
+            {
+                name: "Shifting Sands",
+                description: "Anhur erects an obelisk from the ground, blocking all player movement. The surrounding sands Slow enemies and increase the damage of Anhur's Basic Attacks against targets in the sands.",
+                buffs: [
+                    "Slow: 15/20/25/30/35%",
+                    "Damage Buff: 8/11/14/17/20%",
+                    "Lifetime: 7s",
+                    "Range/Radius: 70/30",
+                    "Cooldown: 14 seconds"
+                ],
+                imageUrl: require('../assets/images/anhur_1.png'),
+            },
+            {
+                name: "Impale",
+                description: "Anhur hurls his spear with great might. If the spear hits a god, they take damage and are knocked back. Gods knocked back into a wall are Stunned. Enemies hit by the pushed god take damage. The spear passes through minions, doing damage to them as well.",
+                buffs: [
+                    "Damage: 105/170/235/300/365 (+80% of your Physical Power)",
+                    "Stun Duration: 1.1/1.2/1.3/1.4/1.5s",
+                    "Range: 55",
+                    "Cooldown: 12 seconds"
+                ],
+                imageUrl: require('../assets/images/anhur_2.png'),
+            },
+            {
+                name: "Disperse",
+                description: "Anhur leaps to his ground target location, doing damage and knocking back all enemies in the radius where he lands.",
+                buffs: [
+                    "Damage: 70/110/150/190/230 (+60% of your Physical Power)",
+                    "Range/Radius: 55/15",
+                    "Cooldown: 15/14.5/14/13.5/13 seconds",
+                    "This ability's knockup and damage can be canceled if hit by CC on landing.",
+                    "This ability has a setup time of 0.15s and leap time of 0.85s."
+                ],
+                imageUrl: require('../assets/images/anhur_3.png'),
+            },
+            {
+                name: "Desert Fury (Ultimate)",
+                description: "Summoning the fury of the desert, Anhur hunkers down and throws empowered spears that pass through everything, doing damage to all enemies in their path. He is immune to Crowd Control for the duration.",
+                buffs: [
+                    "Damage per Spear: 65/90/115/140/165 (+30% of your Physical Power)",
+                    "Spears Thrown: 8",
+                    "Range: 80",
+                    "Cooldown: 90 seconds",
+                    "This ability can go through walls.",
+                    "Has a duration of 2s (with a 0.25s prefire and spears thrown every 0.22s)."
+                ],
+                imageUrl: require('../assets/images/anhur_ult.png'),
+            },
+        ]
+    },
+    {
+        name: "Anubis",
+        class: GodClass.Mage,
+        blurb: "",
+        imageUrl: require('../assets/images/anubis.png'),
+        abilities: [
+            {
+                name: "Sorrow (Passive)",
+                description: "All of Anubis' abilities steal Physical and Magical Protection from the target and increase his Healing obtained from Magical Lifesteal. These effects stack on every tick of Anubis' abilities. Sorrow also grants Anubis an additional 30% reduction to all Crowd Control durations.",
+                buffs: [
+                    "Protections Stolen Per Stack: 5",
+                    "Increased Healing per Stack: 20%",
+                    "Duration: 6s",
+                    "Max Stacks: 3",
+                    "Grants 15 Protections and 60% Lifesteal Healing bonus at max stacks."
+                ],
+                imageUrl: require('../assets/images/anubis_p.png'),
+            },
+            {
+                name: "Plague of Locusts",
+                description: "A plague of locusts bellows forth from Anubis' mouth, smothering all enemies in the area and doing damage every .25s for 3s. Anubis is immune to knockback while channeling and moves at 50% speed.",
+                buffs: [
+                    "Damage per Tick: 18/26/34/42/50 (+22% of your Magical Power)",
+                    "Range: 35",
+                    "Cooldown: 10 seconds",
+                    "Can be cancelled early."
+                ],
+                imageUrl: require('../assets/images/anubis_1.png'),
+            },
+            {
+                name: "Mummify",
+                description: "Anubis fires a bandage projectile, mummifying and Stunning his target.",
+                buffs: [
+                    "Stun Duration: 2s",
+                    "Range: 70",
+                    "Cooldown: 17/16/15/14/13 seconds"
+                ],
+                imageUrl: require('../assets/images/anubis_2.png'),
+            },
+            {
+                name: "Grasping Hands",
+                description: "Anubis calls for help from the underworld as hands penetrate the ground and claw at his enemies, doing damage and Slowing every .5s for 2s.",
+                buffs: [
+                    "Damage per Tick: 25/40/55/70/85 (+35% of your Magical Power)",
+                    "Slow: 25%",
+                    "Range/Radius: 55/20",
+                    "Cooldown: 14/13.5/13/12.5/12 seconds"
+                ],
+                imageUrl: require('../assets/images/anubis_3.png'),
+            },
+            {
+                name: "Death Gaze (Ultimate)",
+                description: "Anubis focuses all of his energy into a piercing gaze, doing damage to all enemies in the path, every 0.1 seconds for 3 seconds.",
+                buffs: [
+                    "Damage per Tick: 20/25/30/35/40 (+13% of your Magical Power)",
+                    "Range: 70",
+                    "Cooldown: 90/85/80/75/70 seconds",
+                    "Anubis is stationary, CC immune and can rotate while casting this ability.",
+                    "Can be cancelled early."
+                ],
+                imageUrl: require('../assets/images/anubis_ult.png'),
+            },
+        ]
+    },
+    {
+        name: "Ao Kuang",
+        class: GodClass.Mage,
+        blurb: "",
+        imageUrl: require('../assets/images/ao_kuang.png'),
+        abilities: [
+            {
+                name: "Dragon King's Sword (Passive)",
+                description: "Every 10 seconds Ao Kuang gets a stack of Dragon King's Sword. With a stack available, his next non-ultimate ability that deals damage to an Enemy god has a reduced cooldown and heals Ao Kuang. Successfully executing an Enemy god with King of the Eastern Seas fully charges Dragon King's Sword.",
+                buffs: [
+                    "Cooldown Reduction: 2s",
+                    "Max Stacks: 3",
+                    "Heal: 3% of maximum Health"
+                ],
+                imageUrl: require('../assets/images/ao_kuang_p.png'),
+            },
+            {
+                name: "Water Illusion",
+                description: "Ao Kuang Teleports forward into Stealth, leaving behind a watery form of himself. He remains in Stealth for 5s or until he attacks or takes damage.  Ao Kuang may activate this ability again to detonate the watery form, dealing damage to nearby enemies.",
+                buffs: [
+                    "Damage: 70/120/170/220/270 (+70% of your Magical Power)",
+                    "Range/Radius: 30/20",
+                    "Cooldown: 15 seconds",
+                    "The watery form automatically detonates after 5s regardless of Ao Kuang's status."
+                ],
+                imageUrl: require('../assets/images/ao_kuang_1.png'),
+            },
+            {
+                name: "Dragon Call",
+                description: "Ao Kuang summons 6 dragons to his side. For every successful Basic Attack Ao Kuang makes, a dragon will dive to the target dealing additional damage. This ability ends after all dragons are used, or after 10s. Ao Kuang may activate this ability again to send forward any remaining dragons in a ranged attack. The dragons damage and Slow the first enemy they hit.",
+                buffs: [
+                    "Attack Damage: 35/50/65/80/95 (+30% of your Magical Power) per hit",
+                    "Ranged Damage: 20/25/30/35/40 (+13% of your Magical Power) per remaining dragon",
+                    "Slow: 30%, for 1s + 0.25s per remaining dragon",
+                    "Range: 55",
+                    "Cooldown: 15/14/13/12/11 seconds"
+                ],
+                imageUrl: require('../assets/images/ao_kuang_2.png'),
+            },
+            {
+                name: "Wild Storm",
+                description: "Ao Kuang unleashes a storm of lightning from his sword, damaging all enemies in front of him. This hit will send a Dragon from Dragon's Call forth, dealing damage to hit targets.",
+                buffs: [
+                    "Damage: 90/135/180/225/270 (+40% of your Magical Power)",
+                    "Range: 30",
+                    "Cooldown: 6 seconds"
+                ],
+                imageUrl: require('../assets/images/ao_kuang_3.png'),
+            },
+            {
+                name: "King of the Eastern Seas (Ultimate)",
+                description: "Ao Kuang grabs a single target, damaging and knocking them into the air. If the target is below a Health threshold, Ao Kuang will also reveal his true form, becoming an airborne Dragon and executing them restoring Health. After transforming Ao Kuang then picks a new location to land, dealing damage to enemies within 20 units.",
+                buffs: [
+                    "Damage: 90/140/190/240/290 (+50% of your Magical Power)",
+                    "Execute Threshold: 30%",
+                    "Heal: 10/15/20/25/30% of maximum Health",
+                    "Landing Damage: 100/150/200/250/300 (+50% of your Magical Power)",
+                    "Range: 15",
+                    "Cooldown: 100 seconds",
+                    "The target can avoid being executed by cleansing the knockup effect before reaching the halfway point of going up into the air.",
+                    "Ao Kuang is CC immune while he is grabbing a target, even if the ability does not result in an execute."
+                ],
+                imageUrl: require('../assets/images/ao_kuang_ult.png'),
+            },
+        ]
+    }
   
-    // {
+    //{
     //     name: "God Template",
     //     class: GodClass.,
     //     blurb: "",
