@@ -3022,13 +3022,13 @@ export default godData = [
             "Magical:": "23 (+1.3)",
             "HP5:": "6 (+0.45)",
             "MP5:": "5.5 (+0.44)",
-            "imageURL": require("../assets/images/Chang%27e.png")
+            "imageURL": require("../assets/images/Chang27e.png")
         },
         "Abilities": [
             {
                 "name": "Passive  - Jade Rabbit",
                 "description": "Chang'e can purchase/sell items from anywhere and her Jade Rabbit will fetch them. Only one item can be purchased/sold in this way at a time. Chang'e also gains +40% movement speed with no backpedal penalty when using her dances and her abilities apply a debuff to enemies, causing them to take 3% extra damage from her abilities within the next 5s, stacking 3 times.",
-                "imageURL": require("../assets/images/Chang%27e_ability_0.png"),
+                "imageURL": require("../assets/images/Chang27e_ability_0.png"),
                 "notes": [
                     "The rabbit has 5x Chang'e's Movement Speed.",
                     "The rabbit can't fetch items in the Assault game mode.",
@@ -3040,7 +3040,7 @@ export default godData = [
             {
                 "name": "1st Ability  - Crescent Moon Dance",
                 "description": "Chang'e flings a crescent moon in an arc, dealing damage to all enemies in its path.",
-                "imageURL": require("../assets/images/Chang%27e_ability_1.png"),
+                "imageURL": require("../assets/images/Chang27e_ability_1.png"),
                 "notes": [
                     "Its hitbox sweeps left to right in a cone in front of Chang'e.",
                     "Damage: 80/115/150/185/220 (+55% of your Magical Power)",
@@ -3053,7 +3053,7 @@ export default godData = [
             {
                 "name": "2nd Ability  - Moonlit Waltz",
                 "description": "Chang'e performs an evasive spin dance. She is immune to damage and Crowd Control during the action. For each tick of damage from an ability or Basic Attack that was avoided, Chang'e restores Mana to herself and her allies.",
-                "imageURL": require("../assets/images/Chang%27e_ability_2.png"),
+                "imageURL": require("../assets/images/Chang27e_ability_2.png"),
                 "notes": [
                     "Has an immunity duration of 1s.",
                     "Mana Restored: 20/30/40/50/60 per tick avoided",
@@ -3066,7 +3066,7 @@ export default godData = [
             {
                 "name": "3rd Ability  - Moonflower Dance",
                 "description": "Chang'e twirls, scattering flowers around her, and healing herself and all nearby allies and damaging nearby enemies.",
-                "imageURL": require("../assets/images/Chang%27e_ability_3.png"),
+                "imageURL": require("../assets/images/Chang27e_ability_3.png"),
                 "notes": [
                     "Its hitbox moves clockwise around Chang'e.",
                     "Persists for .7s after use.",
@@ -3081,7 +3081,7 @@ export default godData = [
             {
                 "name": "Ultimate  - Waxing Moon",
                 "description": "Chang'e's Waxing Moon dance is captivating, with this dance dealing damage and Stunning enemy gods in front of her. Each subsequent god that gets Stunned is Stunned for longer than the previous one.",
-                "imageURL": require("../assets/images/Chang%27e_ability_4.png"),
+                "imageURL": require("../assets/images/Chang27e_ability_4.png"),
                 "notes": [
                     "Applies up to a 5s stun for the last target hit when stunning 5 gods with the ability.",
                     "Damage: 150/215/280/345/410 (+65% of your Magical Power)",

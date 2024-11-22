@@ -42,6 +42,7 @@ const GodDetailScreen: React.FC = () => {
 
             {showStats && (
                 <View style={styles.statsContainer}>
+                    <Text style={styles.statText}>Type: {god.Attributes['Type:']}</Text>
                     <Text style={styles.statText}>Health: {god.Attributes['Health:']}</Text>
                     <Text style={styles.statText}>Mana: {god.Attributes['Mana:']}</Text>
                     <Text style={styles.statText}>Speed: {god.Attributes['Speed:']}</Text>
