@@ -33,11 +33,9 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    // color removed here; it will be set dynamically based on theme
   },
   button: {
     fontSize: 20,
     textDecorationLine: 'underline',
-    // color removed here; it will be set dynamically based on theme
   },
 });

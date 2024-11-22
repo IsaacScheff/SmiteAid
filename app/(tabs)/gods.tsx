@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, TextInput, StyleSheet, View } from 'react-native';
 import GodItem from '../GodItem';
-import gods from '../godsData';
+import { gods } from '../godsData';
 import { useTheme } from '../../theme/ThemeContext'; 
 
 const GodsScreen: React.FC = () => {
@@ -13,7 +13,7 @@ const GodsScreen: React.FC = () => {
     const handleSearch = (query: string) => {
         setSearchQuery(query);
         const filtered = gods.filter(god =>
-            god.name.toLowerCase().includes(query.toLowerCase())
+            god.Name.toLowerCase().includes(query.toLowerCase())
         );
         setFilteredGods(filtered);
     };
@@ -29,7 +29,7 @@ const GodsScreen: React.FC = () => {
             />
             <ScrollView>
                 {filteredGods.map(god => (
-                    <GodItem key={god.name} god={god} />
+                    <GodItem key={god.Name} god={god} />
                 ))}
             </ScrollView>
         </View>

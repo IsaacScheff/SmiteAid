@@ -2,31 +2,27 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import { Link } from 'expo-router';
 import { setSelectedGod } from './selectedGod'; 
-import { GodClass, Range } from './godsData';
+import { God } from './selectedGod';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../theme/ThemeContext'; 
 
-const classIcons: Record<GodClass, keyof typeof Ionicons.glyphMap> = {
-    [GodClass.Assassin]: "skull-outline",
-    [GodClass.Guardian]: "shield-half",
-    [GodClass.Hunter]: "send",
-    [GodClass.Mage]: "flame-outline",
-    [GodClass.Warrior]: "eyedrop-outline",
+// Define the valid keys for god classes
+type GodClassKey = 'Assassin' | 'Guardian' | 'Hunter' | 'Mage' | 'Warrior';
+
+const godClassIconMapping: Record<GodClassKey, keyof typeof Ionicons.glyphMap> = {
+    Assassin: "skull-outline",
+    Guardian: "shield-half",
+    Hunter: "send",
+    Mage: "flame-outline",
+    Warrior: "eyedrop-outline",
 };
 
-interface GodItemProps {
-  god: {
-    name: string;
-    class: GodClass;
-    range: Range;
-    blurb: string;
-    imageUrl: any;
-    abilities: any;
-  };
-}
-
-const GodItem: React.FC<GodItemProps> = ({ god }) => {
+const GodItem: React.FC<{ god: God }> = ({ god }) => {
     const { theme } = useTheme();
+    const godClass = god.Attributes['Class:'] as GodClassKey; // Assume it's valid for now
+
+    // Check if the class is valid and get the corresponding icon
+    const classIcon = godClassIconMapping[godClass] ?? 'alert'; // Use a fallback icon if the class is invalid
 
     return (
         <View style={[styles.container, { borderBottomColor: theme.secondary }]}>
@@ -34,14 +30,14 @@ const GodItem: React.FC<GodItemProps> = ({ god }) => {
                 href="/GodDetailScreen"
                 onPress={() => setSelectedGod(god)}
                 style={styles.link}>
-                <Image source={god.imageUrl} style={styles.image} />
+                <Image source={{ uri: god.Attributes['imageURL'] }} style={styles.image} />
             </Link>
-            <Text style={[styles.name, { color: theme.text }]}>{god.name}</Text>
+            <Text style={[styles.name, { color: theme.text }]}>{god.Name}</Text>
             <View style={styles.classContainer}>
-                <Ionicons name={classIcons[god.class]} size={16} color={theme.text} />
-                <Text style={[styles.class, { color: theme.text }]}>{god.class}</Text>
+                <Ionicons name={classIcon} size={16} color={theme.text} />
+                <Text style={[styles.class, { color: theme.text }]}>{godClass}</Text>
             </View>
-            <Text style={[styles.blurb, { color: theme.text }]}>{god.blurb}</Text>
+            <Text style={[styles.blurb, { color: theme.text }]}>{god.Attributes['Title:']}</Text>
         </View>
     );
 };
@@ -70,7 +66,7 @@ const styles = StyleSheet.create({
     class: {
         fontSize: 14,
         fontStyle: 'italic',
-        marginLeft: 5, // Spacing between icon and text
+        marginLeft: 5,
     },
     blurb: {
         fontSize: 14,

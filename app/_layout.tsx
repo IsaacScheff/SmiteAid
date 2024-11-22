@@ -7,7 +7,7 @@ export default function RootLayout() {
     <ThemeProvider>  {/* Wrap the entire Stack with ThemeProvider */}
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="GodDetailScreen" />
+        <Stack.Screen name="GodDetailScreen" options={{ headerShown: false }}/> {/*this also removes back button, have to investigate further*/}
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>

@@ -2,17 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, Image, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { getSelectedGod } from './selectedGod';
-import { GodClass } from './godsData';
 import { useTheme } from '../theme/ThemeContext'; 
-import { Theme } from '../theme/themes';
-
-const classIcons: Record<GodClass, keyof typeof Ionicons.glyphMap> = {
-    [GodClass.Assassin]: "skull-outline",
-    [GodClass.Guardian]: "shield-half",
-    [GodClass.Hunter]: "send",
-    [GodClass.Mage]: "flame-outline",
-    [GodClass.Warrior]: "eyedrop-outline",
-};
 
 const GodDetailScreen: React.FC = () => {
     const { theme } = useTheme();
@@ -25,39 +15,32 @@ const GodDetailScreen: React.FC = () => {
     }
 
     const styles = getStyles(theme); // Call to getStyles with the current theme
+    const classIcon = god.Attributes['Class:'].replace(',', ''); // Removing comma if it exists
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            <Image source={god.imageUrl} style={styles.image} />
-            <Text style={styles.name}>{god.name}</Text>
+            <Image source={{ uri: god.Attributes.imageURL }} style={styles.image} />
+            <Text style={styles.name}>{god.Name}</Text>
             <View style={styles.classContainer}>
-                <Ionicons name={classIcons[god.class]} size={20} color={theme.text} />
-                <Text style={styles.class}>{god.class}</Text>
+                <Ionicons name={classIcons[classIcon]} size={20} color={theme.text} />
+                <Text style={styles.class}>{god.Attributes['Class:']}</Text>
             </View>
-            <Text style={styles.range}>{god.range}</Text>
-            <Text style={styles.description}>{god.description || "No description available."}</Text>
+            <Text style={styles.description}>{god.Attributes['Title:']}</Text>
 
             <Text style={styles.sectionTitle}>Abilities</Text>
             <View style={styles.abilitiesContainer}>
-                {god.abilities.map((ability, index) => (
+                {god.Abilities.map((ability, index) => (
                     <TouchableOpacity
                         key={index}
                         style={styles.abilityItem}
                         onPress={() => setSelectedAbility(index === selectedAbility ? null : index)}
                         activeOpacity={1}
                     >
-                        <Image source={ability.imageUrl} style={styles.abilityImage} />
+                        <Image source={{ uri: ability.imageURL }} style={styles.abilityImage} />
                         <Text style={styles.abilityName}>{ability.name}</Text>
                         {selectedAbility === index && (
                             <View>
                                 <Text style={styles.abilityDescription}>{ability.description}</Text>
-                                <View style={styles.buffsContainer}>
-                                    {ability.buffs.map((buff, buffIndex) => (
-                                        <Text key={buffIndex} style={styles.buffText}>
-                                            {`• ${buff}`}
-                                        </Text>
-                                    ))}
-                                </View>
                             </View>
                         )}
                     </TouchableOpacity>
@@ -67,7 +50,16 @@ const GodDetailScreen: React.FC = () => {
     );
 };
 
-function getStyles(theme: Theme) { // Properly typed theme parameter
+// Define your icon mappings outside of the component
+const classIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
+    Assassin: "skull-outline",
+    Guardian: "shield-half",
+    Hunter: "send",
+    Mage: "flame-outline",
+    Warrior: "eyedrop-outline",
+};
+
+function getStyles(theme: any) { // Properly typed theme parameter
     return StyleSheet.create({
         container: {
             alignItems: 'center',
@@ -95,12 +87,6 @@ function getStyles(theme: Theme) { // Properly typed theme parameter
             fontStyle: 'italic',
             color: theme.text,
             marginLeft: 5,
-        },
-        range: {
-            fontSize: 16,
-            fontStyle: 'italic',
-            color: theme.text,
-            marginTop: 5,
         },
         description: {
             fontSize: 16,
@@ -140,18 +126,6 @@ function getStyles(theme: Theme) { // Properly typed theme parameter
             textAlign: 'center',
             color: theme.text,
             marginTop: 5,
-        },
-        buffsContainer: {
-            marginTop: 10,
-            padding: 10,
-            backgroundColor: theme.surface,
-            borderRadius: 8,
-        },
-        buffText: {
-            fontSize: 14,
-            textAlign: 'left',
-            color: theme.text,
-            marginBottom: 5,
         },
     });
 }

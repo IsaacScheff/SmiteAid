@@ -1,19 +1,22 @@
-import { GodClass, Range } from "./godsData";
+interface Attributes {
+    "Title:": string;
+    "Pantheon:": string;
+    "Type:": string;
+    "Class:": string;
+    "imageURL": string;
+    // Add other attributes as needed
+}
 
 interface Ability {
     name: string;
     description: string;
-    buffs: string[],
-    imageUrl: any; 
+    imageURL: string;
 }
+
 export interface God {
-    name: string;
-    class: GodClass
-    range: Range;
-    blurb: string;
-    imageUrl: any;
-    description?: string;
-    abilities: Ability[];
+    Name: string;
+    Attributes: Attributes;
+    Abilities: Ability[];
 }
 
 let selectedGod: God | null = null;
@@ -22,4 +25,4 @@ export const getSelectedGod = (): God | null => selectedGod;
 
 export const setSelectedGod = (god: God): void => {
     selectedGod = god;
-};  
+};
