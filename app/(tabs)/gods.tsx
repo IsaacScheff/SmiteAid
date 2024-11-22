@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ScrollView, TextInput, StyleSheet, View } from 'react-native';
 import GodItem from '../GodItem';
-import { gods } from '../godsData';
+import gods from '../godsDataRaw';
 import { useTheme } from '../../theme/ThemeContext'; 
 
 const GodsScreen: React.FC = () => {

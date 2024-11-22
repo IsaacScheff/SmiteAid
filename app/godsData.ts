@@ -1,8 +1,10 @@
+import { ImageSourcePropType } from 'react-native';
+
 export interface Ability {
     name: string;
     description: string;
     notes: string[];
-    imageURL: string;
+    imageURL: ImageSourcePropType;
 }
 
 export interface Attributes {
@@ -28,7 +30,7 @@ export interface Attributes {
     "Magical:": string;
     "HP5:": string;
     "MP5:": string;
-    "imageURL": string;
+    imageURL: ImageSourcePropType;
 }
 
 export interface God {
@@ -36,8 +38,3 @@ export interface God {
     Attributes: Attributes;
     Abilities: Ability[];
 }
-
-import godsJson from '../assets/god_data.json';
-
-// Cast the imported JSON to ensure TypeScript treats it as the correct type
-export const gods: God[] = godsJson as God[];

@@ -1,16 +1,30 @@
+import { ImageSourcePropType } from 'react-native';
+
 interface Attributes {
     "Title:": string;
     "Pantheon:": string;
     "Type:": string;
     "Class:": string;
-    "imageURL": string;
+    "imageURL": ImageSourcePropType;
+    "Health:": string;
+    "Mana:": string;
+    "Speed:": string;
+    "Range:": string;
+    "Attack/Sec:": string;
+    "Damage:": string;
+    "Physical:": string;
+    "Magical:": string;
+    "HP5:": string;
+    "MP5:": string;
+    "Difficulty:": string;
+    "Release date:": string;
     // Add other attributes as needed
 }
 
 interface Ability {
     name: string;
     description: string;
-    imageURL: string;
+    imageURL: ImageSourcePropType;
 }
 
 export interface God {

@@ -6,7 +6,6 @@ import { God } from './selectedGod';
 import { Ionicons } from '@expo/vector-icons';
 import { useTheme } from '../theme/ThemeContext'; 
 
-// Define the valid keys for god classes
 type GodClassKey = 'Assassin' | 'Guardian' | 'Hunter' | 'Mage' | 'Warrior';
 
 const godClassIconMapping: Record<GodClassKey, keyof typeof Ionicons.glyphMap> = {
@@ -21,20 +20,17 @@ const GodItem: React.FC<{ god: God }> = ({ god }) => {
     const { theme } = useTheme();
     const godClass = god.Attributes['Class:'] as GodClassKey; // Assume it's valid for now
 
-    // Check if the class is valid and get the corresponding icon
-    const classIcon = godClassIconMapping[godClass] ?? 'alert'; // Use a fallback icon if the class is invalid
-
     return (
         <View style={[styles.container, { borderBottomColor: theme.secondary }]}>
             <Link 
                 href="/GodDetailScreen"
                 onPress={() => setSelectedGod(god)}
                 style={styles.link}>
-                <Image source={{ uri: god.Attributes['imageURL'] }} style={styles.image} />
+                <Image source={god.Attributes.imageURL} style={styles.image} />
             </Link>
             <Text style={[styles.name, { color: theme.text }]}>{god.Name}</Text>
             <View style={styles.classContainer}>
-                <Ionicons name={classIcon} size={16} color={theme.text} />
+                <Ionicons name={godClassIconMapping[godClass] ?? 'alert'} size={16} color={theme.text} />
                 <Text style={[styles.class, { color: theme.text }]}>{godClass}</Text>
             </View>
             <Text style={[styles.blurb, { color: theme.text }]}>{god.Attributes['Title:']}</Text>
