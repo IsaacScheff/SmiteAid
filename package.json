@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",
+    "build": "npx expo export",
     "reset-project": "node ./scripts/reset-project.js",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -12,7 +13,7 @@
     "test": "jest --watchAll",
     "lint": "expo lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "jest": {
     "preset": "jest-expo"
