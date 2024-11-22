@@ -24,6 +24,7 @@ interface Attributes {
 interface Ability {
     name: string;
     description: string;
+    notes: string[];
     imageURL: ImageSourcePropType;
 }
 

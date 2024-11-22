@@ -69,7 +69,12 @@ const GodDetailScreen: React.FC = () => {
                         <Image source={ability.imageURL} style={styles.abilityImage} />
                         <Text style={styles.abilityName}>{ability.name}</Text>
                         {selectedAbility === index && (
-                            <Text style={styles.abilityDescription}>{ability.description}</Text>
+                            <View style={styles.abilityDetailContainer}>
+                                <Text style={styles.abilityDescription}>{ability.description}</Text>
+                                {ability.notes.map((note, noteIndex) => (
+                                    <Text key={noteIndex} style={styles.noteText}>• {note}</Text>
+                                ))}
+                            </View>
                         )}
                     </TouchableOpacity>
                 ))}
@@ -77,6 +82,8 @@ const GodDetailScreen: React.FC = () => {
         </ScrollView>
     );
 };
+
+
 
 function getStyles(theme: any) {
     return StyleSheet.create({
@@ -173,6 +180,17 @@ function getStyles(theme: any) {
             color: theme.text,
             marginBottom: 5,
             textAlign: 'left',
+        },
+        abilityDetailContainer: {
+            padding: 10,
+            backgroundColor: theme.surface,
+            borderRadius: 8,
+        },
+        noteText: {
+            fontSize: 12,
+            color: theme.text,
+            marginTop: 5,
+            textAlign: 'center',
         },
     });
 }
