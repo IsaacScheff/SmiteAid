@@ -1,4 +1,4 @@
-export default godData = [
+const gods = [
     {
         "Name": "Achilles",
         "Attributes": {
@@ -97,7 +97,7 @@ export default godData = [
                 "imageURL": require("../assets/images/Achilles_ability_4.png"),
                 "notes": [
                     "Achilles is CC immune while he charges up this ability.",
-                    "The execute from this ability also ignores shields,  The Alternate Timeline, Kumbhakarna's and Persephone's passive abilities and Khepri's ultimate.",
+                    "The execute from this ability also ignores shields, The Alternate Timeline, Kumbhakarna's and Persephone's passive abilities and Khepri's ultimate.",
                     "Grants Achilles up to 25% increased damage taken.",
                     "The dash portion of the ability occurs after 1s.",
                     "Damage: 180/270/360/450/540 (+100% of your Physical Power)",
@@ -307,7 +307,7 @@ export default godData = [
                 "description": "Ah Muzen Cab fires off an enormous stinger that deals damage to all enemies in a line, sticking into the first god that is hit, applying Bees!, Slowing, Crippling, and decreasing their Physical Protections for 3 seconds. If the target dies or after 3 seconds, the stinger falls onto the ground for 4 seconds. If Ah Muzen Cab picks up his stinger, he gains a significant reduction to Stinger's Cooldown.",
                 "imageURL": require("../assets/images/Ah_Muzen_Cab_ability_4.png"),
                 "notes": [
-                    "Retrieval's cooldown reduction deducts from the current cooldown, taking into account Cooldown %.",
+                    "Retrieval's cooldown reduction deducts from the current cooldown, taking into account Cooldown %.",
                     "Damage: 275/355/435/515/595 (+90% of your Physical Power)",
                     "Slow: 20%",
                     "Physical Protection Reduction: 10%",
@@ -775,10 +775,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Water Illusion",
-                "description": "Ao Kuang Teleports forward into Stealth, leaving behind a watery form of himself. He remains in Stealth for 5s or until he attacks or takes damage.Ao Kuang may activate this ability again to detonate the watery form, dealing damage to nearby enemies.",
+                "description": "Ao Kuang Teleports forward into Stealth, leaving behind a watery form of himself. He remains in Stealth for 5s or until he attacks or takes damage. Ao Kuang may activate this ability again to detonate the watery form, dealing damage to nearby enemies.",
                 "imageURL": require("../assets/images/Ao_Kuang_ability_1.png"),
                 "notes": [
-                    "Ao Kuang Teleports forward into Stealth, leaving behind a watery form of himself. He remains in Stealth for 5s or until he attacks or takes damage.\nAo Kuang may activate this ability again to detonate the watery form, dealing damage to nearby enemies.",
                     "Entering an enemy structure's attack range while stealthed will temporarily reveal him.",
                     "It won't begin its cooldown until after the watery form is detonated.",
                     "The watery form automatically detonates after 5s regardless of Ao Kuang's status.",
@@ -824,7 +823,7 @@ export default godData = [
                 "description": "Ao Kuang grabs a single target, damaging and knocking them into the air. If the target is below a Health threshold, Ao Kuang will also reveal his true form, becoming an airborne Dragon and executing them restoring Health. After transforming Ao Kuang then picks a new location to land, dealing damage to enemies within 20 units.",
                 "imageURL": require("../assets/images/Ao_Kuang_ability_4.png"),
                 "notes": [
-                    "The execute from this ability also ignores shields,  The Alternate Timeline, Kumbhakarna's and Persephone's passive abilities and Khepri's ultimate.",
+                    "The execute from this ability also ignores shields, The Alternate Timeline, Kumbhakarna's and Persephone's passive abilities and Khepri's ultimate.",
                     "The target can avoid being executed by cleansing the knockup effect before reaching the halfway point of going up into the air.",
                     "Ao Kuang is CC immune while he is grabbing a target, even if the ability does not result in an execute.",
                     "Has a maximum airborne duration of 5s, range of 200 and if there is no valid landing point, Ao Kuang will land to the closest valid point near the targetter.",
@@ -1406,10 +1405,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Energy Surge (Maul Prey)",
-                "description": "Druid: Artio pulses out a strong wave of energy that damages enemies. She will heal herself and allies within 65 units for each enemy god hit by this ability.Bear Form: Artio slashes twice with her claws, damaging enemies with each swipe.",
+                "description": "Druid: Artio pulses out a strong wave of energy that damages enemies. She will heal herself and allies within 65 units for each enemy god hit by this ability. Bear Form: Artio slashes twice with her claws, damaging enemies with each swipe.",
                 "imageURL": require("../assets/images/Artio_ability_1.png"),
                 "notes": [
-                    "Druid: Artio pulses out a strong wave of energy that damages enemies. She will heal herself and allies within 65 units for each enemy god hit by this ability.\nBear Form: Artio slashes twice with her claws, damaging enemies with each swipe.",
                     "Maul Prey can deal up to 80/140/200/260/320 (+60% of your Magical Power) damage.",
                     "Druid Damage: 70/105/140/175/210 (+35% of your Magical Power)",
                     "Druid Heal: 40/60/80/100/120",
@@ -1439,10 +1437,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Life Tap (Heavy Charge)",
-                "description": "Druid Form: Artio channels for 2s, draining the life from enemies. While channeling she deals damage up to 5 times and heals herself up to 5 times. Each hit increasingly Slows enemies and enemies hit all 5 times are Rooted for 1s.Bear Form: Artio charges forward at an increased movement speed for 3s. Enemies she charges through take damage and are Slowed for 2s.",
+                "description": "Druid Form: Artio channels for 2s, draining the life from enemies. While channeling she deals damage up to 5 times and heals herself up to 5 times. Each hit increasingly Slows enemies and enemies hit all 5 times are Rooted for 1s. Bear Form: Artio charges forward at an increased movement speed for 3s. Enemies she charges through take damage and are Slowed for 2s.",
                 "imageURL": require("../assets/images/Artio_ability_3.png"),
                 "notes": [
-                    "Druid Form: Artio channels for 2s, draining the life from enemies. While channeling she deals damage up to 5 times and heals herself up to 5 times. Each hit increasingly Slows enemies and enemies hit all 5 times are Rooted for 1s.\nBear Form: Artio charges forward at an increased movement speed for 3s. Enemies she charges through take damage and are Slowed for 2s.",
                     "Life Tap deals damage and heals every 0.4 seconds while the slow from the ability last 1s and refreshes per tick.",
                     "Life Tap deals up to 75/150/225/300/375 (+75% of your Magical Power) damage, heals up to 50/75/100/125/150 health and slows up to 40%.",
                     "Artio moves 100% faster while using Heavy Charge.",
@@ -1459,10 +1456,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Shapeshift",
-                "description": "Active: Artio Shapeshifts between her Druid stance and Bear stance.Passive: Every time Artio hits at least 1 enemy with an ability she gains 1 stack of Invigoration. Invigoration stacks increase her Movement Speed and MP5. Stacks last 6s, and stack up to 8 times.",
+                "description": "Active: Artio Shapeshifts between her Druid stance and Bear stance. Passive: Every time Artio hits at least 1 enemy with an ability she gains 1 stack of Invigoration. Invigoration stacks increase her Movement Speed and MP5. Stacks last 6s, and stack up to 8 times.",
                 "imageURL": require("../assets/images/Artio_ability_4.png"),
                 "notes": [
-                    "Active: Artio Shapeshifts between her Druid stance and Bear stance.\nPassive: Every time Artio hits at least 1 enemy with an ability she gains 1 stack of Invigoration. Invigoration stacks increase her Movement Speed and MP5. Stacks last 6s, and stack up to 8 times.",
                     "Provides a total of 8/12/16/20/24% Movement Speed and 16/32/48/64/80 MP5 with max Invigoration stacks.",
                     "Artio starts in druid stance and respawns in whatever stance she was currently in.",
                     "Movement Speed Per Stack: 1/1.5/2/2.5/3%",
@@ -1737,10 +1733,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Summon Suku",
-                "description": "Awilix mounts her Panther Suku, gaining movement speed but decreasing strafe speed. Awilix may leap off of Suku to deal damage to all enemies in the target area.Canceling this ability before leaping will not trigger its Cooldown.",
+                "description": "Awilix mounts her Panther Suku, gaining movement speed but decreasing strafe speed. Awilix may leap off of Suku to deal damage to all enemies in the target area. Canceling this ability before leaping will not trigger its Cooldown.",
                 "imageURL": require("../assets/images/Awilix_ability_1.png"),
                 "notes": [
-                    "Awilix mounts her Panther Suku, gaining movement speed but decreasing strafe speed. Awilix may leap off of Suku to deal damage to all enemies in the target area.\nCanceling this ability before leaping will not trigger its Cooldown.",
                     "Canceling it won't refund the mana cost.",
                     "Cannot use relics nor place wards but can use potions while mounted.",
                     "Activates \"on ability cast\" effects even if its cancelled.",
@@ -1755,10 +1750,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Feather Step",
-                "description": "Awilix flips over the last enemy she hit within 1.5s, Rooting, Crippling, and dealing damage as she passes over them. The damage dealt is modified based on the next attack in Awilix's Basic Attack progression.If the next attack is her third attack, then she also hits all targets in the area around her.",
+                "description": "Awilix flips over the last enemy she hit within 1.5s, Rooting, Crippling, and dealing damage as she passes over them. The damage dealt is modified based on the next attack in Awilix's Basic Attack progression. If the next attack is her third attack, then she also hits all targets in the area around her.",
                 "imageURL": require("../assets/images/Awilix_ability_2.png"),
                 "notes": [
-                    "Awilix flips over the last enemy she hit within 1.5s, Rooting, Crippling, and dealing damage as she passes over them. The damage dealt is modified based on the next attack in Awilix's Basic Attack progression.\nIf the next attack is her third attack, then she also hits all targets in the area around her.",
                     "Awilix is briefly untargetable while in the air.",
                     "Deals 75/127.5/180/232.5/285 (+75% of your Physical Power) damage with the second attack from the progression and 100/170/240/310/380 (+100% of your Physical Power) damage with the third.",
                     "Cannot be cast without one target hit.",
@@ -1787,10 +1781,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Gravity Surge",
-                "description": "Awilix calls upon the power of the moon, immediately pulling to her the closest enemy god she is facing that is either leaping or knocked up into the air. The target god takes damage and is Stunned for 0.8s when they land.Awilix is then bathed in moonlight, gaining bonus Attack Speed and Physical Power, along with protection against Roots, Slows, and Knockbacks for 6s.",
+                "description": "Awilix calls upon the power of the moon, immediately pulling to her the closest enemy god she is facing that is either leaping or knocked up into the air. The target god takes damage and is Stunned for 0.8s when they land. Awilix is then bathed in moonlight, gaining bonus Attack Speed and Physical Power, along with protection against Roots, Slows, and Knockbacks for 6s.",
                 "imageURL": require("../assets/images/Awilix_ability_4.png"),
                 "notes": [
-                    "Awilix calls upon the power of the moon, immediately pulling to her the closest enemy god she is facing that is either leaping or knocked up into the air. The target god takes damage and is Stunned for 0.8s when they land.\nAwilix is then bathed in moonlight, gaining bonus Attack Speed and Physical Power, along with protection against Roots, Slows, and Knockbacks for 6s.",
                     "Can also pull targets through walls.",
                     "Can also pull any leaps that travel underground.",
                     "Awilix must be aiming within 90 degrees of her target to pull them.",
@@ -1873,7 +1866,7 @@ export default godData = [
                 "imageURL": require("../assets/images/Baba_Yaga_ability_2.png"),
                 "notes": [
                     "Has a potion brew pre-fire time of 0.2s and post-fire time of 0.1s while both the potion swap pre-fire and post-fire have a time of 0.1s.",
-                    "For information on the consumable item see:  Baba's Brew",
+                    "For information on the consumable item see: Baba's Brew",
                     "Damage: 85/120/155/190/225 (+70% of your Magical Power)",
                     "Ingredient Count: 3/3/4/4/5",
                     "Ability Type: Circle Crowd Control, Damage",
@@ -2099,10 +2092,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Butcher Blades",
-                "description": "Bakasura passively gains Physical Power. When activated, he gains additionaltrue damageon each strike for the duration.",
+                "description": "Bakasura passively gains Physical Power. When activated, he gains additional true damage on each strike for the duration.",
                 "imageURL": require("../assets/images/Bakasura_ability_3.png"),
                 "notes": [
-                    "Bakasura passively gains Physical Power. When activated, he gains additional true damage on each strike for the duration.",
                     "Can deal up to 150/375/600/825/1050 true damage with max (2.5%) attack speed.",
                     "Passive Physical Power: 10/15/20/25/30",
                     "True Damage: 10/25/40/55/70",
@@ -2282,7 +2274,7 @@ export default godData = [
                 "notes": [
                     "Basic Attacks apply 5 stacks, each ability applies a unique amount of stacks and stacks up to 70.",
                     "Hysteria drains once every 0.5 seconds to enemies not damaged by Baron in the last 5s.",
-                    "For information on the consumable item see:  Baron's Brew",
+                    "For information on the consumable item see: Baron's Brew",
                     "Ability Type: Debuff"
                 ]
             },
@@ -2305,10 +2297,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Consign Spirits",
-                "description": "Baron Samedi guides restless spirits to the ground and buries them. After a brief delay the ground erupts, damaging enemies standing in the area. Minions and jungle camps take an additional 25% damage. If an enemy god is hit, friendly spirits fly from the area and heal allies near the explosion or by Baron Samedi.If the enemy god hit is above 30 Hysteria the friendly spirit applies Slow Immunity for allies, and increases their Movement Speed for 3s.",
+                "description": "Baron Samedi guides restless spirits to the ground and buries them. After a brief delay the ground erupts, damaging enemies standing in the area. Minions and jungle camps take an additional 25% damage. If an enemy god is hit, friendly spirits fly from the area and heal allies near the explosion or by Baron Samedi. If the enemy god hit is above 30 Hysteria the friendly spirit applies Slow Immunity for allies, and increases their Movement Speed for 3s.",
                 "imageURL": require("../assets/images/Baron_Samedi_ability_2.png"),
                 "notes": [
-                    "Baron Samedi guides restless spirits to the ground and buries them. After a brief delay the ground erupts, damaging enemies standing in the area. Minions and jungle camps take an additional 25% damage. If an enemy god is hit, friendly spirits fly from the area and heal allies near the explosion or by Baron Samedi.\nIf the enemy god hit is above 30 Hysteria the friendly spirit applies Slow Immunity for allies, and increases their Movement Speed for 3s.",
                     "This ability only heals each ally once regardless of how many targets were hit.",
                     "Deals 87.5/156/225/284/362.5 (+87.5% of your Magical Power) damage to minions and jungle camps.",
                     "Damage: 70/125/180/235/290 (+70% of your Magical Power)",
@@ -2449,8 +2440,6 @@ export default godData = [
                 "description": "Bastet becomes CC Immune and conjures a radiant projectile that travels forward in a line damaging and stunning the first enemy god hit. A Huntress of Bast appears near the hit target and a destination is marked at Bastet. The Huntress then picks up and carries the enemy hit to the marked location.On successful capture, a pool of quicksand is formed under the enemy creating a Vortex which drags targets toward the center and deals damage.",
                 "imageURL": require("../assets/images/Bastet_ability_4.png"),
                 "notes": [
-                    "Bastet becomes CC Immune and conjures a radiant projectile that travels forward in a line damaging and stunning the first enemy god hit. A Huntress of Bast appears near the hit target and a destination is marked at Bastet. The Huntress then picks up and carries the enemy hit to the marked location.",
-                    "On successful capture, a pool of quicksand is formed under the enemy creating a Vortex which drags targets toward the center and deals damage.",
                     "The melee capture range of 10 units in front of Bastet and the quicksand has a radius of 20.",
                     "Deals up to 280/370/460/550/640 (+180% of your Physical Power) damage to a target grabbed into the quicksand for the entire duration and/or up to 120/150/180/210/240 (+90% of your Physical Power) damage to enemies in the quicksand.",
                     "Can be fired through walls.",
@@ -2509,8 +2498,6 @@ export default godData = [
                 "description": "Bellona dashes forward and bashes with her shield, dealing damage and Slowing enemies. Bellona gains 1 Stack of block for each enemy god hit. Block absorbs all damage from a single Basic Attack and reflects a portion of the damage around her.Bellona then makes Basic Attacks with sword and shield until she has not taken or dealt damage in the last 7s. Every 3 successful basic attacks she gains another Stack of block (max. 3).",
                 "imageURL": require("../assets/images/Bellona_ability_1.png"),
                 "notes": [
-                    "Bellona dashes forward and bashes with her shield, dealing damage and Slowing enemies. Bellona gains 1 Stack of block for each enemy god hit. Block absorbs all damage from a single Basic Attack and reflects a portion of the damage around her.",
-                    "Bellona then makes Basic Attacks with sword and shield until she has not taken or dealt damage in the last 7s. Every 3 successful basic attacks she gains another Stack of block (max. 3).",
                     "Sword and shield's Basic Attack progression is .5/1/1x damage and swing time.",
                     "Has a dash range of 25.",
                     "Damage: 90/130/170/210/250 (+50% of your Physical Power)",
@@ -2524,10 +2511,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Bludgeon",
-                "description": "Bellona summons a hammer and spins, hitting every enemy around her and then smashing forward in an overhand attack. Each enemy god hit in the spin increases the damage of the overhand attack.Bellona now makes Basic Attacks with her hammer until she has not taken or dealt damage in the last 7s. Every hammer attack hits all enemies in melee range and only benefit from 33% of Bellona's total Lifesteal.",
+                "description": "Bellona summons a hammer and spins, hitting every enemy around her and then smashing forward in an overhand attack. Each enemy god hit in the spin increases the damage of the overhand attack. Bellona now makes Basic Attacks with her hammer until she has not taken or dealt damage in the last 7s. Every hammer attack hits all enemies in melee range and only benefit from 33% of Bellona's total Lifesteal.",
                 "imageURL": require("../assets/images/Bellona_ability_2.png"),
                 "notes": [
-                    "Bellona summons a hammer and spins, hitting every enemy around her and then smashing forward in an overhand attack. Each enemy god hit in the spin increases the damage of the overhand attack.\nBellona now makes Basic Attacks with her hammer until she has not taken or dealt damage in the last 7s. Every hammer attack hits all enemies in melee range and only benefit from 33% of Bellona's total Lifesteal.",
                     "Hammer's Basic Attack progression is 1.5/1/1.5x damage and swing time, with each attacks hitting all enemies in melee range.",
                     "The spin attack's hitbox moves clockwise around Bellona.",
                     "Deals up to 105/195/285/375/465 (+85% of your Physical Power) damage to non-god sources and 125% bonus damage to the final god hit when hitting 5 gods with the overhand attack.",
@@ -2630,10 +2616,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Refraction Shield",
-                "description": "Passive: As Cabrakan's shields take damage they store energy and gain Protection stacks.Active: Cabrakan slams his shields together creating a concussive blast and damaging enemies in front of him, granting him Mana per enemy hit. If his shields have the maximum number of Stacks then the enemy gods hit are Stunned. Stacks are removed.",
+                "description": "Passive: As Cabrakan's shields take damage they store energy and gain Protection stacks. Active: Cabrakan slams his shields together creating a concussive blast and damaging enemies in front of him, granting him Mana per enemy hit. If his shields have the maximum number of Stacks then the enemy gods hit are Stunned. Stacks are removed.",
                 "imageURL": require("../assets/images/Cabrakan_ability_2.png"),
                 "notes": [
-                    "Passive: As Cabrakan's shields take damage they store energy and gain Protection stacks.\nActive: Cabrakan slams his shields together creating a concussive blast and damaging enemies in front of him, granting him Mana per enemy hit. If his shields have the maximum number of Stacks then the enemy gods hit are Stunned. Stacks are removed.",
                     "Grants up to 20/25/30/35/40 Protections.",
                     "Damage: 80/135/190/245/300 (+50% of your Magical Power)",
                     "Stun Duration: 1.1/1.2/1.3/1.4/1.5s",
@@ -2723,10 +2708,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Screech",
-                "description": "Camazotz screeches loudly and launches a sound wave that pierces through minions and deals damage.If the screech hits an enemy god, the sound wave will echo. If Camazotz is hit by an echo, his team gains vision of the god that was hit by screech for the next 15s and gains bonus Physical Power for the duration.",
+                "description": "Camazotz screeches loudly and launches a sound wave that pierces through minions and deals damage. If the screech hits an enemy god, the sound wave will echo. If Camazotz is hit by an echo, his team gains vision of the god that was hit by screech for the next 15s and gains bonus Physical Power for the duration.",
                 "imageURL": require("../assets/images/Camazotz_ability_1.png"),
                 "notes": [
-                    "Camazotz screeches loudly and launches a sound wave that pierces through minions and deals damage.\nIf the screech hits an enemy god, the sound wave will echo. If Camazotz is hit by an echo, his team gains vision of the god that was hit by screech for the next 15s and gains bonus Physical Power for the duration.",
                     "Each echo can bounce off walls up to 2 times and/or up to 4s before disappearing.",
                     "Damage: 100/145/190/235/280 (+85% of your Physical Power)",
                     "Echo Buff: 15/20/25/30/35 Physical Power",
@@ -2738,10 +2722,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Vampire Bats",
-                "description": "Camazotz commands a swarm of bats to fly out and attack a single target, damaging, slowing them by 40%, lowering their healing received for 3s and then carrying back a heal.If the target was a Buff Holder, Oracle, or Alpha Harpy, they will be marked and Camazotz will receive a heal as well as a stackable Vampirism buff that lasts 300s. Marked monsters will not provide Camazotz with another stack of Vampirism or an additional heal.",
+                "description": "Camazotz commands a swarm of bats to fly out and attack a single target, damaging, slowing them by 40%, lowering their healing received for 3s and then carrying back a heal. If the target was a Buff Holder, Oracle, or Alpha Harpy, they will be marked and Camazotz will receive a heal as well as a stackable Vampirism buff that lasts 300s. Marked monsters will not provide Camazotz with another stack of Vampirism or an additional heal.",
                 "imageURL": require("../assets/images/Camazotz_ability_2.png"),
                 "notes": [
-                    "Camazotz commands a swarm of bats to fly out and attack a single target, damaging, slowing them by 40%, lowering their healing received for 3s and then carrying back a heal.\nIf the target was a Buff Holder, Oracle, or Alpha Harpy, they will be marked and Camazotz will receive a heal as well as a stackable Vampirism buff that lasts 300s. Marked monsters will not provide Camazotz with another stack of Vampirism or an additional heal.",
                     "Deals 70/110/150/190/230 (+80% of your Physical Power) initial damage, then 5/10/15/20/25 (+5% of your Physical Power) damage every .5s for 3s dealing a total of 30/60/90/120/150 (+30% of your Physical Power) DoT damage.",
                     "Cleansing the slow won't remove the DoT.",
                     "Provides up to 6% Physical Lifesteal, Ability Lifesteal and Increased Healing at max stacks.",
@@ -2944,10 +2927,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Torrent",
-                "description": "Chaac spins his axe around him, damaging all enemies, and gaining Protections for each enemy hit (max. 4). Gods hits provide 2 stacks.If his axe is out from Thunder Strike, he will first dash to the axe location, doing 50% base damage to enemies he passes through and then executing his spin attack. This dash can go through walls.",
+                "description": "Chaac spins his axe around him, damaging all enemies, and gaining Protections for each enemy hit (max. 4). Gods hits provide 2 stacks. If his axe is out from Thunder Strike, he will first dash to the axe location, doing 50% base damage to enemies he passes through and then executing his spin attack. This dash can go through walls.",
                 "imageURL": require("../assets/images/Chaac_ability_2.png"),
                 "notes": [
-                    "Chaac spins his axe around him, damaging all enemies, and gaining Protections for each enemy hit (max. 4). Gods hits provide 2 stacks.\nIf his axe is out from Thunder Strike, he will first dash to the axe location, doing 50% base damage to enemies he passes through and then executing his spin attack. This dash can go through walls.",
                     "Grants up to 20/40/60/80/100 Protections.",
                     "The dash deals 50/80/110/140/170 damage.",
                     "The spin's hitbox moves clockwise around Chaac.",
@@ -2963,10 +2945,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Rain Dance",
-                "description": "Chaac summons a rainstorm around his current location for 6s. While it rains, he regains Health, and enemies are caught in the mud and have their Movement Speed, Attack Speed, and Power reduced.If his axe is out from Thunder Strike, a rainstorm will also spawn at that location. Enemies caught in the area of both rainstorms will have the Movement Slow and Attack Speed Reduction applied twice.",
+                "description": "Chaac summons a rainstorm around his current location for 6s. While it rains, he regains Health, and enemies are caught in the mud and have their Movement Speed, Attack Speed, and Power reduced. If his axe is out from Thunder Strike, a rainstorm will also spawn at that location. Enemies caught in the area of both rainstorms will have the Movement Slow and Attack Speed Reduction applied twice.",
                 "imageURL": require("../assets/images/Chaac_ability_3.png"),
                 "notes": [
-                    "Chaac summons a rainstorm around his current location for 6s. While it rains, he regains Health, and enemies are caught in the mud and have their Movement Speed, Attack Speed, and Power reduced.\nIf his axe is out from Thunder Strike, a rainstorm will also spawn at that location. Enemies caught in the area of both rainstorms will have the Movement Slow and Attack Speed Reduction applied twice.",
                     "Heals a total of 96/156/216/276/336 health.",
                     "Has a radius of 30 at the location where Chaac's axe was deployed from Thunder Strike.",
                     "Can reduce up to 40/50/60/70/80% Movement and 30/35/40/45/50% Attack Speed if caught in both rainstorms.",
@@ -3240,8 +3221,6 @@ export default godData = [
                 "description": "Charybdis' attack speed increases as her Tide increases. Successful Basic Attack hits increase her Tide.Charybdis deals less damage with item effect procs on only her rapid fire Basic Attacks.",
                 "imageURL": require("../assets/images/Charybdis_ability_0.png"),
                 "notes": [
-                    "Charybdis' attack speed increases as her Tide increases. Successful Basic Attack hits increase her Tide.",
-                    "Charybdis deals less damage with item effect procs on only her rapid fire Basic Attacks.",
                     "Provides 25% Attack Speed (10.75% at level 1) at level 20.",
                     "Damage from items deal 80% damage at max tide.",
                     "Takes a total of 33 basic attacks to fully charge the Tide.",
@@ -3254,10 +3233,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Spike Shot",
-                "description": "Charybdis reveals The Maw as it fires large spikes for a short duration dealing Basic Attack damage. These projectiles pass through minions and are wider and faster than normal Basic Attacks.On hitting enemy gods and walls, the spikes splinter dealing additional damage.",
+                "description": "Charybdis reveals The Maw as it fires large spikes for a short duration dealing Basic Attack damage. These projectiles pass through minions and are wider and faster than normal Basic Attacks. On hitting enemy gods and walls, the spikes splinter dealing additional damage.",
                 "imageURL": require("../assets/images/Charybdis_ability_1.png"),
                 "notes": [
-                    "Charybdis reveals The Maw as it fires large spikes for a short duration dealing Basic Attack damage. These projectiles pass through minions and are wider and faster than normal Basic Attacks.\nOn hitting enemy gods and walls, the spikes splinter dealing additional damage.",
                     "Splinters have a range of 30 and cannot go through walls or gods.",
                     "Basic attacks that hit gods provide 6% Tide.",
                     "Enemies can only be hit by 1 splinter regardless if all meet.",
@@ -3273,10 +3251,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Capsize",
-                "description": "Charybdis absorbs water from around her before firing a quick blast from The Maw. Enemies are hit by a rapidly decaying Slow and Physical Protection debuff.This ability can be channeled for longer, consuming Tide on fire, to become wider, strengthen the debuff effects and deal more damage.Up to 40% Tide consumed.",
+                "description": "Charybdis absorbs water from around her before firing a quick blast from The Maw. Enemies are hit by a rapidly decaying Slow and Physical Protection debuff. This ability can be channeled for longer, consuming Tide on fire, to become wider, strengthen the debuff effects and deal more damage. Up to 40% Tide consumed.",
                 "imageURL": require("../assets/images/Charybdis_ability_2.png"),
                 "notes": [
-                    "Charybdis absorbs water from around her before firing a quick blast from The Maw. Enemies are hit by a rapidly decaying Slow and Physical Protection debuff.\nThis ability can be channeled for longer, consuming Tide on fire, to become wider, strengthen the debuff effects and deal more damage. \nUp to 40% Tide consumed.",
                     "Applies a 10% slow/protection shred for 1s with minimal tide and deals 115% Physical Power Scaling with maximum tide.",
                     "Takes 0.75s to fully charge the ability.",
                     "Damage: 90/140/190/240/290 (+85% of your Physical Power)",
@@ -3295,9 +3272,6 @@ export default godData = [
                 "description": "Charybdis dives into a whirlpool she creates, expanding and revealing the terrifying Maw. Charybdis deals damage to enemies caught in the area.This ability can be amplified by toggling it again and spending 30% Tide. Doing so increases the damage dealt as well as providing Movement Speed, extra damage, and a knockup on exiting.While submerged, Charybdis is untargetable and immune to damage for up to 3s.",
                 "imageURL": require("../assets/images/Charybdis_ability_3.png"),
                 "notes": [
-                    "Charybdis dives into a whirlpool she creates, expanding and revealing the terrifying Maw. Charybdis deals damage to enemies caught in the area.",
-                    "This ability can be amplified by toggling it again and spending 30% Tide. Doing so increases the damage dealt as well as providing Movement Speed, extra damage, and a knockup on exiting.",
-                    "While submerged, Charybdis is untargetable and immune to damage for up to 3s.",
                     "Total Damage: 60/90/120/150/180 (+30% of your Physical Power) damage",
                     "Total Amplified Damage: 180/280/380/480/580 (+125% of your Physical Power) damage",
                     "Charybdis can move through player-made walls for the duration, not through map walls.",
@@ -3315,10 +3289,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - The Maw Hungers",
-                "description": "Charybdis reveals her true nature, becoming immune to Crowd Control for the next 6s, and gaining movement speed. She may make one powerful attack as The Maw charges forward, damaging and carrying back enemies hit before chomping down, damaging again and stunning.If she kills an enemy god with the attack, she gains another 6s and may attack again.",
+                "description": "Charybdis reveals her true nature, becoming immune to Crowd Control for the next 6s, and gaining movement speed. She may make one powerful attack as The Maw charges forward, damaging and carrying back enemies hit before chomping down, damaging again and stunning. If she kills an enemy god with the attack, she gains another 6s and may attack again.",
                 "imageURL": require("../assets/images/Charybdis_ability_4.png"),
                 "notes": [
-                    "Charybdis reveals her true nature, becoming immune to Crowd Control for the next 6s, and gaining movement speed. She may make one powerful attack as The Maw charges forward, damaging and carrying back enemies hit before chomping down, damaging again and stunning.\nIf she kills an enemy god with the attack, she gains another 6s and may attack again.",
                     "There is no limit to how many additional attacks can be gained per cast.",
                     "Has a minimum/cone range of 30.",
                     "Can deal up to 360/490/620/750/880 (+170% of your Physical Power) damage.",
@@ -3519,8 +3492,6 @@ export default godData = [
                 "description": "Chiron gallops forward damaging enemies, knocking up minions, and kicking enemy gods behind him. Chiron is immune to knockups while charging.Chiron may fire Basic Attacks and Masterful Shot while charging.",
                 "imageURL": require("../assets/images/Chiron_ability_3.png"),
                 "notes": [
-                    "Chiron gallops forward damaging enemies, knocking up minions, and kicking enemy gods behind him. Chiron is immune to knockups while charging.",
-                    "Chiron may fire Basic Attacks and Masterful Shot while charging.",
                     "The bonus power lasts for as long as Chiron is galloping.",
                     "The dash can last up to 3s and can only hit each enemy once.",
                     "Has a knockback distance of 30.",
@@ -3538,9 +3509,6 @@ export default godData = [
                 "description": "Chiron is transformed into a constellation, and can fire three long-distance shots, even through walls.If Chiron would be killed during this ability, he does not die until he runs out of time or shots. Killing an enemy with this ability when Chiron would have died returns him to life with health equal to the damage dealt instead.Applies target mark.",
                 "imageURL": require("../assets/images/Chiron_ability_4.png"),
                 "notes": [
-                    "Chiron is transformed into a constellation, and can fire three long-distance shots, even through walls.",
-                    "If Chiron would be killed during this ability, he does not die until he runs out of time or shots. Killing an enemy with this ability when Chiron would have died returns him to life with health equal to the damage dealt instead.",
-                    "Applies target mark.",
                     "Has a projectile speed of 175.",
                     "Chiron suffers a 40% Movement Speed Slow while channeling.",
                     "Can deal up to 390/525/660/795/930 (+195% of your Physical Power) damage.",
@@ -3606,13 +3574,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Accelerate",
-                "description": "Chronos accelerates himself over time, allowing him to move faster initially and gain speed over time. While active, his Attack Speed is increased. This ability also stops the Wheel of Time.Section I: Heal 1% Max Health Per Second.Section II: 100% Mana Refund On Abilities.Section III: +35% Magical Power.Section IV: +35% Magical Power Contribution to Basic Attacks.",
+                "description": "Chronos accelerates himself over time, allowing him to move faster initially and gain speed over time. While active, his Attack Speed is increased. This ability also stops the Wheel of Time. Section I: Heal 1% Max Health Per Second.Section II: 100% Mana Refund On Abilities.Section III: +35% Magical Power.Section IV: +35% Magical Power Contribution to Basic Attacks.",
                 "imageURL": require("../assets/images/Chronos_ability_2.png"),
                 "notes": [
-                    "Chronos accelerates himself over time, allowing him to move faster initially and gain speed over time. While active, his Attack Speed is increased. This ability also stops the Wheel of Time.\nSection I: Heal 1% Max Health Per Second.",
-                    "Section II: 100% Mana Refund On Abilities.",
-                    "Section III: +35% Magical Power.",
-                    "Section IV: +35% Magical Power Contribution to Basic Attacks.",
                     "Section I heals a total of 7% Max Health.",
                     "Abilities still require enough mana to cast to be refunded by Section II.",
                     "Chronos gains extra movement speed (1.7/2/2.3/2.6/2.9%) every 1s.",
@@ -3812,9 +3776,6 @@ export default godData = [
                 "description": "Cthulhu sends out a terrifying blast of energy, dealing damage to all enemies hit and reducing their Attack Speed. Enemies hit by this ability also do reduced damage to Cthulhu for 6s.This ability applies 1 stack of Torment, 2 if the enemy hit is facing Cthulhu or Fears them instead if they are afflicted with Insanity.Successfully consuming Insanity permanently increases the base mitigation of this ability.",
                 "imageURL": require("../assets/images/Cthulhu_ability_1.png"),
                 "notes": [
-                    "Cthulhu sends out a terrifying blast of energy, dealing damage to all enemies hit and reducing their Attack Speed. Enemies hit by this ability also do reduced damage to Cthulhu for 6s.",
-                    "This ability applies 1 stack of Torment, 2 if the enemy hit is facing Cthulhu or Fears them instead if they are afflicted with Insanity.",
-                    "Successfully consuming Insanity permanently increases the base mitigation of this ability.",
                     "Damage Mitigation stacks up to 20 times.",
                     "Damage: 90/140/190/240/290 (+40% of your Magical Power)",
                     "Attack Speed Slow: 20/22.5/25/27.5/30% for 3s",
@@ -3831,8 +3792,6 @@ export default godData = [
                 "description": "Cthulhu summons a portal creating a slowing field of eldritch mire at the target location. The Mire continues to grow as the portal fires out two masses of corruption that hit and damage all enemies in the field.The first shot also Slows enemies while the second Roots them, both hits applying 1 stack of Torment.",
                 "imageURL": require("../assets/images/Cthulhu_ability_2.png"),
                 "notes": [
-                    "Cthulhu summons a portal creating a slowing field of eldritch mire at the target location. The Mire continues to grow as the portal fires out two masses of corruption that hit and damage all enemies in the field.",
-                    "The first shot also Slows enemies while the second Roots them, both hits applying 1 stack of Torment.",
                     "Deals up to 120/210/300/390/480 (+60% of your Magical Power) damage and applies up to 2 stacks of Torment.",
                     "The first hit of the ability slows for a total of 45%.",
                     "Has a minimum radius of 20.",
@@ -3849,10 +3808,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Rushing Terror",
-                "description": "Cthulhu creates two twisting projectiles at his sides as he unfurls his wings and charges forwards, damaging, stunning and knocking away enemies hit.The projectiles follow at a slightly slower pace but travel further, damaging enemies as well.Enemies hit by Cthulhu or the projectiles gain 1 stack of Torment.",
+                "description": "Cthulhu creates two twisting projectiles at his sides as he unfurls his wings and charges forwards, damaging, stunning and knocking away enemies hit. The projectiles follow at a slightly slower pace but travel further, damaging enemies as well. Enemies hit by Cthulhu or the projectiles gain 1 stack of Torment.",
                 "imageURL": require("../assets/images/Cthulhu_ability_3.png"),
                 "notes": [
-                    "Cthulhu creates two twisting projectiles at his sides as he unfurls his wings and charges forwards, damaging, stunning and knocking away enemies hit.\nThe projectiles follow at a slightly slower pace but travel further, damaging enemies as well.\nEnemies hit by Cthulhu or the projectiles gain 1 stack of Torment.",
                     "Deals up to 150/250/350/450/550 (+70% of your Magical Power) damage and applies up to 3 stacks of Torment.",
                     "Cthulhu is knockback immune while dashing.",
                     "Enemies will be knocked to the closest side they're currently standing when hit by Cthulhu.",
@@ -3871,9 +3829,6 @@ export default godData = [
                 "description": "Cthulhu reveals his true form as he plunges the battlefield into R'lyeh while any enemies caught nearby are damaged.In this form Cthulhu gains increased Health, becomes immune to Crowd Control and gains access to new abilities. Enemies near Cthulhu gain stacks of Torment, increasing in pace if they are facing him. Enemies also suffer the debuff effects of Sanity Break, causing them to deal less damage to Cthulhu.Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.",
                 "imageURL": require("../assets/images/Cthulhu_ability_4.png"),
                 "notes": [
-                    "Cthulhu reveals his true form as he plunges the battlefield into R'lyeh while any enemies caught nearby are damaged.",
-                    "In this form Cthulhu gains increased Health, becomes immune to Crowd Control and gains access to new abilities. Enemies near Cthulhu gain stacks of Torment, increasing in pace if they are facing him. Enemies also suffer the debuff effects of Sanity Break, causing them to deal less damage to Cthulhu.",
-                    "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.",
                     "Cannot use relics or consumables for the duration.",
                     "Enemies gain stacks of torment every 1.5s when looking away from Cthulhu and 1s when facing him while applying insanity after 6s to targets looking away from and 4s to targets looking at Cthulhu.",
                     "If Cthulhu uses an ability at the end of the duration, he will finish the ability before the duration expires.",
@@ -3954,10 +3909,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Vent Anger",
-                "description": "Cu Chulainn vents his anger as superheated steam, increasing his Movement Speed and draining his Rage. Every .5s while in this state, all enemies within range are damaged by the heat. Vent Anger does not return Rage.In his Berserk form, Cu Chulainn Vents Anger automatically and does not drain Rage.",
+                "description": "Cu Chulainn vents his anger as superheated steam, increasing his Movement Speed and draining his Rage. Every .5s while in this state, all enemies within range are damaged by the heat. Vent Anger does not return Rage. In his Berserk form, Cu Chulainn Vents Anger automatically and does not drain Rage.",
                 "imageURL": require("../assets/images/Cu_Chulainn_ability_2.png"),
                 "notes": [
-                    "Cu Chulainn vents his anger as superheated steam, increasing his Movement Speed and draining his Rage. Every .5s while in this state, all enemies within range are damaged by the heat. Vent Anger does not return Rage.\nIn his Berserk form, Cu Chulainn Vents Anger automatically and does not drain Rage.",
                     "It will still activate automatically at rank 1 during Berserk if no levels are put into it.",
                     "Can deal up to 120/204/288/372/456 (+60% of your Physical Power) damage.",
                     "Damage per Tick: 10/17/24/31/38 (+5% of your Physical Power)",
@@ -3971,10 +3925,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Salmon's Leap (Furious Charge)",
-                "description": "Cu Chulainn vaults over his spear, leaping to a target location and slamming it down to damage enemies around and in front of him. Successfully hitting an enemy minion with this ability restores 5 Rage, 8 for a god (to a max of 18).In his Berserk Form, Cu Chulainn instead charges forward damaging, stunning and driving all enemies back with him and this ability costs no Rage.",
+                "description": "Cu Chulainn vaults over his spear, leaping to a target location and slamming it down to damage enemies around and in front of him. Successfully hitting an enemy minion with this ability restores 5 Rage, 8 for a god (to a max of 18). In his Berserk Form, Cu Chulainn instead charges forward damaging, stunning and driving all enemies back with him and this ability costs no Rage.",
                 "imageURL": require("../assets/images/Cu_Chulainn_ability_3.png"),
                 "notes": [
-                    "Cu Chulainn vaults over his spear, leaping to a target location and slamming it down to damage enemies around and in front of him. Successfully hitting an enemy minion with this ability restores 5 Rage, 8 for a god (to a max of 18).\nIn his Berserk Form, Cu Chulainn instead charges forward damaging, stunning and driving all enemies back with him and this ability costs no Rage.",
                     "Salmon's Leap has a line range of 20.",
                     "Furious Charge's stun duration lasts 1s.",
                     "Cu Chulainn is knockup immune while using Furious Charge and can act immediately after using the ability.",
@@ -3987,10 +3940,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Spear of Mortal Pain (War Cry)",
-                "description": "Cu Chulainn swings his spear Gae Bulg in a circle around him, Damaging and Knocking Up all Enemies. Successfully hitting an enemy minion with this ability restores 10 Rage, 26 for a god (to a max of 36).In his Berserk Form, Cu Chulainn instead gives a terrifying yell, Damaging all Enemies and causing them to Tremble. This yell costs no Rage and has a 35s cooldown.",
+                "description": "Cu Chulainn swings his spear Gae Bulg in a circle around him, Damaging and Knocking Up all Enemies. Successfully hitting an enemy minion with this ability restores 10 Rage, 26 for a god (to a max of 36). In his Berserk Form, Cu Chulainn instead gives a terrifying yell, Damaging all Enemies and causing them to Tremble. This yell costs no Rage and has a 35s cooldown.",
                 "imageURL": require("../assets/images/Cu_Chulainn_ability_4.png"),
                 "notes": [
-                    "Cu Chulainn swings his spear Gae Bulg in a circle around him, Damaging and Knocking Up all Enemies. Successfully hitting an enemy minion with this ability restores 10 Rage, 26 for a god (to a max of 36).\nIn his Berserk Form, Cu Chulainn instead gives a terrifying yell, Damaging all Enemies and causing them to Tremble. This yell costs no Rage and has a 35s cooldown.",
                     "Cu Chulainn suffers a 20% Movement Speed Slow while channeling both abilities.",
                     "Cu Chulainn is immune from crowd control effects while using this ability.",
                     "Damage: 175/245/315/385/455 (+65% of your Physical Power)",
@@ -4078,10 +4030,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Flutter",
-                "description": "Passive: Cupid gains increased Attack Speed.Active: Cupid flutters forward quickly, leaving a trail behind him that increases all allies' movement speed. Additionally, after dashing, Cupid doubles the Passive Attack Speed he gains from this ability for 4s.",
+                "description": "Passive: Cupid gains increased Attack Speed. Active: Cupid flutters forward quickly, leaving a trail behind him that increases all allies' movement speed. Additionally, after dashing, Cupid doubles the Passive Attack Speed he gains from this ability for 4s.",
                 "imageURL": require("../assets/images/Cupid_ability_3.png"),
                 "notes": [
-                    "Passive: Cupid gains increased Attack Speed.\nActive: Cupid flutters forward quickly, leaving a trail behind him that increases all allies' movement speed. Additionally, after dashing, Cupid doubles the Passive Attack Speed he gains from this ability for 4s.",
                     "Cupid gains 8/16/24/32/40% Attack Speed after using this ability.",
                     "Attack Speed: 4/8/12/16/20%",
                     "Movement Speed: 30%",
@@ -4164,10 +4115,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - One Thousand Cuts",
-                "description": "Da Ji lashes out with her claws at nearby enemies, executing 4 strikes that damage all enemies in range and apply the Bleed from Torture Blades.While this ability is channeling Da Ji moves freely in all directions, gains 40% increased Movement Speed, immunity to Slows and Knockups, and her tails mitigate Damage dealt to her by Enemy Gods who are behind her.",
+                "description": "Da Ji lashes out with her claws at nearby enemies, executing 4 strikes that damage all enemies in range and apply the Bleed from Torture Blades. While this ability is channeling Da Ji moves freely in all directions, gains 40% increased Movement Speed, immunity to Slows and Knockups, and her tails mitigate Damage dealt to her by Enemy Gods who are behind her.",
                 "imageURL": require("../assets/images/Da_Ji_ability_2.png"),
                 "notes": [
-                    "Da Ji lashes out with her claws at nearby enemies, executing 4 strikes that damage all enemies in range and apply the Bleed from Torture Blades.\nWhile this ability is channeling Da Ji moves freely in all directions, gains 40% increased Movement Speed, immunity to Slows and Knockups, and her tails mitigate Damage dealt to her by Enemy Gods who are behind her.",
                     "Has a duration of 2s (damage is dealt every .5s).",
                     "Can deal up to 140/220/310/380/460 (+160% of your Physical Power) damage.",
                     "Can be cancelled early.",
@@ -4258,10 +4208,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Fool’s Gold",
-                "description": "Danzaburou rolls out 3 money bags that pass through and damage Enemy minions but stop on Enemy gods, slowing as they travel. Gods hit are damaged and Intoxicated, dropping a gold coin that Danzaburou or his ally gods can pick up to provide him 10 gold.When a money bag stops moving, it reveals to be an explosive which detonates after a short delay. Subsequent hits of the money bag or explosions deal 15% damage.",
+                "description": "Danzaburou rolls out 3 money bags that pass through and damage Enemy minions but stop on Enemy gods, slowing as they travel. Gods hit are damaged and Intoxicated, dropping a gold coin that Danzaburou or his ally gods can pick up to provide him 10 gold. When a money bag stops moving, it reveals to be an explosive which detonates after a short delay. Subsequent hits of the money bag or explosions deal 15% damage.",
                 "imageURL": require("../assets/images/Danzaburou_ability_1.png"),
                 "notes": [
-                    "Danzaburou rolls out 3 money bags that pass through and damage Enemy minions but stop on Enemy gods, slowing as they travel. Gods hit are damaged and Intoxicated, dropping a gold coin that Danzaburou or his ally gods can pick up to provide him 10 gold.\nWhen a money bag stops moving, it reveals to be an explosive which detonates after a short delay. Subsequent hits of the money bag or explosions deal 15% damage.",
                     "The bags have a delay time of 1s before exploding, can bounce up to 2 times and coins last up to 8s.",
                     "Each initial bag and explosion that hits an enemy deals 125/200/275/350/425 (+105% of your Physical Power) damage and 19/30/41/52/64 (+16% of your Physical Power) damage on subsequent hits/explosions and dealing up to 163/260/357/454/553 (+137% of your Physical Power) damage if all 3 bags/explosions hit the same target and provides up to 30 gold to Danzaburou/allies.",
                     "Intoxications from multiple bags do not stack in duration.",
@@ -4276,10 +4225,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Alluring Spirits",
-                "description": "Danzaburou takes a swig of his sake bottle, gaining health, before hurling it in front of him dealing damage to Enemies in the inner circle. Jungle Camps take an extra+40% damage.The bottle of sake applies stacks to Enemy gods in the area slowing, and upon reaching 3 stacks, taunting (with no DR) them towards the sake bottle. Enemies that take more than 30% of their max. Health while taunted are broken out early.",
+                "description": "Danzaburou takes a swig of his sake bottle, gaining health, before hurling it in front of him dealing damage to Enemies in the inner circle. Jungle Camps take an extra+40% damage. The bottle of sake applies stacks to Enemy gods in the area slowing, and upon reaching 3 stacks, taunting (with no DR) them towards the sake bottle. Enemies that take more than 30% of their max. Health while taunted are broken out early.",
                 "imageURL": require("../assets/images/Danzaburou_ability_2.png"),
                 "notes": [
-                    "Danzaburou takes a swig of his sake bottle, gaining health, before hurling it in front of him dealing damage to Enemies in the inner circle. Jungle Camps take an extra+40% damage.\nThe bottle of sake applies stacks to Enemy gods in the area slowing, and upon reaching 3 stacks, taunting (with no DR) them towards the sake bottle. Enemies that take more than 30% of their max. Health while taunted are broken out early.",
                     "Deals 112/182/252/322/402 (+98% of your Physical Power) damage to jungle minions.",
                     "Has a damage radius of 13.",
                     "Slows up to 30% (stacks every .33s) and the sake bottle can last up to 4s.",
@@ -4313,10 +4261,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Uproarious Rocket",
-                "description": "Danzaburou summons a magical leaf which transforms into a large bamboo rocket! While preparing, Danzaburou can aim the rocket within 180 degrees to lock onto Enemy gods or he can refire this ability to become the rocket, also becoming damage immune.Once fired the Rocket will pass through and damage Enemy minions, stopping on the first Enemy god hit damaging and stunning them while dealing 75% damage in a larger area.",
+                "description": "Danzaburou summons a magical leaf which transforms into a large bamboo rocket! While preparing, Danzaburou can aim the rocket within 180 degrees to lock onto Enemy gods or he can refire this ability to become the rocket, also becoming damage immune. Once fired the Rocket will pass through and damage Enemy minions, stopping on the first Enemy god hit damaging and stunning them while dealing 75% damage in a larger area.",
                 "imageURL": require("../assets/images/Danzaburou_ability_4.png"),
                 "notes": [
-                    "Danzaburou summons a magical leaf which transforms into a large bamboo rocket! While preparing, Danzaburou can aim the rocket within 180 degrees to lock onto Enemy gods or he can refire this ability to become the rocket, also becoming damage immune.\nOnce fired the Rocket will pass through and damage Enemy minions, stopping on the first Enemy god hit damaging and stunning them while dealing 75% damage in a larger area.",
                     "Danzaburou is immune to crowd control during the prefire while having an increased turn radius and 50% Speed after refiring (up to 5s).",
                     "Deals 225/270/315/360/405 (+75% of your Physical Power) damage to enemies in the AoE.",
                     "Danazburou has up to 1.5s to refire the ability before automatically firing.",
@@ -4418,9 +4365,6 @@ export default godData = [
                 "description": "Discordia throws her Golden Apple of Discord that damages and passes through minions and bounces off of walls. If the Apple hits an enemy god it will damage them and force them to hold the Apple.Gods holding the apple will become intolerable, causing them to be Crippled, Intoxicated while they constantly boast.At the end of the duration, the Apple will detonate, dealing damage and spreading the effects to nearby gods.",
                 "imageURL": require("../assets/images/Discordia_ability_4.png"),
                 "notes": [
-                    "Discordia throws her Golden Apple of Discord that damages and passes through minions and bounces off of walls. If the Apple hits an enemy god it will damage them and force them to hold the Apple.",
-                    "Gods holding the apple will become intolerable, causing them to be Crippled, Intoxicated while they constantly boast.",
-                    "At the end of the duration, the Apple will detonate, dealing damage and spreading the effects to nearby gods.",
                     "Discordia is CC immune for the duration she holds the Golden Apple of Discord in her hands.",
                     "Deals a total of 325/400/475/550/625 (+110% of your Magical Power) damage to a single target.",
                     "The projectile can bounce an unlimited number of times during the throw.",
@@ -4692,10 +4636,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Cursed Strength",
-                "description": "Fafnir hurls his hammer forward, dealing damage to enemies in its path. If Fafnir hits a god the hammer stops short and Stuns them. The Stunned god also radiates out a cursed pulse, Slowing them and nearby enemies by 20% for 3s.In dragon form, this ability deals increased damage that ticks 3 times over 3s. Also, the cursed pulse shreds Protections in addition to Slowing.",
+                "description": "Fafnir hurls his hammer forward, dealing damage to enemies in its path. If Fafnir hits a god the hammer stops short and Stuns them. The Stunned god also radiates out a cursed pulse, Slowing them and nearby enemies by 20% for 3s. In dragon form, this ability deals increased damage that ticks 3 times over 3s. Also, the cursed pulse shreds Protections in addition to Slowing.",
                 "imageURL": require("../assets/images/Fafnir_ability_1.png"),
                 "notes": [
-                    "Fafnir hurls his hammer forward, dealing damage to enemies in its path. If Fafnir hits a god the hammer stops short and Stuns them. The Stunned god also radiates out a cursed pulse, Slowing them and nearby enemies by 20% for 3s.\nIn dragon form, this ability deals increased damage that ticks 3 times over 3s. Also, the cursed pulse shreds Protections in addition to Slowing.",
                     "Can go through walls.",
                     "Dragon form's damage over time effect is dealt at 0s, 1.5s and 3s from application and deals a total of 150/210/270/330/390 (+75% of your Magical Power) damage.",
                     "Damage: 100/140/180/220/260 (+50% of your Magical Power)",
@@ -4710,10 +4653,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Coerce",
-                "description": "Fafnir coerces his allies into fighting harder, boosting Attack Speed for 5s and healing himself. While Coerce is active Fafnir deals bonus Magic Damage whenever the affected ally damages an enemy.In dragon form, this ability has a larger area of effect and can buff multiple allies.",
+                "description": "Fafnir coerces his allies into fighting harder, boosting Attack Speed for 5s and healing himself. While Coerce is active Fafnir deals bonus Magic Damage whenever the affected ally damages an enemy. In dragon form, this ability has a larger area of effect and can buff multiple allies.",
                 "imageURL": require("../assets/images/Fafnir_ability_2.png"),
                 "notes": [
-                    "Fafnir coerces his allies into fighting harder, boosting Attack Speed for 5s and healing himself. While Coerce is active Fafnir deals bonus Magic Damage whenever the affected ally damages an enemy.\nIn dragon form, this ability has a larger area of effect and can buff multiple allies.",
                     "The bonus damage is based off the attack or ability that triggered it, and will proc Fafnir's \"on ability hit\" item effects.",
                     "Last hits will always be credited to the god that dealt the killing blow even if the bonus damage is what killed them.",
                     "Attack Speed Buff: 20/22.5/25/27.5/30%",
@@ -4727,10 +4669,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Underhanded Tactics",
-                "description": "Fafnir leaps to a target location and executes a despicable strike, dealing damage and disarming enemies in front of him for 2s.In dragon form, Fafnir can leap much further. Also, this ability deals increased damage that ticks three times over 3s and Fafnir Stuns the enemy god closest to him for 2s in addition to Disarming.",
+                "description": "Fafnir leaps to a target location and executes a despicable strike, dealing damage and disarming enemies in front of him for 2s. In dragon form, Fafnir can leap much further. Also, this ability deals increased damage that ticks three times over 3s and Fafnir Stuns the enemy god closest to him for 2s in addition to Disarming.",
                 "imageURL": require("../assets/images/Fafnir_ability_3.png"),
                 "notes": [
-                    "Fafnir leaps to a target location and executes a despicable strike, dealing damage and disarming enemies in front of him for 2s.\nIn dragon form, Fafnir can leap much further. Also, this ability deals increased damage that ticks three times over 3s and Fafnir Stuns the enemy god closest to him for 2s in addition to Disarming.",
                     "Leap speed is based on distance, from instant at minimum range to .5s at max range.",
                     "The leap in dwarf form has a range of 55 and dragon form has a range of 70.",
                     "Dragon form's damage over time effect is dealt at 0s, 1.5s and 3s from application and deals a total of 120/180/240/300/360 (+90% of your Magical Power) damage.",
@@ -4805,7 +4746,7 @@ export default godData = [
                 "description": "Fenrir leaps forward, dealing damage to all enemies when he lands. At full Runes, the leap Stuns the enemies hit. If the leap hits a god, the Cooldown is reduced by 30%.",
                 "imageURL": require("../assets/images/Fenrir_ability_1.png"),
                 "notes": [
-                    "The cooldown reduction is directly deducted from the current total cooldown, taking in account Cooldown %.",
+                    "The cooldown reduction is directly deducted from the current total cooldown, taking in account Cooldown %.",
                     "Damage: 85/145/205/265/325 (+95% of your Physical Power)",
                     "Stun: 1s",
                     "Ability Type: Circle, Leap, Damage",
@@ -5047,10 +4988,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Dharmic Pillars",
-                "description": "Ganesha summons the Four Great Pillars of Righteousness to imprison his Enemies. Between each pair of pillars a magical field is created, and Enemies who pass through the field take Damage, are Slowed, and have their Protections reduced for 3s.The first tick of this damage does an additional 60%, and Enemy Minions and Jungle Monsters take 40% of this Damage.",
+                "description": "Ganesha summons the Four Great Pillars of Righteousness to imprison his Enemies. Between each pair of pillars a magical field is created, and Enemies who pass through the field take Damage, are Slowed, and have their Protections reduced for 3s. The first tick of this damage does an additional 60%, and Enemy Minions and Jungle Monsters take 40% of this Damage.",
                 "imageURL": require("../assets/images/Ganesha_ability_4.png"),
                 "notes": [
-                    "Ganesha summons the Four Great Pillars of Righteousness to imprison his Enemies. Between each pair of pillars a magical field is created, and Enemies who pass through the field take Damage, are Slowed, and have their Protections reduced for 3s.\nThe first tick of this damage does an additional 60%, and Enemy Minions and Jungle Monsters take 40% of this Damage.",
                     "Deals 144/208/272/336/400 (+64% of your Magical Power) damage (58/83/109/134/160 (+26% of your Magical Power) damage to minions) on the first tick and 36/52/68/84/100 (+16% of your Magical Power) damage each tick (after the first) to minions.",
                     "Deals up to 1134/1638/2142/2626/3150 (+504% of your Magical Power) damage to gods and up to 454/655/857/1058/1260 (+202% of your Magical Power) damage to minions.",
                     "Damage is dealt every 0.5s and the debuff duration refreshes per tick.",
@@ -5100,7 +5040,7 @@ export default godData = [
                 "description": "Critical Strike bonus damage taken is decreased by 65%.",
                 "imageURL": require("../assets/images/Geb_ability_0.png"),
                 "notes": [
-                    "Lowers the base critical hit multiplier to 35%; Effects like  Deathbringer's (as well as its glyphs) passive remain unaffected.",
+                    "Lowers the base critical hit multiplier to 35%; Effects like Deathbringer's (as well as its glyphs) passive remain unaffected.",
                     "Ability Type: Buff"
                 ]
             },
@@ -5846,10 +5786,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Decay (Restoration)",
-                "description": "DECAY (Dark Stance) - Hel fires an orb of decay that deals damage and passes through minions. The orb will explode in a 12 unit radius if it hits a god or reaches max range.RESTORATION (Light Stance) - Hel fires an orb of restoration that damages enemy minions and stops on gods. Hitting an enemy god deals damage. Hitting an allied god provides that god and Hel Health and Mana",
+                "description": "DECAY (Dark Stance) - Hel fires an orb of decay that deals damage and passes through minions. The orb will explode in a 12 unit radius if it hits a god or reaches max range. RESTORATION (Light Stance) - Hel fires an orb of restoration that damages enemy minions and stops on gods. Hitting an enemy god deals damage. Hitting an allied god provides that god and Hel Health and Mana",
                 "imageURL": require("../assets/images/Hel_ability_1.png"),
                 "notes": [
-                    "DECAY (Dark Stance) - Hel fires an orb of decay that deals damage and passes through minions. The orb will explode in a 12 unit radius if it hits a god or reaches max range.\nRESTORATION (Light Stance) - Hel fires an orb of restoration that damages enemy minions and stops on gods. Hitting an enemy god deals damage. Hitting an allied god provides that god and Hel Health and Mana",
                     "When fully attuned to Dark Stance, Decay deals 84/144/204/264/324 (+72% of your Magical Power) damage.",
                     "Restoration heals a total of 125/140/155/170/185 health at level 20.",
                     "Both abilities can go through walls.",
@@ -5866,7 +5805,7 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Hinder (Cleanse)",
-                "description": "HINDER (Dark Stance) - Hel debuffs all enemies in the targeted area, reducing their Magical Protection and slowing them for 3s.CLEANSE (Light Stance) - Hel cleanses all allied gods in the targeted area, removing all Crowd Control effects instantly and protecting them from future ones for a duration.",
+                "description": "HINDER (Dark Stance) - Hel debuffs all enemies in the targeted area, reducing their Magical Protection and slowing them for 3s. CLEANSE (Light Stance) - Hel cleanses all allied gods in the targeted area, removing all Crowd Control effects instantly and protecting them from future ones for a duration.",
                 "imageURL": require("../assets/images/Hel_ability_2.png"),
                 "notes": [
                     "Dark Protections Debuff: 5/10/15/20/25 + 5%",
@@ -5898,10 +5837,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Switch Stances",
-                "description": "DARK STANCE - Hel's abilities cause damage and she gains increased Magical Power.LIGHT STANCE - Hel's abilities heal and support her allies and she gains increased Protections.Passive - Hel gains increased MP5 and Half of the benefits gained, including Physical Power, from Switch Stances are shared with allied gods within 55 units.",
+                "description": "DARK STANCE - Hel's abilities cause damage and she gains increased Magical Power. LIGHT STANCE - Hel's abilities heal and support her allies and she gains increased Protections. Passive - Hel gains increased MP5 and Half of the benefits gained, including Physical Power, from Switch Stances are shared with allied gods within 55 units.",
                 "imageURL": require("../assets/images/Hel_ability_4.png"),
                 "notes": [
-                    "DARK STANCE - Hel's abilities cause damage and she gains increased Magical Power.\nLIGHT STANCE - Hel's abilities heal and support her allies and she gains increased Protections.\nPassive - Hel gains increased MP5 and Half of the benefits gained, including Physical Power, from Switch Stances are shared with allied gods within 55 units.",
                     "Grants 15/20/25/30/35 Magical Power to allies while in Dark Stance, 6.5/8/9.5/11/12.5 Protections while in Light Stance.",
                     "Hel starts in Dark Stance and always respawns in light stance.",
                     "Dark Magical Power: 30/40/50/60/70",
@@ -5989,10 +5927,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Divine Shroud",
-                "description": "Hera shrouds herself in her divine power, granting her a shield from damage and temporary movement speed that lasts as long as the shield remains.If Argus is active, Argus shines with the same Divine power as Hera, causing him to deal radiant damage and move at an increased rate.",
+                "description": "Hera shrouds herself in her divine power, granting her a shield from damage and temporary movement speed that lasts as long as the shield remains. If Argus is active, Argus shines with the same Divine power as Hera, causing him to deal radiant damage and move at an increased rate.",
                 "imageURL": require("../assets/images/Hera_ability_3.png"),
                 "notes": [
-                    "Hera shrouds herself in her divine power, granting her a shield from damage and temporary movement speed that lasts as long as the shield remains.\nIf Argus is active, Argus shines with the same Divine power as Hera, causing him to deal radiant damage and move at an increased rate.",
                     "Grants up to 590 (87 Shield Health at level 1) Shield Health at level 20.",
                     "Damage is dealt every 0.5s, has a damage radius of 25 and can proc item effects while Argus is active.",
                     "Can deal up to 70/110/150/190/230 (+75% of your Magical Power) damage if Argus is active.",
@@ -6172,10 +6109,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Updraft",
-                "description": "Horus uses his wings to create an updraft around himself, knocking nearby enemies into the air.Using the currents from the updraft, Horus' next Basic Attack within 5s will create a gust of wind that travels forward, damaging enemies and slowing them for 2.5s. This attack cannot crit. Enemies that are knocked up when hit take bonus damage.",
+                "description": "Horus uses his wings to create an updraft around himself, knocking nearby enemies into the air. Using the currents from the updraft, Horus' next Basic Attack within 5s will create a gust of wind that travels forward, damaging enemies and slowing them for 2.5s. This attack cannot crit. Enemies that are knocked up when hit take bonus damage.",
                 "imageURL": require("../assets/images/Horus_ability_1.png"),
                 "notes": [
-                    "Horus uses his wings to create an updraft around himself, knocking nearby enemies into the air.\nUsing the currents from the updraft, Horus' next Basic Attack within 5s will create a gust of wind that travels forward, damaging enemies and slowing them for 2.5s. This attack cannot crit. Enemies that are knocked up when hit take bonus damage.",
                     "The gust deals 45/60/75/90/105 +150% of your Basic Attack Damage to a unit that's been knocked up by this ability. The gust also triggers item effects and benefits from only 33% Lifesteal.",
                     "The projectile is spent even if Horus misses.",
                     "Damage: 50/95/140/185/230 (+75% of your Physical Power)",
@@ -6620,8 +6556,6 @@ export default godData = [
                 "description": "Gleaming Blast - Ix Chel fires a blast of gleaming light ahead of her dealing damage, piercing minions, and stopping on the first enemy god hit. Minions and Jungle Camps take an extra +40% damage. Hitting an enemy causes this ability to change.Threads of Light - Strands of Light illuminate damage enemies in their path. Enemies facing the strands as they illuminate are Blinded. Enemies hit by the tip of the field, take bonus damage.",
                 "imageURL": require("../assets/images/Ix_Chel_ability_1.png"),
                 "notes": [
-                    "Gleaming Blast - Ix Chel fires a blast of gleaming light ahead of her dealing damage, piercing minions, and stopping on the first enemy god hit. Minions and Jungle Camps take an extra +40% damage. Hitting an enemy causes this ability to change.",
-                    "Threads of Light - Strands of Light illuminate damage enemies in their path. Enemies facing the strands as they illuminate are Blinded. Enemies hit by the tip of the field, take bonus damage.",
                     "Gleaming Blast deals 84/112/140/168/196 (+56% of your Magical Power) damage to minions and jungle camps.",
                     "Threads of Light deals 75/131/188/244/300 (+69% of your Magical Power) damage to enemies at the second half of the cone.",
                     "The second half of the cone from Threads of Light has a range of 32.5.",
@@ -6652,10 +6586,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Rainbow Crash",
-                "description": "Ix Chel sends out an arcing, weaved rainbow towards a location while gaining a small burst of Movement Speed.On landing the crashing rainbow deals damage and Roots enemies, splitting into smaller orbs of light. These orbs can be picked up by Ix Chel and her allies for increased Movement Speed.",
+                "description": "Ix Chel sends out an arcing, weaved rainbow towards a location while gaining a small burst of Movement Speed. On landing the crashing rainbow deals damage and Roots enemies, splitting into smaller orbs of light. These orbs can be picked up by Ix Chel and her allies for increased Movement Speed.",
                 "imageURL": require("../assets/images/Ix_Chel_ability_3.png"),
                 "notes": [
-                    "Ix Chel sends out an arcing, weaved rainbow towards a location while gaining a small burst of Movement Speed.\nOn landing the crashing rainbow deals damage and Roots enemies, splitting into smaller orbs of light. These orbs can be picked up by Ix Chel and her allies for increased Movement Speed.",
                     "Provides up to 40% Movement Speed from the AoE and orbs.",
                     "The orbs can bounce off of walls up to 2 times.",
                     "Allies can only pick up one orb per ability cast.",
@@ -6671,11 +6604,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Great End",
-                "description": "Ix Chel becomes CC immune as she channels all of her energy into a single intense beam of light. The beam deals damage to enemies and heals allies every 0.2s for 3s, increasing in duration if Ix Chel hits allied and enemy gods at the same time.Enemies take increasing damage per tick which decays rapidly if not hit recently.Healing an ally or damaging an enemy also heals Ix Chel. Ix Chel gains 6 stacks of Rainbow Weaver on firing.",
+                "description": "Ix Chel becomes CC immune as she channels all of her energy into a single intense beam of light. The beam deals damage to enemies and heals allies every 0.2s for 3s, increasing in duration if Ix Chel hits allied and enemy gods at the same time.Enemies take increasing damage per tick which decays rapidly if not hit recently. Healing an ally or damaging an enemy also heals Ix Chel. Ix Chel gains 6 stacks of Rainbow Weaver on firing.",
                 "imageURL": require("../assets/images/Ix_Chel_ability_4.png"),
                 "notes": [
-                    "Ix Chel becomes CC immune as she channels all of her energy into a single intense beam of light. The beam deals damage to enemies and heals allies every 0.2s for 3s, increasing in duration if Ix Chel hits allied and enemy gods at the same time.",
-                    "Enemies take increasing damage per tick which decays rapidly if not hit recently.\nHealing an ally or damaging an enemy also heals Ix Chel. Ix Chel gains 6 stacks of Rainbow Weaver on firing.",
                     "Deals up to 375/735/945/1155/1365 (+210% of your Magical Power) when not healing at least one ally while healing up to 30% of their missing HP and up to 1000/1400/1800/2200/2600 (+400% of your Magical Power) damage when healing an ally for the duration and heals allies up to 60% of their missing HP.",
                     "Ix Chel only heals once per tick regardless of how many allies healed/enemies damaged.",
                     "Ix Chel can move freely in all directions and suffers no backpedal penalty for the duration.",
@@ -6725,9 +6656,6 @@ export default godData = [
                 "description": "The closer Izanami gets to death, the more powerful she becomes.Izanami gains 4% Physical Penetration for each 10% of her Health that is missing, up to a maximum of 20%.Izanami's Basic Attacks increase in projectile speed with higher Attack Speed and only trigger Item effects on the first target hit per attack.",
                 "imageURL": require("../assets/images/Izanami_ability_0.png"),
                 "notes": [
-                    "The closer Izanami gets to death, the more powerful she becomes.",
-                    "Izanami gains 4% Physical Penetration for each 10% of her Health that is missing, up to a maximum of 20%.",
-                    "Izanami's Basic Attacks increase in projectile speed with higher Attack Speed and only trigger Item effects on the first target hit per attack.",
                     "Izanami's basic attacks have a power contribution of 75% when fired and 35% power contribution when returning to her (total scaling of 110% power contribution) and benefit from only 33% Lifesteal.",
                     "Penetration per Stack: 4%",
                     "Max Stacks: 5",
@@ -6750,7 +6678,7 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Spectral Projection",
-                "description": "Izanami sends forth a demonic visage of herself to strike down her enemies, damaging and Slowing all Enemies in a line.If an Enemy God is killed while slowed by this ability, future uses of the slow will be increased by 10% per kill up to twice, for a maximum of 40%.",
+                "description": "Izanami sends forth a demonic visage of herself to strike down her enemies, damaging and Slowing all Enemies in a line. If an Enemy God is killed while slowed by this ability, future uses of the slow will be increased by 10% per kill up to twice, for a maximum of 40%.",
                 "imageURL": require("../assets/images/Izanami_ability_2.png"),
                 "notes": [
                     "Damage: 65/115/165/215/265 (+80% of your Physical Power)",
@@ -6764,10 +6692,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Fade Away",
-                "description": "Izanami descends into the underworld, becoming Stealthed, and leaps away from her current position.Taking damage, or firing a damaging Ability or Basic Attack breaks her Stealth.",
+                "description": "Izanami descends into the underworld, becoming Stealthed, and leaps away from her current position. Taking damage, or firing a damaging Ability or Basic Attack breaks her Stealth.",
                 "imageURL": require("../assets/images/Izanami_ability_3.png"),
                 "notes": [
-                    "Izanami descends into the underworld, becoming Stealthed, and leaps away from her current position.\nTaking damage, or firing a damaging Ability or Basic Attack breaks her Stealth.",
                     "Has a prefire of 0.35s.",
                     "Izanami can't be targeted by minions while channeling.",
                     "Despite moving underground, this ability is considered a leap.",
@@ -6835,10 +6762,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Portal",
-                "description": "Janus creates a portal in the world. If placed on a wall, the portal will create a passage through to the other side of the wall that Janus or any ally may use. The portal may be entered from either side, but closes after 1 use.If placed on the ground, enemies and Janus will fall into the portal, being teleported into the air above it. Enemies take damage upon landing, and are considered banished during the fall.",
+                "description": "Janus creates a portal in the world. If placed on a wall, the portal will create a passage through to the other side of the wall that Janus or any ally may use. The portal may be entered from either side, but closes after 1 use. If placed on the ground, enemies and Janus will fall into the portal, being teleported into the air above it. Enemies take damage upon landing, and are considered banished during the fall.",
                 "imageURL": require("../assets/images/Janus_ability_1.png"),
                 "notes": [
-                    "Janus creates a portal in the world. If placed on a wall, the portal will create a passage through to the other side of the wall that Janus or any ally may use. The portal may be entered from either side, but closes after 1 use.\nIf placed on the ground, enemies and Janus will fall into the portal, being teleported into the air above it. Enemies take damage upon landing, and are considered banished during the fall.",
                     "Phoenix pedestals count as walls.",
                     "Wall portals can't be used by gods who are Stunned, Crippled or Rooted.",
                     "Janus won't fall through his ground portals while immune to Crowd Control.",
@@ -6869,10 +6795,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Threshold",
-                "description": "Passive: Janus increases the movement speed of himself and allies each time they go through a portal or over a Threshold (max. 3 Stacks).Active: Janus opens a multi-dimensional rift. Enemies who pass over the rift are slowed, and marked with Phase. Targets in Phase take additional Magical scaling damage when hit by Janus' damaging abilities.",
+                "description": "Passive: Janus increases the movement speed of himself and allies each time they go through a portal or over a Threshold (max. 3 Stacks). Active: Janus opens a multi-dimensional rift. Enemies who pass over the rift are slowed, and marked with Phase. Targets in Phase take additional Magical scaling damage when hit by Janus' damaging abilities.",
                 "imageURL": require("../assets/images/Janus_ability_3.png"),
                 "notes": [
-                    "Passive: Janus increases the movement speed of himself and allies each time they go through a portal or over a Threshold (max. 3 Stacks).\nActive: Janus opens a multi-dimensional rift. Enemies who pass over the rift are slowed, and marked with Phase. Targets in Phase take additional Magical scaling damage when hit by Janus' damaging abilities.",
                     "The Phase debuff lasts 3s.",
                     "The buff/debuff is only applied once per cast.",
                     "Grants up to 45% Movement Speed.",
@@ -6890,12 +6815,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Through Space and Time",
-                "description": "Passive: Janus gains increased % Magical Penetration.Active: Janus becomes CC Immune and blasts a ball of multi-dimensional energy across the battlefield, burning a portal into every surface it encounters within range 500. These portals last 10s, may be used by allies, and do not vanish after the first use.Enemies hit take damage, increasing in Magical scaling the further the energy travels. Enemy gods cannot take more than 75% of their maximum Health as damage.",
+                "description": "Passive: Janus gains increased % Magical Penetration.Active: Janus becomes CC Immune and blasts a ball of multi-dimensional energy across the battlefield, burning a portal into every surface it encounters within range 500. These portals last 10s, may be used by allies, and do not vanish after the first use.Enemies hit take damage, increasing in Magical scaling the further the energy travels. Enemy gods cannot take more than 75% of their maximum Health as damage.",
                 "imageURL": require("../assets/images/Janus_ability_4.png"),
                 "notes": [
-                    "Passive: Janus gains increased % Magical Penetration.",
-                    "Active: Janus becomes CC Immune and blasts a ball of multi-dimensional energy across the battlefield, burning a portal into every surface it encounters within range 500. These portals last 10s, may be used by allies, and do not vanish after the first use.",
-                    "Enemies hit take damage, increasing in Magical scaling the further the energy travels. Enemy gods cannot take more than 75% of their maximum Health as damage.",
                     "The portals have no range restriction, but can't be placed on walls that lead outside the map.",
                     "While portals won't close on use, players can only go through each portal once.",
                     "This ability does not damage enemies who are inside their team's fountain.",
@@ -7057,10 +6979,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Venomous Haze",
-                "description": "Jormungandr fires noxious spit at an area that deals damage and creates a large toxic cloud. This field damages and slows Enemies inside of it every second.If Jormungandr interacts with a toxic cloud with Consuming Bellow or Submerge, the duration of the cloud is reduced to 8s.Jormungandr can have a maximum of 9 toxic clouds out at a time.",
+                "description": "Jormungandr fires noxious spit at an area that deals damage and creates a large toxic cloud. This field damages and slows Enemies inside of it every second. If Jormungandr interacts with a toxic cloud with Consuming Bellow or Submerge, the duration of the cloud is reduced to 8s. Jormungandr can have a maximum of 9 toxic clouds out at a time.",
                 "imageURL": require("../assets/images/Jormungandr_ability_1.png"),
                 "notes": [
-                    "Jormungandr fires noxious spit at an area that deals damage and creates a large toxic cloud. This field damages and slows Enemies inside of it every second.\nIf Jormungandr interacts with a toxic cloud with Consuming Bellow or Submerge, the duration of the cloud is reduced to 8s.\nJormungandr can have a maximum of 9 toxic clouds out at a time.",
                     "Can deal up to 280/520/760/1000/1240 (+140% of your Magical Power) damage if deployed from the ability itself.",
                     "Damage: 80/120/160/200/240 (+40% of your Magical Power)",
                     "Damage per tick: 10/20/30/40/50 (+5% of your Magical Power)",
@@ -7078,9 +6999,6 @@ export default godData = [
                 "description": "Jormungandr draws power from toxic clouds nearby while channeling for 1.2s. At the end of the channel Jormungandr roars dealing damage to all Enemies, trembling and slowing Enemy gods by 30% for 1.5s.Each cloud increases the size of Consuming Bellow and Empowers him up to 3 times while also dealing extra damage to Enemies hit. Extra damage after the first instance is halved.While Empowered, Jormungandr's basic attack fires at its fastest rate.",
                 "imageURL": require("../assets/images/Jormungandr_ability_2.png"),
                 "notes": [
-                    "Jormungandr draws power from toxic clouds nearby while channeling for 1.2s. At the end of the channel Jormungandr roars dealing damage to all Enemies, trembling and slowing Enemy gods by 30% for 1.5s.",
-                    "Each cloud increases the size of Consuming Bellow and Empowers him up to 3 times while also dealing extra damage to Enemies hit. Extra damage after the first instance is halved.",
-                    "While Empowered, Jormungandr's basic attack fires at its fastest rate.",
                     "Deals up to 160/230/300/370/440 (+62.5% of your Magical Power) damage and can maintain the empowered buff for up to 6s.",
                     "Interrupting the channel of this ability while active will not go on cooldown.",
                     "Damage: 120/180/240/300/360 (+45% of your Magical Power)",
@@ -7097,9 +7015,6 @@ export default godData = [
                 "description": "Jormungandr submerges into the ground turning invisible as he searches for prey. During this time he moves faster and gains predatory vision, sensing all enemies in a large radius.Firing this ability while invisible reveals Jormungandr as he emerges out of the ground, knocking up Enemies around him.Emerging through a toxic cloud creates two new ones in the direction Jormungandr is facing, with a low duration. Taking damage from Enemy gods breaks Stealth.",
                 "imageURL": require("../assets/images/Jormungandr_ability_3.png"),
                 "notes": [
-                    "Jormungandr submerges into the ground turning invisible as he searches for prey. During this time he moves faster and gains predatory vision, sensing all enemies in a large radius.",
-                    "Firing this ability while invisible reveals Jormungandr as he emerges out of the ground, knocking up Enemies around him.",
-                    "Emerging through a toxic cloud creates two new ones in the direction Jormungandr is facing, with a low duration. Taking damage from Enemy gods breaks Stealth.",
                     "Has and vision range of 110 and a knockup height of 375.",
                     "Damage: 70/125/180/235/290 (+50% of your Magical Power)",
                     "Movement Speed: 35%",
@@ -7115,9 +7030,6 @@ export default godData = [
                 "description": "Jormungandr prepares to enter into the world, enlarging as he prepares a devastating attack.After selecting a target area, Jormungandr flies into the air, diving down and crashing into enemies as his body then slams into the ground. He must travel 2 more times.When Jormungandr Emerges and Submerges during this ability, he knocks up Enemies and with each Submerge he leaves behind a toxic cloud.",
                 "imageURL": require("../assets/images/Jormungandr_ability_4.png"),
                 "notes": [
-                    "Jormungandr prepares to enter into the world, enlarging as he prepares a devastating attack.",
-                    "After selecting a target area, Jormungandr flies into the air, diving down and crashing into enemies as his body then slams into the ground. He must travel 2 more times.",
-                    "When Jormungandr Emerges and Submerges during this ability, he knocks up Enemies and with each Submerge he leaves behind a toxic cloud.",
                     "Jormungandr is both immune from crowd control effects and untargetable while using this ability.",
                     "Each attack has a minimum travel range of 40.",
                     "Jormungandr has up to 2s to choose a new landing spot with each attack.",
@@ -7806,9 +7718,6 @@ export default godData = [
                 "description": "Lancelot receives 1 Stack for a god kill/assist and 1 Stack for every 5 minion kills (max. 40 Stacks).While Mounted, each stack provides increased Movement Speed.While Unmounted, each stack provides reduced basic attack damage received from directly in front.",
                 "imageURL": require("../assets/images/Lancelot_ability_0.png"),
                 "notes": [
-                    "Lancelot receives 1 Stack for a god kill/assist and 1 Stack for every 5 minion kills (max. 40 Stacks).",
-                    "While Mounted, each stack provides increased Movement Speed.",
-                    "While Unmounted, each stack provides reduced basic attack damage received from directly in front.",
                     "Provides up to 18% movement speed while mounted and 18% reduced damage taken from basic attacks while facing in front while unmounted.",
                     "Movement Speed: 0.45% per stack",
                     "Basic Attack Damage Reduction: 0.45% per stack",
@@ -7850,9 +7759,6 @@ export default godData = [
                 "description": "Lancelot mounts onto his trusty steed charging forwards with increased movement speed. While on his horse Lancelot gains a Health Shield that builds over time and his abilities change.Lancelot can cancel this ability to dismount normally which will not trigger a Cooldown. If Lancelot's Health Shield is depleted, he is forced off his horse.While Mounted, Lancelot is immune to CC effects except Stuns and Time Dilation.",
                 "imageURL": require("../assets/images/Lancelot_ability_3.png"),
                 "notes": [
-                    "Lancelot mounts onto his trusty steed charging forwards with increased movement speed. While on his horse Lancelot gains a Health Shield that builds over time and his abilities change.",
-                    "Lancelot can cancel this ability to dismount normally which will not trigger a Cooldown. If Lancelot's Health Shield is depleted, he is forced off his horse.",
-                    "While Mounted, Lancelot is immune to CC effects except Stuns and Time Dilation.",
                     "The shield generates every .33s, stacks with other shields before mounting, not after and doesn't protect from execute effects.",
                     "Provides a total of 38% movement speed with full passive stacks and up to 240/385/530/675/820 shield health.",
                     "Moving backwards slows down the charge.",
@@ -8485,10 +8391,9 @@ export default godData = [
         "Abilities": [
             {
                 "name": "Passive  - Fastest God Alive",
-                "description": "For every 1 unit traveled, Mercury gains a 0.04% Physical Power bonus on his next Basic Attack (max 20%).Mercury also gains additional Physical Power equal to 25% of movement speed from items or abilities, and the passive movement speed gained from levels 1 to 7.",
+                "description": "For every 1 unit traveled, Mercury gains a 0.04% Physical Power bonus on his next Basic Attack (max 20%). Mercury also gains additional Physical Power equal to 25% of movement speed from items or abilities, and the passive movement speed gained from levels 1 to 7.",
                 "imageURL": require("../assets/images/Mercury_ability_0.png"),
                 "notes": [
-                    "For every 1 unit traveled, Mercury gains a 0.04% Physical Power bonus on his next Basic Attack (max 20%).\nMercury also gains additional Physical Power equal to 25% of movement speed from items or abilities, and the passive movement speed gained from levels 1 to 7.",
                     "Mercury can gain the maximum Physical Power bonus on his next basic attack after travelling at least 500 units without landing a basic attack.",
                     "Jumping while moving will prevent the charge meter from filling up.",
                     "Ability Type: Buff"
@@ -8499,7 +8404,7 @@ export default godData = [
                 "description": "Mercury moves in the blink of an eye, dealing one melee attack to every enemy within the target area. This ability can Critically Hit, and triggers Ability related Item effects, not Basic Attack related Item effects.",
                 "imageURL": require("../assets/images/Mercury_ability_1.png"),
                 "notes": [
-                    "The critical hits are affected by  Deathbringer.",
+                    "The critical hits are affected by Deathbringer.",
                     "Can be used through walls.",
                     "Damage: 80/115/150/185/220 (+70% of your Basic Attack Power)",
                     "Radius: 7.5/9/10.5/12/13.5",
@@ -8511,10 +8416,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Maximum Velocity",
-                "description": "Passive: Mercury gains increased movement speed.Active: Mercury increases his Attack Speed, cleanses himself of Slows and becomes immune to Slows for the duration.",
+                "description": "Passive: Mercury gains increased movement speed. Active: Mercury increases his Attack Speed, cleanses himself of Slows and becomes immune to Slows for the duration.",
                 "imageURL": require("../assets/images/Mercury_ability_2.png"),
                 "notes": [
-                    "Passive: Mercury gains increased movement speed.\nActive: Mercury increases his Attack Speed, cleanses himself of Slows and becomes immune to Slows for the duration.",
                     "Due to Fastest God Alive's effect, it also grants 2.25/4.5/6.75/9/11.25 Physical Power.",
                     "Ground Speed: 2/4/6/8/10%",
                     "Attack Speed: 30/40/50/60/70%",
@@ -8604,10 +8508,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability (Arcane)  - Eclipse",
-                "description": "Merlin conjures an orb of condensed celestial energy that grows in size as it travels, dealing damage every 0.4s and marking Enemies hit.Enemies marked take additional damage if they stay within the outer range of Eclipse.",
+                "description": "Merlin conjures an orb of condensed celestial energy that grows in size as it travels, dealing damage every 0.4s and marking Enemies hit. Enemies marked take additional damage if they stay within the outer range of Eclipse.",
                 "imageURL": require("../assets/images/Merlin_ability_1.png"),
                 "notes": [
-                    "Merlin conjures an orb of condensed celestial energy that grows in size as it travels, dealing damage every 0.4s and marking Enemies hit.\nEnemies marked take additional damage if they stay within the outer range of Eclipse.",
                     "Can deal up to 80/180/280/380/480 (+119% of your Magical Power) damage.",
                     "Ability deals 1 major instance of damage and up to 8 minor instances.",
                     "Initial Damage: 40/60/80/100/120 (+55% of your Magical Power)",
@@ -8666,10 +8569,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability (Fire)  - Dragonfire",
-                "description": "Merlin summons forth two ethereal dragons that spout flames towards each other, dealing damage to Enemies every 0.25s.If caught in the center of the area, Enemy gods have their protections reduced. The dragons last for 3s.",
+                "description": "Merlin summons forth two ethereal dragons that spout flames towards each other, dealing damage to Enemies every 0.25s. If caught in the center of the area, Enemy gods have their protections reduced. The dragons last for 3s.",
                 "imageURL": require("../assets/images/Merlin_ability_5.png"),
                 "notes": [
-                    "Merlin summons forth two ethereal dragons that spout flames towards each other, dealing damage to Enemies every 0.25s.\nIf caught in the center of the area, Enemy gods have their protections reduced. The dragons last for 3s.",
                     "Has a radius of 30, a cone angle of 80 and a deploy time of 0.5s.",
                     "Each tick refreshes the debuff's duration.",
                     "Deals up to 104/143/182/221/260 (+195% of your Magical Power) damage and shreds up to 16% Protections to gods.",
@@ -8686,10 +8588,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability (Ice)  - Blizzard",
-                "description": "Merlin creates a Blizzard at a target location that lasts for 4s. After a brief delay, shards of ice start hurling down every 0.5s.Enemies hit take damage and progressively get more slowed while they stay within the area.",
+                "description": "Merlin creates a Blizzard at a target location that lasts for 4s. After a brief delay, shards of ice start hurling down every 0.5s. Enemies hit take damage and progressively get more slowed while they stay within the area.",
                 "imageURL": require("../assets/images/Merlin_ability_6.png"),
                 "notes": [
-                    "Merlin creates a Blizzard at a target location that lasts for 4s. After a brief delay, shards of ice start hurling down every 0.5s.\nEnemies hit take damage and progressively get more slowed while they stay within the area.",
                     "Has a deploy time of 0.7s.",
                     "Deals up to 80/200/320/440/560 (+120% of your Magical Power) damage and slows up to 40%.",
                     "Each tick refreshes the slow's duration.",
@@ -8718,10 +8619,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Elemental Mastery",
-                "description": "Merlin taps into his inner potential, exploding with energy in the stance he is currently attuned to. During this time Merlin can choose which stance to enter into next.After the explosion reaches its apex, it collapses in on itself. Enemies are dealt damage from the both the explosion and the implosion and suffer different effects depending on which stance's energy they are being hit by.",
+                "description": "Merlin taps into his inner potential, exploding with energy in the stance he is currently attuned to. During this time Merlin can choose which stance to enter into next. After the explosion reaches its apex, it collapses in on itself. Enemies are dealt damage from the both the explosion and the implosion and suffer different effects depending on which stance's energy they are being hit by.",
                 "imageURL": require("../assets/images/Merlin_ability_8.png"),
                 "notes": [
-                    "Merlin taps into his inner potential, exploding with energy in the stance he is currently attuned to. During this time Merlin can choose which stance to enter into next.\nAfter the explosion reaches its apex, it collapses in on itself. Enemies are dealt damage from the both the explosion and the implosion and suffer different effects depending on which stance's energy they are being hit by.",
                     "Each stance changes Merlin's color scheme and effects.",
                     "Deals up to 160/220/280/340/420 (+30% of your Magical Power) damage by default and 175/250/325/400/495 (+45% of your Magical Power) damage when switching to or from fire stance.",
                     "Arcane has a knockup strength of 100 while fire's DoT deals damage every 0.5s.",
@@ -8784,12 +8684,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Sigil Mastery",
-                "description": "Morgan Le Fay summons a crashing magical sword, imbued by a sigil of her choice which is briefly carved into the ground. Enemy gods hit are Marked while the Sigil causes secondary effects.Mark of Mind, fearing enemies from the center of the Sigil.Mark of Body, creating a slowing field.Mark of Soul, spawning a decoy that attacks Enemy gods hit for 4s.",
+                "description": "Morgan Le Fay summons a crashing magical sword, imbued by a sigil of her choice which is briefly carved into the ground. Enemy gods hit are Marked while the Sigil causes secondary effects. Mark of Mind, fearing enemies from the center of the Sigil.Mark of Body, creating a slowing field.Mark of Soul, spawning a decoy that attacks Enemy gods hit for 4s.",
                 "imageURL": require("../assets/images/Morgan_Le_Fay_ability_1.png"),
                 "notes": [
-                    "Morgan Le Fay summons a crashing magical sword, imbued by a sigil of her choice which is briefly carved into the ground. Enemy gods hit are Marked while the Sigil causes secondary effects.\nMark of Mind, fearing enemies from the center of the Sigil.",
-                    "Mark of Body, creating a slowing field.",
-                    "Mark of Soul, spawning a decoy that attacks Enemy gods hit for 4s.",
                     "Has an inner radius of 12.5.",
                     "Can deal up to 105/150/195/240/285 (+80% of your Magical Power) damage.",
                     "The clones are prioritized as gods by towers and minions.",
@@ -8808,10 +8705,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Dragonflight",
-                "description": "Morgan Le Fay summons a dragon apparition which bursts from the ground in front of her, dealing damage and knocking up enemies hit.The dragon then flies forward, dealing damage again and knocking back enemies.Applies Mark of Spirit to enemy gods hit.",
+                "description": "Morgan Le Fay summons a dragon apparition which bursts from the ground in front of her, dealing damage and knocking up enemies hit. The dragon then flies forward, dealing damage again and knocking back enemies. Applies Mark of Spirit to enemy gods hit.",
                 "imageURL": require("../assets/images/Morgan_Le_Fay_ability_2.png"),
                 "notes": [
-                    "Morgan Le Fay summons a dragon apparition which bursts from the ground in front of her, dealing damage and knocking up enemies hit.\nThe dragon then flies forward, dealing damage again and knocking back enemies.\nApplies Mark of Spirit to enemy gods hit.",
                     "Has an initial/knockup range of 18.",
                     "Can deal up to 125/170/215/260/305 (+85% of your Magical Power) damage.",
                     "Area Damage: 50/70/90/110/130 (+35% of your Magical Power)",
@@ -8842,11 +8738,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Consuming Power",
-                "description": "Morgan Le Fay rises into the air, consuming the Marks on enemies in front of her, dealing damage and empowering her next strikes.For a short duration after Morgan Le fay can fire out 3 devastating strikes of dark energy, dealing damage and providing a Missing Health Heal per enemy god hit.Initial Marks consumed increase the width of the energy projectiles. Subsequent heals per projectile is reduced by 50%.",
+                "description": "Morgan Le Fay rises into the air, consuming the Marks on enemies in front of her, dealing damage and empowering her next strikes. For a short duration after Morgan Le fay can fire out 3 devastating strikes of dark energy, dealing damage and providing a Missing Health Heal per enemy god hit.Initial Marks consumed increase the width of the energy projectiles. Subsequent heals per projectile is reduced by 50%.",
                 "imageURL": require("../assets/images/Morgan_Le_Fay_ability_4.png"),
                 "notes": [
-                    "Morgan Le Fay rises into the air, consuming the Marks on enemies in front of her, dealing damage and empowering her next strikes.\nFor a short duration after Morgan Le fay can fire out 3 devastating strikes of dark energy, dealing damage and providing a Missing Health Heal per enemy god hit.",
-                    "Initial Marks consumed increase the width of the energy projectiles. Subsequent heals per projectile is reduced by 50%.",
                     "The projectiles have a width of 12 with no consumed marks and scale up to 20 with 5 different consumed marks.",
                     "Deals up to 395/590/785/980/1175 (+185% of your Magical Power) damage to a god with all 5 marks/projectiles and heals up to 87.5/122.5/167.5/192.5/227.5 (+8/9/9.6/10.5/11.4% of Morgan Le Fay's missing HP) health.",
                     "Morgan Le Fay is immune to crowd control effects and ignores all movement penalties for the duration.",
@@ -8906,12 +8800,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Cross Strike",
-                "description": "Mulan swings her sword with precision, striking twice and dealing damage to all enemies hit.Skilled - Mulan gains an Attack Speed increase after using this ability.Adept - Mulan strikes a third time in a large cone in front of her.Mastered - Mulan gains 10% Attack Speed.",
+                "description": "Mulan swings her sword with precision, striking twice and dealing damage to all enemies hit. Skilled - Mulan gains an Attack Speed increase after using this ability.Adept - Mulan strikes a third time in a large cone in front of her.Mastered - Mulan gains 10% Attack Speed.",
                 "imageURL": require("../assets/images/Mulan_ability_1.png"),
                 "notes": [
-                    "Mulan swings her sword with precision, striking twice and dealing damage to all enemies hit.\nSkilled - Mulan gains an Attack Speed increase after using this ability.",
-                    "Adept - Mulan strikes a third time in a large cone in front of her.",
-                    "Mastered - Mulan gains 10% Attack Speed.",
                     "Deals up to 150/190/230/270/310 (+60% of your Physical Power) damage by default and 225/285/345/405/465 (+90% of your Physical Power) damage when Adept.",
                     "The final cone has a range of 30 when this ability is at least Adept.",
                     "Damage per Hit: 75/95/115/135/155 (+30% of your Physical Power)",
@@ -8925,12 +8816,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Spear Thrust",
-                "description": "Mulan brings forth her spear striking in front of her, dealing damage and slowing all enemies hit.Skilled - Mulan heals for up to 3 enemies hit.Adept - Mulan strikes a second time further in front of her, dealing bonus damage if she hits the same enemy.Mastered - Mulan gains 5% Power.",
+                "description": "Mulan brings forth her spear striking in front of her, dealing damage and slowing all enemies hit. Skilled - Mulan heals for up to 3 enemies hit.Adept - Mulan strikes a second time further in front of her, dealing bonus damage if she hits the same enemy.Mastered - Mulan gains 5% Power.",
                 "imageURL": require("../assets/images/Mulan_ability_2.png"),
                 "notes": [
-                    "Mulan brings forth her spear striking in front of her, dealing damage and slowing all enemies hit.\nSkilled - Mulan heals for up to 3 enemies hit.",
-                    "Adept - Mulan strikes a second time further in front of her, dealing bonus damage if she hits the same enemy.",
-                    "Mastered - Mulan gains 5% Power.",
                     "Skilled heals up to 36/69/102/135/160 health and Adept deals a total of 190/270/350/430/510 (+80% of your Physical Power) damage to targets hit twice.",
                     "Damage per Hit: 90/125/160/195/230 (+35% of your Physical Power)",
                     "Slow: 25%",
@@ -8945,12 +8833,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Grapple",
-                "description": "Mulan readies herself and fires an arrow with a rope attached to it. If she hits an enemy god she stuns them, dealing damage and pulling them towards her while dashing and hitting them again for extra damage.Skilled - Mulan gains a Protection buff after hitting an enemy god.Adept - Mulan is able to dash to walls.Mastered - Mulan gains 5% Movement Speed & 5% Protections.",
+                "description": "Mulan readies herself and fires an arrow with a rope attached to it. If she hits an enemy god she stuns them, dealing damage and pulling them towards her while dashing and hitting them again for extra damage. Skilled - Mulan gains a Protection buff after hitting an enemy god.Adept - Mulan is able to dash to walls.Mastered - Mulan gains 5% Movement Speed & 5% Protections.",
                 "imageURL": require("../assets/images/Mulan_ability_3.png"),
                 "notes": [
-                    "Mulan readies herself and fires an arrow with a rope attached to it. If she hits an enemy god she stuns them, dealing damage and pulling them towards her while dashing and hitting them again for extra damage.\nSkilled - Mulan gains a Protection buff after hitting an enemy god.",
-                    "Adept - Mulan is able to dash to walls.",
-                    "Mastered - Mulan gains 5% Movement Speed & 5% Protections.",
                     "Can deal up to of 130/185/240/295/350 (+70% of your Physical Power) damage to gods hit by the arrow and bonus damage.",
                     "The stun from this ability is not affected by diminishing returns.",
                     "Mulan is immune from crowd control effects while pulling a god.",
@@ -8972,8 +8857,6 @@ export default godData = [
                 "description": "Mulan brings forth her entire arsenal dashing forwards with sword slashes, dealing damage and rooting enemies for 1s, then Mulan uses her new divine energy to knock up enemies with her spear before firing a large projectile attack with her bow.Dealing damage with any part of this ability gains Skill towards the weapon used. Mulan also gains Protections for the duration.",
                 "imageURL": require("../assets/images/Mulan_ability_4.png"),
                 "notes": [
-                    "Mulan brings forth her entire arsenal dashing forwards with sword slashes, dealing damage and rooting enemies for 1s, then Mulan uses her new divine energy to knock up enemies with her spear before firing a large projectile attack with her bow.",
-                    "Dealing damage with any part of this ability gains Skill towards the weapon used. Mulan also gains Protections for the duration.",
                     "Can deal up to 355/495/635/775/915 (+160% of your Physical Power) damage.",
                     "Mulan is immune from crowd control effects while using this ability.",
                     "Can be cancelled early.",
@@ -9558,10 +9441,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Mysterious Fog",
-                "description": "Nu Wa condenses moisture into fog at her location which then rolls forward away from her. She and all allies are Stealthed while inside the fog, and have increased movement speed. Attacking breaks the Stealth effect for 1s.Enemies that run into the fog take damage, and continue to take additional damage again every second they are in the fog.",
+                "description": "Nu Wa condenses moisture into fog at her location which then rolls forward away from her. She and all allies are Stealthed while inside the fog, and have increased movement speed. Attacking breaks the Stealth effect for 1s. Enemies that run into the fog take damage, and continue to take additional damage again every second they are in the fog.",
                 "imageURL": require("../assets/images/Nu_Wa_ability_1.png"),
                 "notes": [
-                    "Nu Wa condenses moisture into fog at her location which then rolls forward away from her. She and all allies are Stealthed while inside the fog, and have increased movement speed. Attacking breaks the Stealth effect for 1s.\nEnemies that run into the fog take damage, and continue to take additional damage again every second they are in the fog.",
                     "If a stealthed unit enters an enemy structure's attack range, they'll be revealed.",
                     "Can deal up to 100/175/250/325/400 (+100% of your Magical Power) damage.",
                     "Damage: 50/75/100/125/150 (+50% of your Magical Power)",
@@ -9577,10 +9459,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Clay Soldiers",
-                "description": "Nu Wa conjures Clay Soldiers from the Earth. If she marked a target while summoning them, they will pursue that target until it dies. If she summoned them with no target, they will attack enemy gods who damage Nu Wa, or closest enemies.Soldiers live for 10s. First they will dash at enemies within 30 units, dealing damage and applying a stack of protection reduction. Stacks up to 3 times, stacks last 2s. They will basic attack after that.",
+                "description": "Nu Wa conjures Clay Soldiers from the Earth. If she marked a target while summoning them, they will pursue that target until it dies. If she summoned them with no target, they will attack enemy gods who damage Nu Wa, or closest enemies. Soldiers live for 10s. First they will dash at enemies within 30 units, dealing damage and applying a stack of protection reduction. Stacks up to 3 times, stacks last 2s. They will basic attack after that.",
                 "imageURL": require("../assets/images/Nu_Wa_ability_2.png"),
                 "notes": [
-                    "Nu Wa conjures Clay Soldiers from the Earth. If she marked a target while summoning them, they will pursue that target until it dies. If she summoned them with no target, they will attack enemy gods who damage Nu Wa, or closest enemies.\nSoldiers live for 10s. First they will dash at enemies within 30 units, dealing damage and applying a stack of protection reduction. Stacks up to 3 times, stacks last 2s. They will basic attack after that.",
                     "The soldiers have a base Movement Speed of 365/380/395/410/425, reduce up to 8/14/20/26/48 Magical Protections and don't remove backdoor protections from towers and phoenixes.",
                     "The soldiers' dash attacks can apply item effects but their basic attacks don't.",
                     "If there are no enemies nearby, the soldiers will march down the lane.",
@@ -9871,9 +9752,6 @@ export default godData = [
                 "description": "Upon reaching 100 Magical Power from Items, Olorun gains 20% Critical Hit Chance and a further 2% per 12 Magical Power from Items.Olorun's Critical hits only deal 40% increased damage.Additionally Olorun gains 5% extra scaling on his basic attacks.",
                 "imageURL": require("../assets/images/Olorun_ability_0.png"),
                 "notes": [
-                    "Upon reaching 100 Magical Power from Items, Olorun gains 20% Critical Hit Chance and a further 2% per 12 Magical Power from Items.",
-                    "Olorun's Critical hits only deal 40% increased damage.",
-                    "Additionally Olorun gains 5% extra scaling on his basic attacks.",
                     "Requires a total of 580 Magical Power to reach the max (100%) Crit Chance.",
                     "Critical Hit Chance: 2% per 12 Magical Power from Items",
                     "Ability Type: Buff"
@@ -9881,10 +9759,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Focused Light",
-                "description": "Olorun charges an orb of pure energy for up to 2s before firing it in front of him. Charging the ability increases the range and damage of the orb. This ability passes through and damages Enemy minions but stops and collides with Enemy gods.This ability can Critically Hit and can provide stacks of Overflowing Divinity.",
+                "description": "Olorun charges an orb of pure energy for up to 2s before firing it in front of him. Charging the ability increases the range and damage of the orb. This ability passes through and damages Enemy minions but stops and collides with Enemy gods. This ability can Critically Hit and can provide stacks of Overflowing Divinity.",
                 "imageURL": require("../assets/images/Olorun_ability_1.png"),
                 "notes": [
-                    "Olorun charges an orb of pure energy for up to 2s before firing it in front of him. Charging the ability increases the range and damage of the orb. This ability passes through and damages Enemy minions but stops and collides with Enemy gods.\nThis ability can Critically Hit and can provide stacks of Overflowing Divinity.",
                     "Has a minimum range of 45 and can extend up to 200 while in Sanctified Field.",
                     "Deals up to 132/186/240/294/348 (+66% of your Magical Power) at full charge.",
                     "Damage: 110/155/200/245/290 (+55% of your Magical Power)",
@@ -9900,8 +9777,6 @@ export default godData = [
                 "description": "Olorun gains amplified Attack Speed. Every successful attack on an Enemy during the buff provides his inner Sun with energy, to a cap of 20 stacks.During the buff or for 4s after, Olorun can refire this ability to conjure the Sun to damage Enemies in an area. The Sun emits projectiles faster and more randomly with higher ammo. Hitting the same Enemy deals 20% less damage each time, to a maximum of 90% reduction.",
                 "imageURL": require("../assets/images/Olorun_ability_2.png"),
                 "notes": [
-                    "Olorun gains amplified Attack Speed. Every successful attack on an Enemy during the buff provides his inner Sun with energy, to a cap of 20 stacks.",
-                    "During the buff or for 4s after, Olorun can refire this ability to conjure the Sun to damage Enemies in an area. The Sun emits projectiles faster and more randomly with higher ammo. Hitting the same Enemy deals 20% less damage each time, to a maximum of 90% reduction.",
                     "Can deal up to 225/315/405/495/585 (+100% of your Magical Power) damage with 20 stacks.",
                     "Attack Speed: 40%",
                     "Duration: 4/4.5/5/5.5/6s",
@@ -9914,10 +9789,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Consecration",
-                "description": "Olorun expends the light within himself knocking back and damaging nearby Enemies as well as slowing them for 2s.Olorun and allies are bathed in the light, gaining a heal over time that ticks every second for 5s. For every ally god healed, Olorun gains Physical and Magical protections.",
+                "description": "Olorun expends the light within himself knocking back and damaging nearby Enemies as well as slowing them for 2s. Olorun and allies are bathed in the light, gaining a heal over time that ticks every second for 5s. For every ally god healed, Olorun gains Physical and Magical protections.",
                 "imageURL": require("../assets/images/Olorun_ability_3.png"),
                 "notes": [
-                    "Olorun expends the light within himself knocking back and damaging nearby Enemies as well as slowing them for 2s.\nOlorun and allies are bathed in the light, gaining a heal over time that ticks every second for 5s. For every ally god healed, Olorun gains Physical and Magical protections.",
                     "Heals a total of 60/90/120/150/180 health and provides up to 32/40/48/56/64 protections if 4 allies are healed from this ability.",
                     "This damage does not stack Overflowing Divinity.",
                     "Damage: 60/80/100/120/140 (+20% of your Magical Power)",
@@ -9935,10 +9809,6 @@ export default godData = [
                 "description": "Olorun brings forth Olodumare and Olofi who travel outwards, creating a large area of divine energy that distorts the flow of time within.All Enemies caught in the area are negatively affected by the time dilation, attacking, casting and even animating more slowly.Olorun himself benefits from the Sanctified Field in a similar way.The strength of the divine field also impacts the effect of buffs, debuffs, projectiles and deployables.",
                 "imageURL": require("../assets/images/Olorun_ability_4.png"),
                 "notes": [
-                    "Olorun brings forth Olodumare and Olofi who travel outwards, creating a large area of divine energy that distorts the flow of time within.",
-                    "All Enemies caught in the area are negatively affected by the time dilation, attacking, casting and even animating more slowly.",
-                    "Olorun himself benefits from the Sanctified Field in a similar way.",
-                    "The strength of the divine field also impacts the effect of buffs, debuffs, projectiles and deployables.",
                     "Olorun also gains 40% Crowd Control Reduction while in the area.",
                     "Enemy Debuff: 40% slower",
                     "Self Buff: 30% faster",
@@ -10095,10 +9965,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Pyroclast",
-                "description": "Pele flourishes and fires out a magma orb ahead of her in a line, dealing damage and granting fuel per enemy hit. Once the fiery projectile reaches maximum distance it hovers for a brief instant, solidifies, and then returns back in pieces, dealing damage to enemies on the way back. The number of shards returning is dependent on the rank of this ability.Pele has 2 charges of this ability.",
+                "description": "Pele flourishes and fires out a magma orb ahead of her in a line, dealing damage and granting fuel per enemy hit. Once the fiery projectile reaches maximum distance it hovers for a brief instant, solidifies, and then returns back in pieces, dealing damage to enemies on the way back. The number of shards returning is dependent on the rank of this ability. Pele has 2 charges of this ability.",
                 "imageURL": require("../assets/images/Pele_ability_1.png"),
                 "notes": [
-                    "Pele flourishes and fires out a magma orb ahead of her in a line, dealing damage and granting fuel per enemy hit. Once the fiery projectile reaches maximum distance it hovers for a brief instant, solidifies, and then returns back in pieces, dealing damage to enemies on the way back. The number of shards returning is dependent on the rank of this ability.\nPele has 2 charges of this ability.",
                     "Can deal up to 90/160/230/300/370 (+75%/90%/105%/120%/135% of your Physical Power) damage and costs up to 80/90/100/110/120 mana with both charges.",
                     "Damage: 60/100/140/180/220 (+60% of your Physical Power)",
                     "Return Damage: 30 (+15% of your Physical Power)",
@@ -10111,10 +9980,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Eruption",
-                "description": "Pele fiercely erupts energy into the ground, exploding in an area around her, causing damage and Knockup to all enemies.At ranks 3 and 5 the area expands again at a delay, dealing less damage and a smaller Knockup.",
+                "description": "Pele fiercely erupts energy into the ground, exploding in an area around her, causing damage and Knockup to all enemies. At ranks 3 and 5 the area expands again at a delay, dealing less damage and a smaller Knockup.",
                 "imageURL": require("../assets/images/Pele_ability_2.png"),
                 "notes": [
-                    "Pele fiercely erupts energy into the ground, exploding in an area around her, causing damage and Knockup to all enemies.\nAt ranks 3 and 5 the area expands again at a delay, dealing less damage and a smaller Knockup.",
                     "Has a knockup strength of 280/240/200.",
                     "Enemies can only be damaged and knocked up once regardless of how many rings they were by.",
                     "Inner Damage: 70/115/160/205/250 (+80% of your Physical Power)",
@@ -10130,10 +9998,6 @@ export default godData = [
                 "description": "Pele churns the land around her, dealing damage to nearby enemies and providing constant movement speed while this ability is active.Toggle this ability again to enter an amplified state, expending more fuel but dealing more damage and providing additional movement speed.This ability has no cooldown but uses fuel and cannot be activated when below 10 fuel.This damage does not trigger Item effects.",
                 "imageURL": require("../assets/images/Pele_ability_3.png"),
                 "notes": [
-                    "Pele churns the land around her, dealing damage to nearby enemies and providing constant movement speed while this ability is active.",
-                    "Toggle this ability again to enter an amplified state, expending more fuel but dealing more damage and providing additional movement speed.",
-                    "This ability has no cooldown but uses fuel and cannot be activated when below 10 fuel.",
-                    "This damage does not trigger Item effects.",
                     "Total Damage: 200/300/400/500/600 (+100% of your Physical Power) damage.",
                     "Total Amplified Damage: 200/350/500/650/800 (+200% of your Physical Power) damage.",
                     "Damage is dealt every 0.5s while active and fuel generates every 1s while inactive.",
@@ -10152,10 +10016,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Volcanic Lightning",
-                "description": "After a short warm up, Pele dashes forwards dealing massive damage and a slow to the first enemy God hit, and dealing additional damage to enemies behind in a cone.For the next 10 seconds or 4 attacks, every time Pele hits an enemy with a basic attack, she instead deals ability damage in a cone originating from that enemy. During this time Pele's basic attacks deal 50% reduced damage.",
+                "description": "After a short warm up, Pele dashes forwards dealing massive damage and a slow to the first enemy God hit, and dealing additional damage to enemies behind in a cone. For the next 10 seconds or 4 attacks, every time Pele hits an enemy with a basic attack, she instead deals ability damage in a cone originating from that enemy. During this time Pele's basic attacks deal 50% reduced damage.",
                 "imageURL": require("../assets/images/Pele_ability_4.png"),
                 "notes": [
-                    "After a short warm up, Pele dashes forwards dealing massive damage and a slow to the first enemy God hit, and dealing additional damage to enemies behind in a cone.\nFor the next 10 seconds or 4 attacks, every time Pele hits an enemy with a basic attack, she instead deals ability damage in a cone originating from that enemy. During this time Pele's basic attacks deal 50% reduced damage.",
                     "Pele is immune from crowd control effects while dashing.",
                     "Can deal up to 580/825/1070/1315/1560 (+220% of your Physical Power) damage to a single target.",
                     "Damage: 180/265/350/435/520 (+60% of your Physical Power)",
@@ -10569,13 +10432,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Taiko Drums",
-                "description": "Passive: Raijin gains increased Attack Speed.Active: Raijin flies above the battlefield, beating his drums 4 times to summon peals of thunder. With each hit, he has a choice of three beats:Beat one: 100% damage.Beat two: Taunt and 50% DamageBeat three: Fear and 50% DamageWhile in the air, Raijin suffers a 20% Movement Speed Slow.",
+                "description": "Passive: Raijin gains increased Attack Speed.Active: Raijin flies above the battlefield, beating his drums 4 times to summon peals of thunder. With each hit, he has a choice of three beats: Beat one: 100% damage.Beat two: Taunt and 50% DamageBeat three: Fear and 50% Damage While in the air, Raijin suffers a 20% Movement Speed Slow.",
                 "imageURL": require("../assets/images/Raijin_ability_4.png"),
                 "notes": [
-                    "Passive: Raijin gains increased Attack Speed.",
-                    "Active: Raijin flies above the battlefield, beating his drums 4 times to summon peals of thunder. With each hit, he has a choice of three beats:\nBeat one: 100% damage.",
-                    "Beat two: Taunt and 50% Damage",
-                    "Beat three: Fear and 50% Damage\nWhile in the air, Raijin suffers a 20% Movement Speed Slow.",
                     "Has a projectile speed of 100.",
                     "Will end as soon as the 4 peals have been used or after 7s have passed, whatever comes first.",
                     "Raijin is CC immune while using this ability.",
@@ -10640,7 +10499,7 @@ export default godData = [
                     "Slows up to 30% and costs up to 75 mana with all 5 arrows.",
                     "Basic Attacks from this ability are spent even when Rama misses.",
                     "Subsequent Basic Attacks after the first deal 8/16/24/32/40 Bonus Damage.",
-                    "Slow %: 10%",
+                    "Slow %: 10%",
                     "Time Slowed: 1.5s",
                     "Bonus Damage: 10/20/30/40/50",
                     "Ability Type: Line, Slow, Damage",
@@ -10933,7 +10792,7 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Sic 'Em",
-                "description": "Scylla sends two hounds forward, damaging, Rooting, and Crippling the first enemy hit.At max rank, two additional enemies nearby the first target will also be hit.",
+                "description": "Scylla sends two hounds forward, damaging, Rooting, and Crippling the first enemy hit. At max rank, two additional enemies nearby the first target will also be hit.",
                 "imageURL": require("../assets/images/Scylla_ability_1.png"),
                 "notes": [
                     "Damage: 60/110/160/210/260 (+75% of your Magical Power)",
@@ -10946,10 +10805,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Crush",
-                "description": "Scylla creates a Magical field that Slows enemies. After 5s it detonates and damages enemies, dealing 30% increased damage to Minions and Jungle Camps. Scylla may activate the ability again to detonate it early.At max rank, enemies in the area also have their Magical Protection reduced, and targets hit by the damage retain the debuff and are Slowed for 1s.",
+                "description": "Scylla creates a Magical field that Slows enemies. After 5s it detonates and damages enemies, dealing 30% increased damage to Minions and Jungle Camps. Scylla may activate the ability again to detonate it early. At max rank, enemies in the area also have their Magical Protection reduced, and targets hit by the damage retain the debuff and are Slowed for 1s.",
                 "imageURL": require("../assets/images/Scylla_ability_2.png"),
                 "notes": [
-                    "Scylla creates a Magical field that Slows enemies. After 5s it detonates and damages enemies, dealing 30% increased damage to Minions and Jungle Camps. Scylla may activate the ability again to detonate it early.\nAt max rank, enemies in the area also have their Magical Protection reduced, and targets hit by the damage retain the debuff and are Slowed for 1s.",
                     "Deals 130/201.5/273/344.5/416 (+110.5% of your Magical Power) damage to minions and jungle camps.",
                     "Can be detonated at any time even while under crowd control or dead.",
                     "Damage: 100/155/210/265/320 (+85% of your Magical Power)",
@@ -10963,10 +10821,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Sentinel",
-                "description": "Passive: Scylla gains MP5.Active: Scylla summons a sentinel to the target area, granting vision of enemies for 5s. Scylla may activate the ability again within 5s to move to the sentinel location.At max rank, the vision is granted through line of sight blockers.",
+                "description": "Passive: Scylla gains MP5. Active: Scylla summons a sentinel to the target area, granting vision of enemies for 5s. Scylla may activate the ability again within 5s to move to the sentinel location. At max rank, the vision is granted through line of sight blockers.",
                 "imageURL": require("../assets/images/Scylla_ability_3.png"),
                 "notes": [
-                    "Passive: Scylla gains MP5.\nActive: Scylla summons a sentinel to the target area, granting vision of enemies for 5s. Scylla may activate the ability again within 5s to move to the sentinel location.\nAt max rank, the vision is granted through line of sight blockers.",
                     "Despite moving underground, this ability is considered a leap.",
                     "Passive MP5: 8/10/12/14/16",
                     "Vision Range: 40/50/60/70/80",
@@ -10978,10 +10835,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - I'm a Monster",
-                "description": "Scylla reveals her true nature, becoming immune to Crowd Control for the next 6s, and gaining movement speed. She may make one powerful attack during this time. If she kills an enemy god with the attack, she gains another 6s and may attack again.At max rank, the movement speed bonus doubles.",
+                "description": "Scylla reveals her true nature, becoming immune to Crowd Control for the next 6s, and gaining movement speed. She may make one powerful attack during this time. If she kills an enemy god with the attack, she gains another 6s and may attack again. At max rank, the movement speed bonus doubles.",
                 "imageURL": require("../assets/images/Scylla_ability_4.png"),
                 "notes": [
-                    "Scylla reveals her true nature, becoming immune to Crowd Control for the next 6s, and gaining movement speed. She may make one powerful attack during this time. If she kills an enemy god with the attack, she gains another 6s and may attack again.\nAt max rank, the movement speed bonus doubles.",
                     "There is no limit to how many additional attacks can be gained per cast.",
                     "Can move freely in all directions for the duration.",
                     "Can be fired through walls.",
@@ -11035,11 +10891,10 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Deathbane",
-                "description": "Serqet dashes three times from side to side, dealing damage and applying Deathbane Poison to each enemy hit. This ability can Critical Hit, and Serqet is immune to Knockup while dashing.Deathbane Poison reduces a target's Physical Protection for a short time, and remains in a lingering dormant state for 20s.",
+                "description": "Serqet dashes three times from side to side, dealing damage and applying Deathbane Poison to each enemy hit. This ability can Critical Hit, and Serqet is immune to Knockup while dashing. Deathbane Poison reduces a target's Physical Protection for a short time, and remains in a lingering dormant state for 20s.",
                 "imageURL": require("../assets/images/Serqet_ability_1.png"),
                 "notes": [
-                    "Serqet dashes three times from side to side, dealing damage and applying Deathbane Poison to each enemy hit. This ability can Critical Hit, and Serqet is immune to Knockup while dashing.\nDeathbane Poison reduces a target's Physical Protection for a short time, and remains in a lingering dormant state for 20s.",
-                    "The critical hits are affected by  Deathbringer.",
+                    "The critical hits are affected by Deathbringer.",
                     "The debuff doesn't stack, but the duration is refreshed on each application.",
                     "Has a minimum distance of 5.",
                     "Can deal up to 150/210/270/330/390 (+150% of your Physical Power) damage if hit by all 3 hits.",
@@ -11086,8 +10941,6 @@ export default godData = [
                 "description": "Passive: Serqet gains increased Critical Strike Chance.Active: Serqet leaps to an enemy, Stunning them and gaining 50% damage mitigation. She then applies the Last Breath poison and pushes them 30 units away. The poison deals true damage to the target over the next 5s, and prevents them from healing. If an enemy dies while infected with Last Breath, they will explode, applying the poison to all enemies within 20 units.",
                 "imageURL": require("../assets/images/Serqet_ability_4.png"),
                 "notes": [
-                    "Passive: Serqet gains increased Critical Strike Chance.",
-                    "Active: Serqet leaps to an enemy, Stunning them and gaining 50% damage mitigation. She then applies the Last Breath poison and pushes them 30 units away. The poison deals true damage to the target over the next 5s, and prevents them from healing. If an enemy dies while infected with Last Breath, they will explode, applying the poison to all enemies within 20 units.",
                     "Can also be used on minions and jungle monsters.",
                     "Does not go into cooldown if it fails to hit a target.",
                     "Serqet is immune from crowd control effects while using this ability.",
@@ -11146,10 +10999,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Skewer",
-                "description": "Set amasses his hatred, throwing it forward. Enemies caught in its path are damaged and slowed for 3s.Set's spawn are commanded when Set fires this attack, dashing towards a location Set determines. Enemies hit by a Spawn's dash take damage and are slowed for 3s. Any dash after the first will deal 40% damage.",
+                "description": "Set amasses his hatred, throwing it forward. Enemies caught in its path are damaged and slowed for 3s. Set's spawn are commanded when Set fires this attack, dashing towards a location Set determines. Enemies hit by a Spawn's dash take damage and are slowed for 3s. Any dash after the first will deal 40% damage.",
                 "imageURL": require("../assets/images/Set_ability_1.png"),
                 "notes": [
-                    "Set amasses his hatred, throwing it forward. Enemies caught in its path are damaged and slowed for 3s.\nSet's spawn are commanded when Set fires this attack, dashing towards a location Set determines. Enemies hit by a Spawn's dash take damage and are slowed for 3s. Any dash after the first will deal 40% damage.",
                     "The slow from this ability doesn't stack but refreshes regardless of how many spawn an enemy was hit by.",
                     "Damage: 75/120/165/210/255 (+85% of your Physical Power)",
                     "Slow: 25%",
@@ -11182,10 +11034,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Sandstorm",
-                "description": "Set conjures a Sandstorm around him, protecting him from Damage and causing him to be immune to Slows. Enemies near Set are damaged every .3s for 6s and have their vision obscured by the sands.If Set is targeting a spawn when this ability is cast he will immediately teleport to the spawn. Otherwise, he can reactivate this ability to teleport. Set can only teleport once per Sandstorm.",
+                "description": "Set conjures a Sandstorm around him, protecting him from Damage and causing him to be immune to Slows. Enemies near Set are damaged every .3s for 6s and have their vision obscured by the sands. If Set is targeting a spawn when this ability is cast he will immediately teleport to the spawn. Otherwise, he can reactivate this ability to teleport. Set can only teleport once per Sandstorm.",
                 "imageURL": require("../assets/images/Set_ability_3.png"),
                 "notes": [
-                    "Set conjures a Sandstorm around him, protecting him from Damage and causing him to be immune to Slows. Enemies near Set are damaged every .3s for 6s and have their vision obscured by the sands.\nIf Set is targeting a spawn when this ability is cast he will immediately teleport to the spawn. Otherwise, he can reactivate this ability to teleport. Set can only teleport once per Sandstorm.",
                     "Can deal up to 120/180/240/300/360 (+120% of your Physical Power) damage.",
                     "Won't go on cooldown until the ability ends.",
                     "Damage: 6/9/12/15/18 (+6% of your Physical Power)",
@@ -11259,11 +11110,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Emblazoned Sweep",
-                "description": "Shiva's trident is emblazoned with the fire of Agni as he spins it around dealing damage, pulling in enemies and leaving behind a firewall at the edge.Bliss – Allies gain a Movement Speed buff on passing the firewall.Destruction – Enemies suffer a Protection Reduction debuff on passing the firewall.",
+                "description": "Shiva's trident is emblazoned with the fire of Agni as he spins it around dealing damage, pulling in enemies and leaving behind a firewall at the edge. Bliss – Allies gain a Movement Speed buff on passing the firewall.Destruction – Enemies suffer a Protection Reduction debuff on passing the firewall.",
                 "imageURL": require("../assets/images/Shiva_ability_1.png"),
                 "notes": [
-                    "Shiva's trident is emblazoned with the fire of Agni as he spins it around dealing damage, pulling in enemies and leaving behind a firewall at the edge.\nBliss – Allies gain a Movement Speed buff on passing the firewall.",
-                    "Destruction – Enemies suffer a Protection Reduction debuff on passing the firewall.",
                     "Can deal up to 155/300/445/590/735 (+100% of your Physical Power) damage while the buff/debuff duration while within the firewall refreshes per tick.",
                     "The Fire Damage ticks are dealt every 0.5s.",
                     "Deals one additional tick of damage on the initial hit.",
@@ -11280,11 +11129,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Damaru's Tempo",
-                "description": "Shiva hits the butt of his trident down into the ground, shaking the damaru drum and causing energy to dissipate and damage enemies. Depending on the selection, enemies in the chosen segment are knocked up as well.Bliss – Allies gain an Attack Speed buff if the energy passes through them.Destruction – Enemies suffer an Attack Speed debuff if the energy passes through them.",
+                "description": "Shiva hits the butt of his trident down into the ground, shaking the damaru drum and causing energy to dissipate and damage enemies. Depending on the selection, enemies in the chosen segment are knocked up as well. Bliss – Allies gain an Attack Speed buff if the energy passes through them.Destruction – Enemies suffer an Attack Speed debuff if the energy passes through them.",
                 "imageURL": require("../assets/images/Shiva_ability_2.png"),
                 "notes": [
-                    "Shiva hits the butt of his trident down into the ground, shaking the damaru drum and causing energy to dissipate and damage enemies. Depending on the selection, enemies in the chosen segment are knocked up as well.\nBliss – Allies gain an Attack Speed buff if the energy passes through them.",
-                    "Destruction – Enemies suffer an Attack Speed debuff if the energy passes through them.",
                     "Has a knockup height of 225 and each segment has a range of 15.",
                     "Damage: 100/150/200/250/300 (+65% of your Physical Power)",
                     "Attack Speed Buff: 30% for 4s",
@@ -11297,11 +11144,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Pillar of Dawn",
-                "description": "Shiva dashes into a pillar of fire where he meditates for a short duration, taking reduced damage and becoming immune to CC except for Stuns and Time Dilation, before being able to dash out again. Each dash deals damage to enemies and as he meditates the pillar emits an aura.Bliss – Allies in the aura gain a block stack while Shiva gains up to 3 after leaving.Destruction – Enemies in the aura suffer constant damage.",
+                "description": "Shiva dashes into a pillar of fire where he meditates for a short duration, taking reduced damage and becoming immune to CC except for Stuns and Time Dilation, before being able to dash out again. Each dash deals damage to enemies and as he meditates the pillar emits an aura. Bliss – Allies in the aura gain a block stack while Shiva gains up to 3 after leaving.Destruction – Enemies in the aura suffer constant damage.",
                 "imageURL": require("../assets/images/Shiva_ability_3.png"),
                 "notes": [
-                    "Shiva dashes into a pillar of fire where he meditates for a short duration, taking reduced damage and becoming immune to CC except for Stuns and Time Dilation, before being able to dash out again. Each dash deals damage to enemies and as he meditates the pillar emits an aura.\nBliss – Allies in the aura gain a block stack while Shiva gains up to 3 after leaving.",
-                    "Destruction – Enemies in the aura suffer constant damage.",
                     "Bliss total damage: 130/190/250/310/370 (+60% of your Physical Power) damage",
                     "Destruction total damage: 242/366/490/614/738 (+124% of your Physical Power) damage",
                     "The buff/DoT can last up to 4s and after the 4s have passed, Shiva will not be able to use the second dash.",
@@ -11319,13 +11164,10 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Shiva Tandava",
-                "description": "Shiva performs his Tandava, channeling for the next 6 seconds with CC Immunity. Every 1.5s he performs a step that can be preselected.Step one – Ally Healing and Mana restore.Step two – 50% Damage and Healing and also amplification of next step radius and effects.Step three – Damage and Shield reduction to Enemies.",
+                "description": "Shiva performs his Tandava, channeling for the next 6 seconds with CC Immunity. Every 1.5s he performs a step that can be preselected. Step one – Ally Healing and Mana restore.Step two – 50% Damage and Healing and also amplification of next step radius and effects.Step three – Damage and Shield reduction to Enemies.",
                 "imageURL": require("../assets/images/Shiva_ability_4.png"),
                 "notes": [
-                    "Shiva performs his Tandava, channeling for the next 6 seconds with CC Immunity. Every 1.5s he performs a step that can be preselected.\nStep one – Ally Healing and Mana restore.",
-                    "Step two – 50% Damage and Healing and also amplification of next step radius and effects.",
-                    "Step three – Damage and Shield reduction to Enemies.",
-                    "Amplified Step 1 restores 105/127.5/150/172.5/195 health while amplified Step 3 deals 202.5/277.5/352.5/427.5/502.5 (+75% of your Physical Power) damage and 75% damage to shields.  Deals up to 540/740/940/1140/1340 (+200% of your Physical Power) damage (3/3/3/3 and 2/3/2/3 both deal similar damage) and heals up to 280/340/400/460/520 health and 60% mana (4 steps total) (1/1/1/1 and 2/1/2/1 both heal the same amount, although the latter combo restores only 30% mana because Step two neither restores mana nor amplifies percentage of restored mana from Step one).",
+                    "Amplified Step 1 restores 105/127.5/150/172.5/195 health while amplified Step 3 deals 202.5/277.5/352.5/427.5/502.5 (+75% of your Physical Power) damage and 75% damage to shields. Deals up to 540/740/940/1140/1340 (+200% of your Physical Power) damage (3/3/3/3 and 2/3/2/3 both deal similar damage) and heals up to 280/340/400/460/520 health and 60% mana (4 steps total) (1/1/1/1 and 2/1/2/1 both heal the same amount, although the latter combo restores only 30% mana because Step two neither restores mana nor amplifies percentage of restored mana from Step one).",
                     "If no step is selected after the initial cast, Shiva will automatically use step 1 and/or whatever step was selected.",
                     "Shiva will cycle between Bliss state if step 1 is selected last or Destruction if step 3 is last.",
                     "Healing: 70/85/100/115/130",
@@ -11434,10 +11276,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Winter's Grasp",
-                "description": "A snowstorm surrounds Skadi as she chooses a location for Kaldr to attack. If Kaldr is too far he will leap there.Upon reaching the location a snowstorm also surrounds Kaldr. The initial hit of either snowstorm Roots enemies in the area and Kaldr is restored to full health. The storms persist for 4s while dealing damage to enemies every .5s.",
+                "description": "A snowstorm surrounds Skadi as she chooses a location for Kaldr to attack. If Kaldr is too far he will leap there. Upon reaching the location a snowstorm also surrounds Kaldr. The initial hit of either snowstorm Roots enemies in the area and Kaldr is restored to full health. The storms persist for 4s while dealing damage to enemies every .5s.",
                 "imageURL": require("../assets/images/Skadi_ability_4.png"),
                 "notes": [
-                    "A snowstorm surrounds Skadi as she chooses a location for Kaldr to attack. If Kaldr is too far he will leap there.\nUpon reaching the location a snowstorm also surrounds Kaldr. The initial hit of either snowstorm Roots enemies in the area and Kaldr is restored to full health. The storms persist for 4s while dealing damage to enemies every .5s.",
                     "Each snowstorm deals up to 85/165/245/325/405 (+115% of your Physical Power) damage and with both dealing 170/330/490/650/810 (+230% of your Physical Power) total damage.",
                     "The snowstorms despawn when Skadi dies.",
                     "Initial Damage: 45/85/125/165/205 (+35% of your Physical Power)",
@@ -11628,10 +11469,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Disapparate",
-                "description": "Sol burns down her manifestation, gaining movement speed and immunity to Slows while leaving a trail of fire behind her that damages enemies.After 3s Sol loses corporeal form for a short time. Sol may leave her incorporeal form early.",
+                "description": "Sol burns down her manifestation, gaining movement speed and immunity to Slows while leaving a trail of fire behind her that damages enemies. After 3s Sol loses corporeal form for a short time. Sol may leave her incorporeal form early.",
                 "imageURL": require("../assets/images/Sol_ability_3.png"),
                 "notes": [
-                    "Sol burns down her manifestation, gaining movement speed and immunity to Slows while leaving a trail of fire behind her that damages enemies.\nAfter 3s Sol loses corporeal form for a short time. Sol may leave her incorporeal form early.",
                     "While incorporeal, Sol can pass through units, gods and player deployables.",
                     "Can deal up to 120/240/360/480/600 (+150% of your Magical Power) damage.",
                     "Damage: 20/40/60/80/100 (+25% of your Magical Power) every 0.5s",
@@ -11804,10 +11644,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Flames of Muspell",
-                "description": "Surtr sets his sword ablaze gaining Haste while this buff is active. Surtr's next successful Basic Attack will deal bonus magical damage, ignite the target causing them to take damage over time as well as spawning a Fiery Imp.This ability's bonus damage increases per stack (max. of 999). Surtr gains 1 stack when hitting an enemy, or 3 if the target is a god. Surtr also gains 2 stacks when killing an enemy, or 5 if the target is a god.",
+                "description": "Surtr sets his sword ablaze gaining Haste while this buff is active. Surtr's next successful Basic Attack will deal bonus magical damage, ignite the target causing them to take damage over time as well as spawning a Fiery Imp. This ability's bonus damage increases per stack (max. of 999). Surtr gains 1 stack when hitting an enemy, or 3 if the target is a god. Surtr also gains 2 stacks when killing an enemy, or 5 if the target is a god.",
                 "imageURL": require("../assets/images/Surtr_ability_1.png"),
                 "notes": [
-                    "Surtr sets his sword ablaze gaining Haste while this buff is active. Surtr's next successful Basic Attack will deal bonus magical damage, ignite the target causing them to take damage over time as well as spawning a Fiery Imp.\nThis ability's bonus damage increases per stack (max. of 999). Surtr gains 1 stack when hitting an enemy, or 3 if the target is a god. Surtr also gains 2 stacks when killing an enemy, or 5 if the target is a god.",
                     "The DoT deals 30/75/120/165/210 (+30% of your Physical Power) damage and up to 1035 bonus magical damage with full stacks.",
                     "The empowered basic attack triggers item effects.",
                     "If multiple enemies are hit by either Surtr's 2nd or 3rd basic attacks while the ability is active, the DoT/Imp spawn will only affect the first target hit (or in the center) and doesn't affect structures, player-made deployables nor wards.",
@@ -11825,12 +11664,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Giant's Grasp",
-                "description": "Surtr pulls the closest target to him, either an enemy lane minion, a Fiery Imp or a magma rock if neither are in range. Surtr then hurls the object forwards, dealing damage and stunning enemies ahead.Magma Rock - Stops on first enemyLane Minion - Passes through minions, stopping on first enemy god.Fiery Imp - Passes through minions, stopping on first enemy god and exploding in an area",
+                "description": "Surtr pulls the closest target to him, either an enemy lane minion, a Fiery Imp or a magma rock if neither are in range. Surtr then hurls the object forwards, dealing damage and stunning enemies ahead. Magma Rock - Stops on first enemyLane Minion - Passes through minions, stopping on first enemy god.Fiery Imp - Passes through minions, stopping on first enemy god and exploding in an area",
                 "imageURL": require("../assets/images/Surtr_ability_2.png"),
                 "notes": [
-                    "Surtr pulls the closest target to him, either an enemy lane minion, a Fiery Imp or a magma rock if neither are in range. Surtr then hurls the object forwards, dealing damage and stunning enemies ahead.\nMagma Rock - Stops on first enemy",
-                    "Lane Minion - Passes through minions, stopping on first enemy god.",
-                    "Fiery Imp - Passes through minions, stopping on first enemy god and exploding in an area",
                     "Has a minion grab range of 20 and AoE when throwing an Imp of 15.",
                     "If 5s are passed and Surtr has not thrown the object currently held when the ability expires, Surtr will automatically hurl the object forward.",
                     "Damage: 90/145/200/255/310 (+70% of your Physical Power)",
@@ -11847,9 +11683,6 @@ export default godData = [
                 "description": "Surtr's fury creates a ring of embers around him providing a Movement Speed buff that increases for hitting enemies, while the ability is active.The ring deals damage and slows enemies once as it expands or when fully formed and again when it contracts.While formed, the outer ring deals continuous damage to enemies inside. The ring also picks up Obsidian Flesh fragments.",
                 "imageURL": require("../assets/images/Surtr_ability_3.png"),
                 "notes": [
-                    "Surtr's fury creates a ring of embers around him providing a Movement Speed buff that increases for hitting enemies, while the ability is active.",
-                    "The ring deals damage and slows enemies once as it expands or when fully formed and again when it contracts.",
-                    "While formed, the outer ring deals continuous damage to enemies inside. The ring also picks up Obsidian Flesh fragments.",
                     "Deals up to 150/230/310/390/470 (+60% of your Physical Power) damage and provides up to 25% movement speed when hitting 3 enemies with this ability.",
                     "The slow's duration is refreshed upon re-entering the radius of the ability.",
                     "The bonus damage from the outer ring ticks every 0.5s.",
@@ -11867,10 +11700,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - End of Days",
-                "description": "After a short buildup, Surtr surges into the air infusing into a large Meteor. While in the air, Surtr is immune to damage and can choose where to come crashing down.Before landing, Meteorites split off, targeting enemies on the ground, dealing damage and spawning Fiery Imps.Surtr's Meteor deals increased damage and knocks up enemies hit.",
+                "description": "After a short buildup, Surtr surges into the air infusing into a large Meteor. While in the air, Surtr is immune to damage and can choose where to come crashing down. Before landing, Meteorites split off, targeting enemies on the ground, dealing damage and spawning Fiery Imps. Surtr's Meteor deals increased damage and knocks up enemies hit.",
                 "imageURL": require("../assets/images/Surtr_ability_4.png"),
                 "notes": [
-                    "After a short buildup, Surtr surges into the air infusing into a large Meteor. While in the air, Surtr is immune to damage and can choose where to come crashing down.\nBefore landing, Meteorites split off, targeting enemies on the ground, dealing damage and spawning Fiery Imps.\nSurtr's Meteor deals increased damage and knocks up enemies hit.",
                     "Surtr is immune to crowd control during this ability.",
                     "Has a delay time of 2s before becoming untargetable and an air time of 4s.",
                     "Spawns a total of 5 Fiery Imps during the ability.",
@@ -12046,10 +11878,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Wisps",
-                "description": "Sylvanus releases wisps that seek out nearby allies and enemies. Allied gods are Protected and all allies are Healed while enemies take damage over time.The initial wisp heals allied gods and damages enemies for twice the normal amount. This ability does not create seed pods when hitting minions.",
+                "description": "Sylvanus releases wisps that seek out nearby allies and enemies. Allied gods are Protected and all allies are Healed while enemies take damage over time. The initial wisp heals allied gods and damages enemies for twice the normal amount. This ability does not create seed pods when hitting minions.",
                 "imageURL": require("../assets/images/Sylvanus_ability_2.png"),
                 "notes": [
-                    "Sylvanus releases wisps that seek out nearby allies and enemies. Allied gods are Protected and all allies are Healed while enemies take damage over time.\nThe initial wisp heals allied gods and damages enemies for twice the normal amount. This ability does not create seed pods when hitting minions.",
                     "Deals a total of 84/120/156/192/228 (+60% of your Magical Power) damage (29/42/55/67/80 (+21% of your Magical Power) damage to minions) and heals a total of 50/75/100/125/150 health (17.5/26/35/44/52.5 health to minions).",
                     "Damage: 14/20/26/32/38 (+10% of your Magical Power) every 1s for 5s",
                     "Heal: 10/14/18/22/26 every 1s for 5s",
@@ -12133,10 +11964,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Force of Nature",
-                "description": "Terra gains momentum, causing her to charge forward and deal damage to enemies she passes through.Terra may charge through her own Standing Stones to Shatter them. If she does she may charge one more time within the next 3s. Terra may use this ability without putting a point into it, but it deals no damage and has a 20s cooldown.",
+                "description": "Terra gains momentum, causing her to charge forward and deal damage to enemies she passes through. Terra may charge through her own Standing Stones to Shatter them. If she does she may charge one more time within the next 3s. Terra may use this ability without putting a point into it, but it deals no damage and has a 20s cooldown.",
                 "imageURL": require("../assets/images/Terra_ability_1.png"),
                 "notes": [
-                    "Terra gains momentum, causing her to charge forward and deal damage to enemies she passes through.\nTerra may charge through her own Standing Stones to Shatter them. If she does she may charge one more time within the next 3s. Terra may use this ability without putting a point into it, but it deals no damage and has a 20s cooldown.",
                     "Can deal up to 120/220/320/420/520 (+60% of your Magical Power) damage with both dashes.",
                     "Terra can use basic attacks and abilities between dashes if shattered at least one stone.",
                     "Damage: 60/110/160/210/260 (+30% of your Magical Power)",
@@ -12148,10 +11978,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Crushing Earth",
-                "description": "Terra raises up two Standing Stone walls on either side of a target location. As long as both stones stand, Terra may activate this ability again to slam the stones together, damaging and Stunning enemies in between for 1.5s.These stones can be Shattered into a cone of shrapnel with Force of Nature, damaging enemies in the area.",
+                "description": "Terra raises up two Standing Stone walls on either side of a target location. As long as both stones stand, Terra may activate this ability again to slam the stones together, damaging and Stunning enemies in between for 1.5s. These stones can be Shattered into a cone of shrapnel with Force of Nature, damaging enemies in the area.",
                 "imageURL": require("../assets/images/Terra_ability_2.png"),
                 "notes": [
-                    "Terra raises up two Standing Stone walls on either side of a target location. As long as both stones stand, Terra may activate this ability again to slam the stones together, damaging and Stunning enemies in between for 1.5s.\nThese stones can be Shattered into a cone of shrapnel with Force of Nature, damaging enemies in the area.",
                     "Has a prefire of 0.7s.",
                     "The walls can be deployed through map walls.",
                     "Damage is dealt when the moving walls touch the target.",
@@ -12170,10 +11999,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Monolith",
-                "description": "Terra summons a Standing Stone monolith that presists for up to 10. The monolith heals nearby allied gods every .5s for the duration and provides Protections but can be destroyed early if hit by 5 enemy basic attacks.Terra can Shatter this stone with Force of Nature to Root enemies in the area for 1s and create a damaging area that lasts 5s.",
+                "description": "Terra summons a Standing Stone monolith that presists for up to 10. The monolith heals nearby allied gods every .5s for the duration and provides Protections but can be destroyed early if hit by 5 enemy basic attacks. Terra can Shatter this stone with Force of Nature to Root enemies in the area for 1s and create a damaging area that lasts 5s.",
                 "imageURL": require("../assets/images/Terra_ability_3.png"),
                 "notes": [
-                    "Terra summons a Standing Stone monolith that presists for up to 10. The monolith heals nearby allied gods every .5s for the duration and provides Protections but can be destroyed early if hit by 5 enemy basic attacks.\nTerra can Shatter this stone with Force of Nature to Root enemies in the area for 1s and create a damaging area that lasts 5s.",
                     "Heals up to 80/160/240/320/400 health and deals up to 210/260/310/360/410 (+100% of your Magical Power) damage.",
                     "Monolith Duration: 10s",
                     "Heal Per Tick: 4/8/12/16/20",
@@ -12292,7 +12120,7 @@ export default godData = [
                 "imageURL": require("../assets/images/Thanatos_ability_4.png"),
                 "notes": [
                     "The bonus Movement Speed buff is affected by Scent of Death's low health target boost.",
-                    "The execute from this ability also ignores shields,  The Alternate Timeline, Kumbhakarna's and Persephone's passive abilities and Khepri's ultimate.",
+                    "The execute from this ability also ignores shields, The Alternate Timeline, Kumbhakarna's and Persephone's passive abilities and Khepri's ultimate.",
                     "Thanatos is immune from crowd control effects while using this ability.",
                     "If there is no valid landing location, Thanatos will land at the closest valid point near the targeter.",
                     "Damage: 110/145/180/215/250 (+80% of your Physical Power)",
@@ -12395,10 +12223,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Changeling",
-                "description": "The Morrigan selects a God from the current match to become a copy of and cleanses herself of all effects. She copies all of their current stats and may use all of their abilities for the duration. She retains her own Relics and cannot use Consumables.The Rank of her abilities will transfer to the skills of the god she copies. This ability's cooldown will be increased to match the target God's ultimate ability cooldown. You may hover over a target and cancel to pre-select them, so you do not need to use the cursor on activation.",
+                "description": "The Morrigan selects a God from the current match to become a copy of and cleanses herself of all effects. She copies all of their current stats and may use all of their abilities for the duration. She retains her own Relics and cannot use Consumables. The Rank of her abilities will transfer to the skills of the god she copies. This ability's cooldown will be increased to match the target God's ultimate ability cooldown. You may hover over a target and cancel to pre-select them, so you do not need to use the cursor on activation.",
                 "imageURL": require("../assets/images/The_Morrigan_ability_4.png"),
                 "notes": [
-                    "The Morrigan selects a God from the current match to become a copy of and cleanses herself of all effects. She copies all of their current stats and may use all of their abilities for the duration. She retains her own Relics and cannot use Consumables.\nThe Rank of her abilities will transfer to the skills of the god she copies. This ability's cooldown will be increased to match the target God's ultimate ability cooldown. You may hover over a target and cancel to pre-select them, so you do not need to use the cursor on activation.",
                     "While transformed, The Morrigan gains the number of stacks from stacking items, jungle buffs and consumable effects from the god she transforms into in addition to her own buff effects.",
                     "Kills/Assists while transformed won't be displayed but are credited until after the transformation is finished and grant normal amount of gold to The Morrigan regardless of the god she transforms into.",
                     "While The Morrigan is transformed and uses an ability that makes the transformed god either untargetable, an increased delay time or affected by a banish cc when the duration expires, she will finish that ability/banish cc expires before reverting to normal.",
@@ -12572,10 +12399,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Evade and Punish",
-                "description": "Thoth dashes in the direction he is currently traveling. After dashing, for 5s Thoth's next basic attack is enhanced.This projectile roots the first Enemy god hit while slowing all other Enemies, and also deals Ability Damage.If either the Dash or Attack passes through the Glyph of Pain, their respective range is increased by 30.",
+                "description": "Thoth dashes in the direction he is currently traveling. After dashing, for 5s Thoth's next basic attack is enhanced. This projectile roots the first Enemy god hit while slowing all other Enemies, and also deals Ability Damage. If either the Dash or Attack passes through the Glyph of Pain, their respective range is increased by 30.",
                 "imageURL": require("../assets/images/Thoth_ability_2.png"),
                 "notes": [
-                    "Thoth dashes in the direction he is currently traveling. After dashing, for 5s Thoth's next basic attack is enhanced.\nThis projectile roots the first Enemy god hit while slowing all other Enemies, and also deals Ability Damage.\nIf either the Dash or Attack passes through the Glyph of Pain, their respective range is increased by 30.",
                     "The attack deals 80/130/180/230/280 (+65% of your Magical Power) damage through Glyph of Pain.",
                     "Won't go on cooldown until the enhanced attack is fired or expires.",
                     "This basic attack is spent even if Thoth misses.",
@@ -12591,10 +12417,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Glyph of Pain",
-                "description": "From his book, Thoth conjures forth a Hieroglyph in front of him. Thoth's ability projectiles passing through the glyph receive increased damage, and a range increase of 30. This damage does not trigger Item effects.Thoth and allies' Basic Attack projectiles also receive a lesser damage bonus, but no range increase.",
+                "description": "From his book, Thoth conjures forth a Hieroglyph in front of him. Thoth's ability projectiles passing through the glyph receive increased damage, and a range increase of 30. This damage does not trigger Item effects. Thoth and allies' Basic Attack projectiles also receive a lesser damage bonus, but no range increase.",
                 "imageURL": require("../assets/images/Thoth_ability_3.png"),
                 "notes": [
-                    "From his book, Thoth conjures forth a Hieroglyph in front of him. Thoth's ability projectiles passing through the glyph receive increased damage, and a range increase of 30. This damage does not trigger Item effects.\nThoth and allies' Basic Attack projectiles also receive a lesser damage bonus, but no range increase.",
                     "Hieroglyphs from this ability last 8s.",
                     "Placing more than one Hieroglyph will not cause the oldest one to despawn, but bonus damage from Thoth's abilities and ranged basic attacks only stack once.",
                     "Empowered basic attacks count as two hits on enemy wards and player-made deployables.",
@@ -12608,10 +12433,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Final Judgement",
-                "description": "Thoth conjures a large glyph from his book, and then inscribes three more at its corners. When all four have been summoned, he sends them forward damaging all Enemies in their path.Thoth may activate this ability again to fire the ability early, doing a reduced amount of damage based on the number of glyphs currently summoned. Alternately he may cancel this ability at a cost of 30 mana.",
+                "description": "Thoth conjures a large glyph from his book, and then inscribes three more at its corners. When all four have been summoned, he sends them forward damaging all Enemies in their path. Thoth may activate this ability again to fire the ability early, doing a reduced amount of damage based on the number of glyphs currently summoned. Alternately he may cancel this ability at a cost of 30 mana.",
                 "imageURL": require("../assets/images/Thoth_ability_4.png"),
                 "notes": [
-                    "Thoth conjures a large glyph from his book, and then inscribes three more at its corners. When all four have been summoned, he sends them forward damaging all Enemies in their path.\nThoth may activate this ability again to fire the ability early, doing a reduced amount of damage based on the number of glyphs currently summoned. Alternately he may cancel this ability at a cost of 30 mana.",
                     "Can be channeled for up to 3s while adding a page every 1s.",
                     "Deals 40% of the damage with just the large glyph, adding 20% for each extra glyph.",
                     "Deals up to 430/500/570/640/710 (+125% of your Magical Power) damage if ability passes through the Glyph of Pain.",
@@ -12670,10 +12494,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability (Flying)  - Primordial Onslaught",
-                "description": "Tiamat gathers power, allowing her to fire orbs of energy at the end of the channel. Each orb damages enemies and stops on enemy gods.Hitting the same enemy deals 15% less damage each time, to a minimum of 70% reduction.This ability can fire additional projectiles at ranks 3 and 5.",
+                "description": "Tiamat gathers power, allowing her to fire orbs of energy at the end of the channel. Each orb damages enemies and stops on enemy gods. Hitting the same enemy deals 15% less damage each time, to a minimum of 70% reduction. This ability can fire additional projectiles at ranks 3 and 5.",
                 "imageURL": require("../assets/images/Tiamat_ability_1.png"),
                 "notes": [
-                    "Tiamat gathers power, allowing her to fire orbs of energy at the end of the channel. Each orb damages enemies and stops on enemy gods.\nHitting the same enemy deals 15% less damage each time, to a minimum of 70% reduction.\nThis ability can fire additional projectiles at ranks 3 and 5.",
                     "Deals up to 148/166/280/310/380 (+65% / +97% / +103% of your Magical Power) damage, with scaling increasing at ranks 3 and 5 and channeled for up to 1.5s at ranks 1 & 2 and up to 2.5s at rank 5.",
                     "Damage: 80/90/90/100/100 (+35% of your Magical Power)",
                     "Ability Type: Line, Damage",
@@ -12711,10 +12534,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate (Flying)  - Children of Creation",
-                "description": "Tiamat is able to summon one of her children onto the battlefield.Summon Serpents: Serpents that travel down lanes and act as minions.Summon Beast: Kusarikku who stands guard waiting for enemy gods.Summon Storm: Umu Dabrutu, the storm that chases enemies.",
+                "description": "Tiamat is able to summon one of her children onto the battlefield. Summon Serpents: Serpents that travel down lanes and act as minions. Summon Beast: Kusarikku who stands guard waiting for enemy gods. Summon Storm: Umu Dabrutu, the storm that chases enemies.",
                 "imageURL": require("../assets/images/Tiamat_ability_4.png"),
                 "notes": [
-                    "Tiamat is able to summon one of her children onto the battlefield.\nSummon Serpents: Serpents that travel down lanes and act as minions.\nSummon Beast: Kusarikku who stands guard waiting for enemy gods.\nSummon Storm: Umu Dabrutu, the storm that chases enemies.",
                     "Tiamat can cancel the ability selection without triggering it's cooldown.",
                     "Ability Type: Pet, Damage",
                     "Range: 50",
@@ -12754,10 +12576,9 @@ export default godData = [
         "Abilities": [
             {
                 "name": "Passive  - Shingetsu & Mangetsu",
-                "description": "Tsukuyomi wields Shingetsu in his left hand and Mangetsu in his right hand. When these weapons damage an enemy they become empowered.Empowered Shingetsu gains a 50% cleave and restores mana.Empowered Mangetsu deals bonus damage and restores health.",
+                "description": "Tsukuyomi wields Shingetsu in his left hand and Mangetsu in his right hand. When these weapons damage an enemy they become empowered. Empowered Shingetsu gains a 50% cleave and restores mana. Empowered Mangetsu deals bonus damage and restores health.",
                 "imageURL": require("../assets/images/Tsukuyomi_ability_0.png"),
                 "notes": [
-                    "Tsukuyomi wields Shingetsu in his left hand and Mangetsu in his right hand. When these weapons damage an enemy they become empowered. Empowered Shingetsu gains a 50% cleave and restores mana. Empowered Mangetsu deals bonus damage and restores health.",
                     "Empowered weapons revert to normal after 5 seconds out of combat.",
                     "The mana restore only triggers on the first enemy hit with empowered Shingetsu.",
                     "Empowered Mangetsu heals for 36 health (7.15 at level 1) at level 20.",
@@ -12770,12 +12591,11 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Dark Moon Shuriken",
-                "description": "Tsukuyomi throws a Dark Moon Shuriken that damages enemies and stops on gods, sticking into them. If Tsukuyomi gets close to the god he retrieves the Shuriken and reduces its cooldown.After casting this ability Shingetsu's next Basic Attack becomes ranged. This attack steals Movement Speed from the enemy hit.",
+                "description": "Tsukuyomi throws a Dark Moon Shuriken that damages enemies and stops on gods, sticking into them. If Tsukuyomi gets close to the god he retrieves the Shuriken and reduces its cooldown. After casting this ability Shingetsu's next Basic Attack becomes ranged. This attack steals Movement Speed from the enemy hit.",
                 "imageURL": require("../assets/images/Tsukuyomi_ability_1.png"),
                 "notes": [
-                    "Tsukuyomi throws a Dark Moon Shuriken that damages enemies and stops on gods, sticking into them. If Tsukuyomi gets close to the god he retrieves the Shuriken and reduces its cooldown. After casting this ability Shingetsu's next Basic Attack becomes ranged. This attack steals Movement Speed from the enemy hit.",
                     "Has a retrieval range of 10 units and up to 4s to retrieve the Shuriken.",
-                    "Retrieval's cooldown reduction deducts from the current cooldown, taking into account Cooldown %.",
+                    "Retrieval's cooldown reduction deducts from the current cooldown, taking into account Cooldown %.",
                     "The movement speed steal lasts 4s after landing a basic attack from this ability.",
                     "Shuriken Damage: 85/135/185/235/285 (+80% of your Physical Power)",
                     "Cooldown Reduction: 4s",
@@ -12805,10 +12625,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Silver Moon Caltrops",
-                "description": "Tsukuyomi scatters Caltrops onto the ground which damage enemies in the area and slow them for 1.5s. Enemies who move inside this Caltrop field take damage and are slowed again.After casting this ability Mangetsu's next Basic Attack becomes ranged. This attack deals bonus Physical Damage.",
+                "description": "Tsukuyomi scatters Caltrops onto the ground which damage enemies in the area and slow them for 1.5s. Enemies who move inside this Caltrop field take damage and are slowed again. After casting this ability Mangetsu's next Basic Attack becomes ranged. This attack deals bonus Physical Damage.",
                 "imageURL": require("../assets/images/Tsukuyomi_ability_3.png"),
                 "notes": [
-                    "Tsukuyomi scatters Caltrops onto the ground which damage enemies in the area and slow them for 1.5s. Enemies who move inside this Caltrop field take damage and are slowed again. After casting this ability Mangetsu's next Basic Attack becomes ranged. This attack deals bonus Physical Damage.",
                     "Damage is dealt every 0.25s and the caltrops persist for 6s.",
                     "Can deal up to 480/840/1200/1560/1920 (+360% of your Physical Power) damage if a target moves inside the caltrop field for it's entire duration.",
                     "The slow's duration refreshes per tick.",
@@ -12895,10 +12714,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Power Cleave",
-                "description": "Tyr makes a massive melee attack, hitting all enemies within a 180 degree cone.Assault Stance: Enemies that are knocked up in the air are knocked away.Guard Stance: Tyr heals himself for each enemy hit (max 3).",
+                "description": "Tyr makes a massive melee attack, hitting all enemies within a 180 degree cone. Assault Stance: Enemies that are knocked up in the air are knocked away. Guard Stance: Tyr heals himself for each enemy hit (max 3).",
                 "imageURL": require("../assets/images/Tyr_ability_2.png"),
                 "notes": [
-                    "Tyr makes a massive melee attack, hitting all enemies within a 180 degree cone.\nAssault Stance: Enemies that are knocked up in the air are knocked away.\nGuard Stance: Tyr heals himself for each enemy hit (max 3).",
                     "Can be used while Fearless is active to interrupt it.",
                     "Guard stance can heal up to 45/105/165/225/285 health.",
                     "Damage: 80/115/150/185/220 (+65% of your Physical Power)",
@@ -12911,10 +12729,9 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Change Stance",
-                "description": "Tyr changes between Assault and Guard stances. Changing stances refreshes the cooldown on Fearless and Power Cleave. Tyr gains benefits depending on his current stance, and also gains half the benefits of the opposing stance.Assault Stance: Gain Physical Power.Guard Stance: Gain Protections.",
+                "description": "Tyr changes between Assault and Guard stances. Changing stances refreshes the cooldown on Fearless and Power Cleave. Tyr gains benefits depending on his current stance, and also gains half the benefits of the opposing stance. Assault Stance: Gain Physical Power. Guard Stance: Gain Protections.",
                 "imageURL": require("../assets/images/Tyr_ability_3.png"),
                 "notes": [
-                    "Tyr changes between Assault and Guard stances. Changing stances refreshes the cooldown on Fearless and Power Cleave. Tyr gains benefits depending on his current stance, and also gains half the benefits of the opposing stance.\nAssault Stance: Gain Physical Power.\nGuard Stance: Gain Protections.",
                     "This ability can be activated without being leveled once, and has the base level 1 cooldown whilst unleveled.",
                     "In Assault Stance, Tyr gains 0/6/10/14/18/22 Protections and 0/6/10/14/18/22 Physical Power in Guard Stance.",
                     "Tyr starts in Assault stance and respawns in whatever stance he was currently in.",
@@ -12927,10 +12744,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Lawbringer",
-                "description": "Tyr leaps through the air, bringing indiscriminate justice upon all enemies in the target area, and Slowing them with additional effects depending on what stance he is in.Assault Stance: Deal additional damage.Guard Stance: Stun enemies hit.",
+                "description": "Tyr leaps through the air, bringing indiscriminate justice upon all enemies in the target area, and Slowing them with additional effects depending on what stance he is in. Assault Stance: Deal additional damage. Guard Stance: Stun enemies hit.",
                 "imageURL": require("../assets/images/Tyr_ability_4.png"),
                 "notes": [
-                    "Tyr leaps through the air, bringing indiscriminate justice upon all enemies in the target area, and Slowing them with additional effects depending on what stance he is in.\nAssault Stance: Deal additional damage.\nGuard Stance: Stun enemies hit.",
                     "Has a range of 70.",
                     "Tyr is immune to crowd control while leaping.",
                     "Assault Damage: 250/375/500/625/750 (+120% of your Physical Power)",
@@ -13000,10 +12816,9 @@ export default godData = [
             },
             {
                 "name": "2nd Ability  - Expose Weakness (Invigorate)",
-                "description": "Ranged: Ullr gains bonus Attack Speed for 5s.Melee: Ullr gains bonus move speed for 5s.",
+                "description": "Ranged: Ullr gains bonus Attack Speed for 5s. Melee: Ullr gains bonus move speed for 5s.",
                 "imageURL": require("../assets/images/Ullr_ability_2.png"),
                 "notes": [
-                    "Ranged: Ullr gains bonus Attack Speed for 5s.\nMelee: Ullr gains bonus move speed for 5s.",
                     "The buffs persist after switching stances.",
                     "Attack Speed (Bow): 20/25/30/35/40%",
                     "Move Speed (Axe): 20/22.5/25/27.5/30%",
@@ -13015,7 +12830,7 @@ export default godData = [
             },
             {
                 "name": "3rd Ability  - Hail of Arrows (Glory Bound)",
-                "description": "Ranged: Ullr fires a volley at his target location, dealing damage.Melee: Ullr leaps to his target location, dealing damage in an AoE on arrival.",
+                "description": "Ranged: Ullr fires a volley at his target location, dealing damage. Melee: Ullr leaps to his target location, dealing damage in an AoE on arrival.",
                 "imageURL": require("../assets/images/Ullr_ability_3.png"),
                 "notes": [
                     "Damage (Bow): 80/120/160/200/240 (+100% of your Physical Power)",
@@ -13028,10 +12843,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Wield Axes (Wield Bow)",
-                "description": "Ullr changes stance and gains benefits depending on which stance he is in. Ullr also gains half the benefits of the opposing stance.Ranged: Ullr uses his yew bow, removing Disarms and gaining additional Physical Power.Melee: Ullr uses his axes, removing Disarms and gaining additional Physical Lifesteal.",
+                "description": "Ullr changes stance and gains benefits depending on which stance he is in. Ullr also gains half the benefits of the opposing stance. Ranged: Ullr uses his yew bow, removing Disarms and gaining additional Physical Power. Melee: Ullr uses his axes, removing Disarms and gaining additional Physical Lifesteal.",
                 "imageURL": require("../assets/images/Ullr_ability_4.png"),
                 "notes": [
-                    "Ullr changes stance and gains benefits depending on which stance he is in. Ullr also gains half the benefits of the opposing stance.\nRanged: Ullr uses his yew bow, removing Disarms and gaining additional Physical Power.\nMelee: Ullr uses his axes, removing Disarms and gaining additional Physical Lifesteal.",
                     "Has a prefire of 0.2s.",
                     "Ullr gains 10/13.5/16/19.5/22 Physical Power in axe stance and 5/7.5/10/12.5/15% Physical Lifesteal in bow stance.",
                     "Ullr always starts and respawns in bow stance.",
@@ -13130,9 +12944,6 @@ export default godData = [
                 "description": "Vamana grows to an enormous giant for 5s gaining immunity to Crowd Control, Protections, Physical Power, Physical lifesteal, a stacking shield that cannot exceed 1000 Health, and his Basic Attacks now damage all nearby enemies. His Movement Penalty for Attacking, Backpedaling, and Strafing are reduced by 20% while in this state.Successful attacks on enemies also provide stacking Movement Speed for 3s. When Vamana is in Colossal form, taking damage from gods increases the duration and Vamana can pass through player made walls.You may cancel his giant form early.",
                 "imageURL": require("../assets/images/Vamana_ability_4.png"),
                 "notes": [
-                    "Vamana grows to an enormous giant for 5s gaining immunity to Crowd Control, Protections, Physical Power, Physical lifesteal, a stacking shield that cannot exceed 1000 Health, and his Basic Attacks now damage all nearby enemies. His Movement Penalty for Attacking, Backpedaling, and Strafing are reduced by 20% while in this state.",
-                    "Successful attacks on enemies also provide stacking Movement Speed for 3s. When Vamana is in Colossal form, taking damage from gods increases the duration and Vamana can pass through player made walls.",
-                    "You may cancel his giant form early.",
                     "Each tick of damage taken increases the duration by 0.5s, to a maximum of 9s.",
                     "Due to Sleeping Giant's Physical Protection conversion, it actually provides 30/36/42/48/54 Physical Power and 3.75/4.5/5.25/6/6.75% attack speed.",
                     "His cone basic attacks can trigger item effects normally, such as Qin's Sais or Hastened Fatalis.",
@@ -13443,10 +13254,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - Whirlwind of Rage and Steel",
-                "description": "Xing Tian spins grabbing and hitting enemies with his axe before throwing them in the direction he is facing.Damage is dealt to enemies once each on the grab and throw as well as three times during the spin.",
+                "description": "Xing Tian spins grabbing and hitting enemies with his axe before throwing them in the direction he is facing. Damage is dealt to enemies once each on the grab and throw as well as three times during the spin.",
                 "imageURL": require("../assets/images/Xing_Tian_ability_4.png"),
                 "notes": [
-                    "Xing Tian spins grabbing and hitting enemies with his axe before throwing them in the direction he is facing.\nDamage is dealt to enemies once each on the grab and throw as well as three times during the spin.",
                     "Has a prefire of 1s.",
                     "Deals up to 225/300/375/450/525 (+175% of your Magical Power) damage to targets that are grabbed for the full duration (5 ticks) and up to 135/180/225/270/315 (+105% of your Magical Power) damage to targets who fail to get grabbed (3 ticks).",
                     "Xing Tian is briefly immune from crowd control effects immediately after using the ability as well as gaining 25% Movement Speed while channeling.",
@@ -13502,10 +13312,9 @@ export default godData = [
             },
             {
                 "name": "1st Ability  - Bouncing Bubble (Moonstrike)",
-                "description": "Bubble: Yemoja tosses out a bubble that bounces twice, dealing damage and slowing enemies by 30% before exploding into smaller bubbles that deal 50% damage. Enemies hit by both bubble bounces take 50% damage on the second hit.Moonstrike: Yemoja calls upon the Moon to deal damage to enemies below. The inner strike is the largest, dealing full damage and stunning all enemies and enemy structures hit.",
+                "description": "Bubble: Yemoja tosses out a bubble that bounces twice, dealing damage and slowing enemies by 30% before exploding into smaller bubbles that deal 50% damage. Enemies hit by both bubble bounces take 50% damage on the second hit. Moonstrike: Yemoja calls upon the Moon to deal damage to enemies below. The inner strike is the largest, dealing full damage and stunning all enemies and enemy structures hit.",
                 "imageURL": require("../assets/images/Yemoja_ability_1.png"),
                 "notes": [
-                    "Bubble: Yemoja tosses out a bubble that bounces twice, dealing damage and slowing enemies by 30% before exploding into smaller bubbles that deal 50% damage. Enemies hit by both bubble bounces take 50% damage on the second hit.\nMoonstrike: Yemoja calls upon the Moon to deal damage to enemies below. The inner strike is the largest, dealing full damage and stunning all enemies and enemy structures hit.",
                     "The small bubbles from Bouncing Bubble have a radius of 7.5 and deal 22.5/40/57.5/75/92.5 (+15% of your Magical Power) damage.",
                     "The bubble has a maximum bounce range of 35 on the first.",
                     "Bouncing Bubble Deals 67.5/120/182.5/225/277.5 (+45% of your Magical Power) damage when hit by the bubble twice and Moonstrike deals up to 105/195/285/375/465 (+70% of your Magical Power) damage.",
@@ -13544,7 +13353,7 @@ export default godData = [
                 "imageURL": require("../assets/images/Yemoja_ability_3.png"),
                 "notes": [
                     "The ability has a maximum deploy range of 60 and radius of 7.5 and the knockback has a range of 40 for allies and 20 for enemies.",
-                    "The direction is reversed if placed at least 45 units away.  Has a delay time of 1s before entering another ring.",
+                    "The direction is reversed if placed at least 45 units away. Has a delay time of 1s before entering another ring.",
                     "Movement Speed: 10/12.5/15/17.5/20%",
                     "Protections: 20/25/30/35/40 Physical and Magical Protections",
                     "Slow: 15% for 2s",
@@ -13556,10 +13365,9 @@ export default godData = [
             },
             {
                 "name": "Ultimate  - River's Rebuke",
-                "description": "Yemoja unleashes her full power creating two large walls of water that block enemy movement and projectiles. After a delay the river cascades down, damaging, trembling and slowing enemies.Yemoja gains a buff to her Omi regeneration while she is in the river field that lingers briefly after she leaves it.",
+                "description": "Yemoja unleashes her full power creating two large walls of water that block enemy movement and projectiles. After a delay the river cascades down, damaging, trembling and slowing enemies. Yemoja gains a buff to her Omi regeneration while she is in the river field that lingers briefly after she leaves it.",
                 "imageURL": require("../assets/images/Yemoja_ability_4.png"),
                 "notes": [
-                    "Yemoja unleashes her full power creating two large walls of water that block enemy movement and projectiles. After a delay the river cascades down, damaging, trembling and slowing enemies.\nYemoja gains a buff to her Omi regeneration while she is in the river field that lingers briefly after she leaves it.",
                     "The water walls last for 5 seconds before cascading down in the direction Yemoja is facing.",
                     "Can maintain the buff for a maximum duration of 9s.",
                     "Also reveals enemies in the area.",
@@ -13998,4 +13806,4 @@ export default godData = [
         ]
     }
 ];
-//export default gods;
+export default gods;
