@@ -49,10 +49,10 @@ const GodDetailScreen: React.FC = () => {
                     <Text style={styles.statText}>Range: {god.Attributes['Range:']}</Text>
                     <Text style={styles.statText}>Attack/Sec: {god.Attributes['Attack/Sec:']}</Text>
                     <Text style={styles.statText}>Damage: {god.Attributes['Damage:']}</Text>
-                    <Text style={styles.statText}>Physical: {god.Attributes['Physical:']}</Text>
-                    <Text style={styles.statText}>Magical: {god.Attributes['Magical:']}</Text>
-                    <Text style={styles.statText}>HP5: {god.Attributes['HP5:']}</Text>
-                    <Text style={styles.statText}>MP5: {god.Attributes['MP5:']}</Text>
+                    <Text style={styles.statText}>Physical Protection: {god.Attributes['Physical:']}</Text>
+                    <Text style={styles.statText}>Magical Protection: {god.Attributes['Magical:']}</Text>
+                    <Text style={styles.statText}>Regen HP5: {god.Attributes['HP5:']}</Text>
+                    <Text style={styles.statText}>Regen MP5: {god.Attributes['MP5:']}</Text>
                     <Text style={styles.statText}>Difficulty: {god.Attributes['Difficulty:']}</Text>
                     <Text style={styles.statText}>Release Date: {god.Attributes['Release date:']}</Text>
                 </View>
@@ -180,7 +180,7 @@ function getStyles(theme: any) {
             fontSize: 14,
             color: theme.text,
             marginBottom: 5,
-            textAlign: 'left',
+            textAlign: 'center',
         },
         abilityDetailContainer: {
             padding: 10,
@@ -191,7 +191,7 @@ function getStyles(theme: any) {
             fontSize: 12,
             color: theme.text,
             marginTop: 5,
-            textAlign: 'center',
+            textAlign: 'left',
         },
     });
 }
