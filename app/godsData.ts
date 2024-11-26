@@ -8,28 +8,28 @@ export interface Ability {
 }
 
 export interface Attributes {
-    "Title:": string;
-    "Pantheon:": string;
-    "Type:": string;
-    "Class:": string;
-    "Pros:": string;
-    "Difficulty:": string;
-    "Release date:": string;
-    "Favor:": string;
-    "Gems:": string;
-    "Voicelines:": string;
-    "Voice actor:": string;
-    "Health:": string;
-    "Mana:": string;
-    "Speed:": string;
-    "Range:": string;
-    "Attack/Sec:": string;
-    "Damage:": string;
-    "Progression:": string;
-    "Physical:": string;
-    "Magical:": string;
-    "HP5:": string;
-    "MP5:": string;
+    "Title": string;
+    "Pantheon": string;
+    "Type": string;
+    "Class": string;
+    "Pros": string;
+    "Difficulty": string;
+    "Release date": string;
+    "Favor": string;
+    "Gems": string;
+    "Voicelines": string;
+    "Voice actor": string;
+    "Health": string;
+    "Mana": string;
+    "Speed": string;
+    "Range": string;
+    "Attack/Sec": string;
+    "Damage": string;
+    "Progression": string;
+    "Physical": string;
+    "Magical": string;
+    "HP5": string;
+    "MP5": string;
     imageURL: ImageSourcePropType;
 }
 

@@ -31,10 +31,10 @@ const GodDetailScreen: React.FC = () => {
             <Image source={god.Attributes.imageURL} style={styles.image} />
             <Text style={styles.name}>{god.Name}</Text>
             <View style={styles.classContainer}>
-                <Ionicons name={classIcons[god.Attributes['Class:'].replace(',', '')]} size={20} color={theme.text} />
-                <Text style={styles.class}>{god.Attributes['Class:']}</Text>
+                <Ionicons name={classIcons[god.Attributes['Class'].replace(',', '')]} size={20} color={theme.text} />
+                <Text style={styles.class}>{god.Attributes['Class']}</Text>
             </View>
-            <Text style={styles.description}>{god.Attributes['Title:']}</Text>
+            <Text style={styles.description}>{god.Attributes['Title']}</Text>
 
             <TouchableOpacity onPress={toggleStats} style={styles.toggleButton}>
                 <Text style={styles.toggleButtonText}>{showStats ? 'Hide Stats' : 'Show Stats'}</Text>
@@ -42,19 +42,19 @@ const GodDetailScreen: React.FC = () => {
 
             {showStats && (
                 <View style={styles.statsContainer}>
-                    <Text style={styles.statText}>Type: {god.Attributes['Type:']}</Text>
-                    <Text style={styles.statText}>Health: {god.Attributes['Health:']}</Text>
-                    <Text style={styles.statText}>Mana: {god.Attributes['Mana:']}</Text>
-                    <Text style={styles.statText}>Speed: {god.Attributes['Speed:']}</Text>
-                    <Text style={styles.statText}>Range: {god.Attributes['Range:']}</Text>
-                    <Text style={styles.statText}>Attack/Sec: {god.Attributes['Attack/Sec:']}</Text>
-                    <Text style={styles.statText}>Damage: {god.Attributes['Damage:']}</Text>
-                    <Text style={styles.statText}>Physical Protection: {god.Attributes['Physical:']}</Text>
-                    <Text style={styles.statText}>Magical Protection: {god.Attributes['Magical:']}</Text>
-                    <Text style={styles.statText}>Regen HP5: {god.Attributes['HP5:']}</Text>
-                    <Text style={styles.statText}>Regen MP5: {god.Attributes['MP5:']}</Text>
-                    <Text style={styles.statText}>Difficulty: {god.Attributes['Difficulty:']}</Text>
-                    <Text style={styles.statText}>Release Date: {god.Attributes['Release date:']}</Text>
+                    <Text style={styles.statText}>Type: {god.Attributes['Type']}</Text>
+                    <Text style={styles.statText}>Health: {god.Attributes['Health']}</Text>
+                    <Text style={styles.statText}>Mana: {god.Attributes['Mana']}</Text>
+                    <Text style={styles.statText}>Speed: {god.Attributes['Speed']}</Text>
+                    <Text style={styles.statText}>Range: {god.Attributes['Range']}</Text>
+                    <Text style={styles.statText}>Attack/Sec: {god.Attributes['Attack/Sec']}</Text>
+                    <Text style={styles.statText}>Damage: {god.Attributes['Damage']}</Text>
+                    <Text style={styles.statText}>Physical Protection: {god.Attributes['Physical']}</Text>
+                    <Text style={styles.statText}>Magical Protection: {god.Attributes['Magical']}</Text>
+                    <Text style={styles.statText}>Regen HP5: {god.Attributes['HP5']}</Text>
+                    <Text style={styles.statText}>Regen MP5: {god.Attributes['MP5']}</Text>
+                    <Text style={styles.statText}>Difficulty: {god.Attributes['Difficulty']}</Text>
+                    <Text style={styles.statText}>Release Date: {god.Attributes['Release date']}</Text>
                 </View>
             )}
 

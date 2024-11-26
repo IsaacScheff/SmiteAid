@@ -18,7 +18,7 @@ const godClassIconMapping: Record<GodClassKey, keyof typeof Ionicons.glyphMap> =
 
 const GodItem: React.FC<{ god: God }> = ({ god }) => {
     const { theme } = useTheme();
-    const godClass = god.Attributes['Class:'] as GodClassKey; // Assume it's valid for now
+    const godClass = god.Attributes['Class'] as GodClassKey; // Assume it's valid for now
 
     return (
         <View style={[styles.container, { borderBottomColor: theme.secondary }]}>
@@ -33,7 +33,7 @@ const GodItem: React.FC<{ god: God }> = ({ god }) => {
                 <Ionicons name={godClassIconMapping[godClass] ?? 'alert'} size={16} color={theme.text} />
                 <Text style={[styles.class, { color: theme.text }]}>{godClass}</Text>
             </View>
-            <Text style={[styles.blurb, { color: theme.text }]}>{god.Attributes['Title:']}</Text>
+            <Text style={[styles.blurb, { color: theme.text }]}>{god.Attributes['Title']}</Text>
         </View>
     );
 };
