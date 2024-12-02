@@ -5,7 +5,7 @@ import { getSelectedGod } from './selectedGod';
 import { useTheme } from '../theme/ThemeContext';
 import averageStats from './average_god_stats.json';
 import {Picker} from '@react-native-picker/picker';
-import { Attributes, AverageStats } from './interfaces';
+import { Grid, Row, Cell } from './GridComponents';
 
 const classIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
     Assassin: "skull-outline",
@@ -20,8 +20,6 @@ const statKeysToShow = ['Health', 'Mana', 'Speed', 'Range', 'Attack/Sec', 'Damag
 const GodDetailScreen: React.FC = () => {
     const { theme } = useTheme();
     const god = getSelectedGod();
-    const [selectedAbility, setSelectedAbility] = useState<number | null>(null);
-    const [showStats, setShowStats] = useState<boolean>(true);
     const [selectedComparison, setSelectedComparison] = useState('Average Overall');
 
     if (!god) {
@@ -29,39 +27,15 @@ const GodDetailScreen: React.FC = () => {
     }
 
     const styles = getStyles(theme);
-    
-    const compareStats = (statName: string, godStat: string, avgStat: string) => {
-        const parseStatValue = (stat: string): number => {
-            const parts = stat.split(' (+');
-            const baseValue = parseFloat(parts[0]);
-            const incrementValue = parts.length > 1 ? parseFloat(parts[1].slice(0, -1)) * 20 : 0;
-            return baseValue + incrementValue;
-        };
-    
-        const godValue = parseStatValue(godStat);
-        const avgValue = parseStatValue(avgStat);
-    
-        let godStyle, avgStyle;
-        if (godValue > avgValue) {
-            godStyle = styles.higherStat;
-            avgStyle = styles.lowerStat;
-        } else if (godValue < avgValue) {
-            godStyle = styles.lowerStat;
-            avgStyle = styles.higherStat;
-        } else {
-            godStyle = avgStyle = styles.statText;
-        }
-    
-        return (
-            <View style={styles.statRow}>
-                <View style={styles.statColumn}><Text style={styles.statName}>{`${statName}:`}</Text></View>
-                <View style={styles.statColumn}><Text style={[styles.statValue, godStyle]}>{godStat}</Text></View>
-                <View style={styles.lastStatColumn}><Text style={[styles.statValue, avgStyle]}>{avgStat}</Text></View>
-            </View>
-        );
-    };    
 
-    const toggleStats = () => setShowStats(!showStats);
+    const statValueStyle = (godStat, avgStat) => {
+        if (godStat > avgStat) {
+            return [styles.higherStat, styles.lowerStat]; // god's stat is higher
+        } else if (godStat < avgStat) {
+            return [styles.lowerStat, styles.higherStat]; // god's stat is lower
+        }
+        return [styles.statValue, styles.statValue]; // stats are equal
+    };
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
@@ -73,32 +47,28 @@ const GodDetailScreen: React.FC = () => {
             </View>
             <Text style={styles.description}>{god.Attributes.Title}</Text>
 
-            <TouchableOpacity onPress={toggleStats} style={styles.toggleButton}>
-                <Text style={styles.toggleButtonText}>{showStats ? 'Hide Stats' : 'Show Stats'}</Text>
-            </TouchableOpacity>
             <Picker
                 selectedValue={selectedComparison}
-                onValueChange={(itemValue, itemIndex) => setSelectedComparison(itemValue)}
+                onValueChange={(itemValue) => setSelectedComparison(itemValue)}
                 style={styles.picker}
             >
                 {Object.keys(averageStats).map(key => (
                     <Picker.Item label={key} value={key} key={key} />
                 ))}
             </Picker>
-            
-            {showStats && (
-                <View style={styles.statsContainer}>
-                    {statKeysToShow.map(statKey => {
-                        const godStat = god.Attributes[statKey];
-                        const avgStat = averageStats[selectedComparison][statKey] || ''; // Use a fallback empty string if undefined
-                        return (
-                            <View key={statKey}> {/* Add the key here */}
-                                <Text>{compareStats(statKey, godStat, avgStat)}</Text>
-                            </View>
-                        );
-                    })}
-                </View>
-            )}
+
+            <Grid style={styles.grid}>
+                {statKeysToShow.map(statKey => {
+                    const [godStyle, avgStyle] = statValueStyle(god.Attributes[statKey], averageStats[selectedComparison][statKey]);
+                    return (
+                        <Row key={statKey}>
+                            <Cell><Text style={styles.statName}>{statKey}</Text></Cell>
+                            <Cell><Text style={godStyle}>{god.Attributes[statKey]}</Text></Cell>
+                            <Cell><Text style={avgStyle}>{averageStats[selectedComparison][statKey]}</Text></Cell>
+                        </Row>
+                    );
+                })}
+            </Grid>
 
             <Text style={styles.sectionTitle}>Abilities</Text>
             <View style={styles.abilitiesContainer}>
@@ -106,19 +76,12 @@ const GodDetailScreen: React.FC = () => {
                     <TouchableOpacity
                         key={index}
                         style={styles.abilityItem}
-                        onPress={() => setSelectedAbility(index === selectedAbility ? null : index)}
+                        onPress={() => setSelectedAbility(index)}
                         activeOpacity={1}
                     >
                         <Image source={ability.imageURL} style={styles.abilityImage} />
                         <Text style={styles.abilityName}>{ability.name}</Text>
-                        {selectedAbility === index && (
-                            <View style={styles.abilityDetailContainer}>
-                                <Text style={styles.abilityDescription}>{ability.description}</Text>
-                                {ability.notes.map((note, noteIndex) => (
-                                    <Text key={noteIndex} style={styles.noteText}>• {note}</Text>
-                                ))}
-                            </View>
-                        )}
+                        <Text style={styles.abilityDescription}>{ability.description}</Text>
                     </TouchableOpacity>
                 ))}
             </View>
@@ -126,7 +89,7 @@ const GodDetailScreen: React.FC = () => {
     );
 };
 
-function getStyles(theme: any) {
+function getStyles(theme) {
     return StyleSheet.create({
         container: {
             alignItems: 'center',
@@ -209,36 +172,17 @@ function getStyles(theme: any) {
             fontWeight: 'bold',
             textAlign: 'center',
         },
-        statsContainer: {
+        picker: {
             width: '100%',
-            backgroundColor: theme.surface,
-            padding: 10,
-            borderRadius: 8,
-            marginTop: 10,
-            borderColor: '#ddd', // Border color for the outer grid
-            borderWidth: 1, // Border width for the outer grid
-            overflow: 'hidden', // Ensures no overflow outside the container
+            backgroundColor: 'white',
         },
-        statRow: {
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            borderBottomWidth: 1, // Adds horizontal line after each row
-            borderBottomColor: '#ddd', // Light grey line for horizontal grid
-            paddingVertical: 5, // Padding top and bottom within each row
-            backgroundColor: theme.surface,
+        higherStat: {
+            color: 'green',
+            fontWeight: 'bold',
         },
-        statColumn: {
-            flex: 1,
-            alignItems: 'flex-start', // Aligns text to the left within columns
-            borderRightWidth: 1, // Adds vertical line between columns
-            borderRightColor: '#ddd', // Light grey line for vertical grid
-            paddingHorizontal: 5, // Padding left and right within each column
-        },
-        lastStatColumn: {
-            flex: 1,
-            alignItems: 'flex-start', // Aligns text to the left within the last column
-            paddingHorizontal: 5, // Padding left and right within the last column
-            borderRightWidth: 0, // Ensures no border on the right edge of the last column
+        lowerStat: {
+            color: 'red',
+            fontWeight: 'bold',
         },
         statName: {
             fontSize: 14,
@@ -250,29 +194,6 @@ function getStyles(theme: any) {
             fontSize: 14,
             color: theme.text,
             textAlign: 'left',
-        },
-        higherStat: {
-            color: 'green',
-            fontWeight: 'bold',
-        },
-        lowerStat: {
-            color: 'red',
-            fontWeight: 'bold',
-        },
-        abilityDetailContainer: {
-            padding: 10,
-            backgroundColor: theme.surface,
-            borderRadius: 8,
-        },
-        noteText: {
-            fontSize: 12,
-            color: theme.text,
-            marginTop: 5,
-            textAlign: 'left',
-        },
-        picker: {
-            width: '100%',
-            backgroundColor: 'white',
         },
     });
 }
