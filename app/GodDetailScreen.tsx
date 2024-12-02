@@ -15,6 +15,8 @@ const classIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
     Warrior: "eyedrop-outline",
 };
 
+const statKeysToShow = ['Type', 'Health', 'Mana', 'Speed', 'Range', 'Attack/Sec', 'Damage', 'Physical', 'Magical', 'HP5', 'MP5', 'Difficulty', 'Release date'];
+
 const GodDetailScreen: React.FC = () => {
     const { theme } = useTheme();
     const god = getSelectedGod();
@@ -28,29 +30,38 @@ const GodDetailScreen: React.FC = () => {
 
     const styles = getStyles(theme);
 
-    const toggleStats = () => setShowStats(!showStats);
-
-    const renderStatComparison = (statKey: keyof Attributes) => {
-        const godStat = god.Attributes[statKey];
-        const formattedKey = statKey.replace('AttackSec', 'Attack/Sec'); // Adjust key formatting if necessary
-        const comparisonStat = averageStats[selectedComparison][formattedKey]; // Use the formatted key for lookup
+    const compareStats = (statName: string, godStat: string, avgStat: string) => {
+        const parseStatValue = (stat: string): number => {
+            const parts = stat.split(' (+');
+            const baseValue = parseFloat(parts[0]);
+            const incrementValue = parts.length > 1 ? parseFloat(parts[1].slice(0, -1)) * 20 : 0;
+            return baseValue + incrementValue;
+        };
     
-        if (!comparisonStat) {
-            return (
-                <View style={styles.statRow}>
-                    <Text style={styles.statText}>{`${statKey}: ${godStat}`}</Text>
-                    <Text style={styles.statText}>{`${selectedComparison}: `}</Text> 
-                </View>
-            );
+        const godValue = parseStatValue(godStat);
+        const avgValue = parseStatValue(avgStat);
+    
+        let godStyle, avgStyle;
+        if (godValue > avgValue) {
+            godStyle = styles.higherStat;
+            avgStyle = styles.lowerStat;
+        } else if (godValue < avgValue) {
+            godStyle = styles.lowerStat;
+            avgStyle = styles.higherStat;
         } else {
-            return (
-                <View style={styles.statRow}>
-                    <Text style={styles.statText}>{`${statKey}: ${godStat}`}</Text>
-                    <Text style={styles.statText}>{`${selectedComparison}: ${comparisonStat}`}</Text>
-                </View>
-            );
+            godStyle = avgStyle = styles.statText;
         }
+    
+        return (
+            <View style={styles.statRow}>
+                {`${statName}:`}
+                <Text style={[styles.statText, godStyle]}>{godStat}</Text>
+                <Text style={[styles.statText, avgStyle]}>{`${avgStat}`}</Text>
+            </View>
+        );
     };
+
+    const toggleStats = () => setShowStats(!showStats);
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
@@ -77,19 +88,11 @@ const GodDetailScreen: React.FC = () => {
 
             {showStats && (
                 <View style={styles.statsContainer}>
-                    <Text style={styles.statText}>Type: {god.Attributes.Type}</Text>
-                    <Text style={styles.statText}>{`Health: ${god.Attributes.Health} compared to: ${averageStats[selectedComparison]['Health'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Mana: ${god.Attributes.Mana} compared to: ${averageStats[selectedComparison]['Mana'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Speed: ${god.Attributes.Speed} compared to: ${averageStats[selectedComparison]['Speed'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Range: ${god.Attributes.Range} compared to: ${averageStats[selectedComparison]['Range'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Attack/Sec: ${god.Attributes['Attack/Sec']} compared to: ${averageStats[selectedComparison]['Attack/Sec'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Damage: ${god.Attributes.Damage} compared to: ${averageStats[selectedComparison]['Damage'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Physical Protection: ${god.Attributes.Physical} compared to: ${averageStats[selectedComparison]['Physical'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Magical Protection: ${god.Attributes.Magical} compared to: ${averageStats[selectedComparison]['Magical'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Regen HP5: ${god.Attributes.HP5} compared to: ${averageStats[selectedComparison]['HP5'] || ''}`}</Text>
-                    <Text style={styles.statText}>{`Regen MP5: ${god.Attributes.MP5} compared to: ${averageStats[selectedComparison]['MP5'] || ''}`}</Text>
-                    <Text style={styles.statText}>Difficulty: {god.Attributes.Difficulty}</Text>
-                    <Text style={styles.statText}>Release Date: {god.Attributes['Release date']}</Text>
+                    {statKeysToShow.map(statKey => {
+                        const godStat = god.Attributes[statKey];
+                        const avgStat = averageStats[selectedComparison][statKey] || ''; // Use a fallback empty string if undefined
+                        return compareStats(statKey, godStat, avgStat);
+                    })}
                 </View>
             )}
 
@@ -229,12 +232,20 @@ function getStyles(theme: any) {
         picker: {
             width: '100%',
             backgroundColor: 'white',
-          },
-          statRow: {
+        },
+        statRow: {
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginBottom: 10,
-          }
+        },
+        higherStat: {
+            color: 'green',
+            fontWeight: 'bold'
+        },
+        lowerStat: {
+            color: 'red',
+            fontWeight: 'bold'
+        }
     });
 }
 
