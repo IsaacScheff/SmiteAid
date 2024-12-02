@@ -10,13 +10,13 @@ const IndexContent: React.FC = () => {
     <View style={[styles.container, { backgroundColor: theme.background }]}>
       <Text style={[styles.text, { color: theme.text }]}>Home</Text>
       <Link href="./about" style={[styles.button, { color: theme.text }]}>
-        Go to About screen
+        <Text>Go to About screen</Text>
       </Link>
       <Link href="./gods" style={[styles.button, { color: theme.text }]}>
-        Go to Gods screen
+        <Text>Go to Gods screen</Text>
       </Link>
       <Link href="./items" style={[styles.button, { color: theme.text }]}>
-        Go to Items screen
+        <Text>Go to Items screen</Text>
       </Link>
       <Button title="Toggle Theme" onPress={toggleTheme} color={theme.primary} />
     </View>

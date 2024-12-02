@@ -15,7 +15,7 @@ const classIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
     Warrior: "eyedrop-outline",
 };
 
-const statKeysToShow = ['Type', 'Health', 'Mana', 'Speed', 'Range', 'Attack/Sec', 'Damage', 'Physical', 'Magical', 'HP5', 'MP5', 'Difficulty', 'Release date'];
+const statKeysToShow = ['Health', 'Mana', 'Speed', 'Range', 'Attack/Sec', 'Damage', 'Physical', 'Magical', 'HP5', 'MP5', 'Difficulty', 'Release date'];
 
 const GodDetailScreen: React.FC = () => {
     const { theme } = useTheme();
@@ -29,7 +29,7 @@ const GodDetailScreen: React.FC = () => {
     }
 
     const styles = getStyles(theme);
-
+    
     const compareStats = (statName: string, godStat: string, avgStat: string) => {
         const parseStatValue = (stat: string): number => {
             const parts = stat.split(' (+');
@@ -54,12 +54,12 @@ const GodDetailScreen: React.FC = () => {
     
         return (
             <View style={styles.statRow}>
-                {`${statName}:`}
-                <Text style={[styles.statText, godStyle]}>{godStat}</Text>
-                <Text style={[styles.statText, avgStyle]}>{`${avgStat}`}</Text>
+                <View style={styles.statColumn}><Text style={styles.statName}>{`${statName}:`}</Text></View>
+                <View style={styles.statColumn}><Text style={[styles.statValue, godStyle]}>{godStat}</Text></View>
+                <View style={styles.lastStatColumn}><Text style={[styles.statValue, avgStyle]}>{avgStat}</Text></View>
             </View>
         );
-    };
+    };    
 
     const toggleStats = () => setShowStats(!showStats);
 
@@ -85,13 +85,17 @@ const GodDetailScreen: React.FC = () => {
                     <Picker.Item label={key} value={key} key={key} />
                 ))}
             </Picker>
-
+            
             {showStats && (
                 <View style={styles.statsContainer}>
                     {statKeysToShow.map(statKey => {
                         const godStat = god.Attributes[statKey];
                         const avgStat = averageStats[selectedComparison][statKey] || ''; // Use a fallback empty string if undefined
-                        return compareStats(statKey, godStat, avgStat);
+                        return (
+                            <View key={statKey}> {/* Add the key here */}
+                                <Text>{compareStats(statKey, godStat, avgStat)}</Text>
+                            </View>
+                        );
                     })}
                 </View>
             )}
@@ -206,17 +210,54 @@ function getStyles(theme: any) {
             textAlign: 'center',
         },
         statsContainer: {
-            width: '90%',
-            padding: 10,
+            width: '100%',
             backgroundColor: theme.surface,
+            padding: 10,
             borderRadius: 8,
             marginTop: 10,
+            borderColor: '#ddd', // Border color for the outer grid
+            borderWidth: 1, // Border width for the outer grid
+            overflow: 'hidden', // Ensures no overflow outside the container
         },
-        statText: {
+        statRow: {
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            borderBottomWidth: 1, // Adds horizontal line after each row
+            borderBottomColor: '#ddd', // Light grey line for horizontal grid
+            paddingVertical: 5, // Padding top and bottom within each row
+            backgroundColor: theme.surface,
+        },
+        statColumn: {
+            flex: 1,
+            alignItems: 'flex-start', // Aligns text to the left within columns
+            borderRightWidth: 1, // Adds vertical line between columns
+            borderRightColor: '#ddd', // Light grey line for vertical grid
+            paddingHorizontal: 5, // Padding left and right within each column
+        },
+        lastStatColumn: {
+            flex: 1,
+            alignItems: 'flex-start', // Aligns text to the left within the last column
+            paddingHorizontal: 5, // Padding left and right within the last column
+            borderRightWidth: 0, // Ensures no border on the right edge of the last column
+        },
+        statName: {
+            fontSize: 14,
+            fontWeight: 'bold',
+            color: theme.text,
+            textAlign: 'left',
+        },
+        statValue: {
             fontSize: 14,
             color: theme.text,
-            marginBottom: 5,
-            textAlign: 'center',
+            textAlign: 'left',
+        },
+        higherStat: {
+            color: 'green',
+            fontWeight: 'bold',
+        },
+        lowerStat: {
+            color: 'red',
+            fontWeight: 'bold',
         },
         abilityDetailContainer: {
             padding: 10,
@@ -233,19 +274,6 @@ function getStyles(theme: any) {
             width: '100%',
             backgroundColor: 'white',
         },
-        statRow: {
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            marginBottom: 10,
-        },
-        higherStat: {
-            color: 'green',
-            fontWeight: 'bold'
-        },
-        lowerStat: {
-            color: 'red',
-            fontWeight: 'bold'
-        }
     });
 }
 
