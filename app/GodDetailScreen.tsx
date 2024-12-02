@@ -6,6 +6,7 @@ import { useTheme } from '../theme/ThemeContext';
 import averageStats from './average_god_stats.json';
 import {Picker} from '@react-native-picker/picker';
 import { Grid, Row, Cell } from './GridComponents';
+import { Attributes, AverageStats } from './interfaces';
 
 const classIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
     Assassin: "skull-outline",
@@ -20,6 +21,8 @@ const statKeysToShow = ['Health', 'Mana', 'Speed', 'Range', 'Attack/Sec', 'Damag
 const GodDetailScreen: React.FC = () => {
     const { theme } = useTheme();
     const god = getSelectedGod();
+    const [selectedAbility, setSelectedAbility] = useState<number | null>(null);
+    const [showStats, setShowStats] = useState<boolean>(true);
     const [selectedComparison, setSelectedComparison] = useState('Average Overall');
 
     if (!god) {
@@ -27,6 +30,7 @@ const GodDetailScreen: React.FC = () => {
     }
 
     const styles = getStyles(theme);
+    const toggleStats = () => setShowStats(!showStats);
 
     const statValueStyle = (godStat, avgStat) => {
         if (godStat > avgStat) {
@@ -46,6 +50,10 @@ const GodDetailScreen: React.FC = () => {
                 <Text style={styles.class}>{god.Attributes.Class}</Text>
             </View>
             <Text style={styles.description}>{god.Attributes.Title}</Text>
+            
+            <TouchableOpacity onPress={toggleStats} style={styles.toggleButton}>
+                <Text style={styles.toggleButtonText}>{showStats ? 'Hide Stats' : 'Show Stats'}</Text>
+            </TouchableOpacity>
 
             <Picker
                 selectedValue={selectedComparison}
@@ -76,12 +84,19 @@ const GodDetailScreen: React.FC = () => {
                     <TouchableOpacity
                         key={index}
                         style={styles.abilityItem}
-                        onPress={() => setSelectedAbility(index)}
+                        onPress={() => setSelectedAbility(index === selectedAbility ? null : index)}
                         activeOpacity={1}
                     >
                         <Image source={ability.imageURL} style={styles.abilityImage} />
                         <Text style={styles.abilityName}>{ability.name}</Text>
-                        <Text style={styles.abilityDescription}>{ability.description}</Text>
+                        {selectedAbility === index && (
+                            <View style={styles.abilityDetailContainer}>
+                                <Text style={styles.abilityDescription}>{ability.description}</Text>
+                                {ability.notes.map((note, noteIndex) => (
+                                    <Text key={noteIndex} style={styles.noteText}>• {note}</Text>
+                                ))}
+                            </View>
+                        )}
                     </TouchableOpacity>
                 ))}
             </View>
@@ -193,6 +208,17 @@ function getStyles(theme) {
         statValue: {
             fontSize: 14,
             color: theme.text,
+            textAlign: 'left',
+        },
+        abilityDetailContainer: {
+            padding: 10,
+            backgroundColor: theme.surface,
+            borderRadius: 8,
+        },
+        noteText: {
+            fontSize: 12,
+            color: theme.text,
+            marginTop: 5,
             textAlign: 'left',
         },
     });
