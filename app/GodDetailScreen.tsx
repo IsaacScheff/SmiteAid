@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { getSelectedGod } from './selectedGod';
 import { useTheme } from '../theme/ThemeContext';
 import averageStats from './average_god_stats.json';
-import {Picker} from '@react-native-picker/picker';
+import {Picker} from '@react-native-picker/picker'; 
 import { Grid, Row, Cell } from './GridComponents';
 import { Attributes, AverageStats } from './interfaces';
 
@@ -54,29 +54,33 @@ const GodDetailScreen: React.FC = () => {
             <TouchableOpacity onPress={toggleStats} style={styles.toggleButton}>
                 <Text style={styles.toggleButtonText}>{showStats ? 'Hide Stats' : 'Show Stats'}</Text>
             </TouchableOpacity>
+            
+            {showStats && (
+                <>
+                    <Picker
+                        selectedValue={selectedComparison}
+                        onValueChange={(itemValue) => setSelectedComparison(itemValue)}
+                        style={styles.picker}
+                    >
+                        {Object.keys(averageStats).map(key => (
+                            <Picker.Item label={key} value={key} key={key} />
+                        ))}
+                    </Picker>
 
-            <Picker
-                selectedValue={selectedComparison}
-                onValueChange={(itemValue) => setSelectedComparison(itemValue)}
-                style={styles.picker}
-            >
-                {Object.keys(averageStats).map(key => (
-                    <Picker.Item label={key} value={key} key={key} />
-                ))}
-            </Picker>
-
-            <Grid style={styles.grid}>
-                {statKeysToShow.map(statKey => {
-                    const [godStyle, avgStyle] = statValueStyle(god.Attributes[statKey], averageStats[selectedComparison][statKey]);
-                    return (
-                        <Row key={statKey}>
-                            <Cell><Text style={styles.statName}>{statKey}</Text></Cell>
-                            <Cell><Text style={godStyle}>{god.Attributes[statKey]}</Text></Cell>
-                            <Cell><Text style={avgStyle}>{averageStats[selectedComparison][statKey]}</Text></Cell>
-                        </Row>
-                    );
-                })}
-            </Grid>
+                    <Grid style={styles.grid}>
+                        {statKeysToShow.map(statKey => {
+                            const [godStyle, avgStyle] = statValueStyle(god.Attributes[statKey], averageStats[selectedComparison][statKey]);
+                            return (
+                                <Row key={statKey}>
+                                    <Cell><Text style={styles.statName}>{statKey}</Text></Cell>
+                                    <Cell><Text style={godStyle}>{god.Attributes[statKey]}</Text></Cell>
+                                    <Cell><Text style={avgStyle}>{averageStats[selectedComparison][statKey]}</Text></Cell>
+                                </Row>
+                            );
+                        })}
+                    </Grid>
+                </>
+            )}
 
             <Text style={styles.sectionTitle}>Abilities</Text>
             <View style={styles.abilitiesContainer}>
