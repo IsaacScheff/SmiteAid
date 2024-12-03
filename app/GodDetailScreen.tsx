@@ -152,7 +152,7 @@ function getStyles(theme) {
         image: {
             width: 200,
             height: 200,
-            borderRadius: 100,
+            borderRadius: 10,
         },
         name: {
             fontSize: 24,
@@ -215,12 +215,15 @@ function getStyles(theme) {
         toggleButton: {
             marginTop: 20,
             padding: 10,
-            backgroundColor: theme.buttonBackground,
+            backgroundColor: '#007BFF',  //blue background color for now
             borderRadius: 5,
             alignSelf: 'center',
+            minWidth: 100,  // Ensuring the button has a minimum width
+            justifyContent: 'center',  // Center content horizontally
+            alignItems: 'center'  // Center content vertically
         },
         toggleButtonText: {
-            color: theme.buttonText,
+            color: 'white',  // White text for better contrast on the blue background
             fontSize: 16,
             fontWeight: 'bold',
             textAlign: 'center',
