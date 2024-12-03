@@ -24,7 +24,7 @@ const GodDetailScreen: React.FC = () => {
     const god = getSelectedGod();
     const [selectedAbility, setSelectedAbility] = useState<number | null>(null);
     const [showStats, setShowStats] = useState<boolean>(true);
-    const [selectedComparison, setSelectedComparison] = useState('Average Overall');
+    const [selectedComparison, setSelectedComparison] = useState('None');
 
     const getStats = (key) => {
         if (key.includes("Average")) {
@@ -82,9 +82,9 @@ const GodDetailScreen: React.FC = () => {
                         onValueChange={(itemValue) => setSelectedComparison(itemValue)}
                         style={styles.picker}
                     >
-                        <Picker.Item label="None" value="Average" />
+                        <Picker.Item label="None" value="None" />
                         {Object.keys(averageStats).map(key => (
-                            <Picker.Item label={`Average ${key}`} value={key} key={key} />
+                            <Picker.Item label={`${key}`} value={key} key={key} />
                         ))}
                         <Picker.Item label="Gods" value="Gods" enabled={false} />
                         {gods.map(god => (
@@ -94,6 +94,11 @@ const GodDetailScreen: React.FC = () => {
 
 
                     <Grid style={styles.grid}>
+                        <Row key="header">
+                            <Cell><Text style={styles.statName}>Stats</Text></Cell>
+                            <Cell><Text style={styles.statName}>{god.Name}</Text></Cell>
+                            <Cell><Text style={styles.statName}>{selectedComparison}</Text></Cell>
+                        </Row>
                         {statKeysToShow.map(statKey => {
                             const godStat = god.Attributes[statKey];
                             const comparisonStat = comparisonStats ? comparisonStats[statKey] : "N/A";
