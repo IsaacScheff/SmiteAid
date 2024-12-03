@@ -7,6 +7,7 @@ import averageStats from './average_god_stats.json';
 import {Picker} from '@react-native-picker/picker'; 
 import { Grid, Row, Cell } from './GridComponents';
 import { Attributes, AverageStats } from './interfaces';
+import gods from './godsDataRaw.js'
 
 const classIcons: Record<string, keyof typeof Ionicons.glyphMap> = {
     Assassin: "skull-outline",
@@ -25,6 +26,18 @@ const GodDetailScreen: React.FC = () => {
     const [showStats, setShowStats] = useState<boolean>(true);
     const [selectedComparison, setSelectedComparison] = useState('Average Overall');
 
+    const getStats = (key) => {
+        if (key.includes("Average")) {
+            return averageStats[key]; // Accessing average stats
+        } else {
+            const god = gods.find(g => g.Name === key);
+            return god ? god.Attributes : null; // Accessing individual god's stats
+        }
+    };
+    
+    const comparisonStats = getStats(selectedComparison);
+    
+
     if (!god) {
         return <Text>God not found.</Text>;
     }
@@ -32,14 +45,20 @@ const GodDetailScreen: React.FC = () => {
     const styles = getStyles(theme);
     const toggleStats = () => setShowStats(!showStats);
 
-    const statValueStyle = (godStat, avgStat) => {
-        if (godStat > avgStat) {
-            return [styles.higherStat, styles.lowerStat]; // god's stat is higher
-        } else if (godStat < avgStat) {
-            return [styles.lowerStat, styles.higherStat]; // god's stat is lower
+    const statValueStyle = (godStat, comparisonStat) => {
+        if (!comparisonStat) return [styles.statValue, styles.statValue]; // Handle missing data
+    
+        let godValue = parseFloat(godStat.split(" ")[0]);
+        let comparisonValue = parseFloat(comparisonStat.split(" ")[0]);
+    
+        if (godValue > comparisonValue) {
+            return [styles.higherStat, styles.lowerStat];
+        } else if (godValue < comparisonValue) {
+            return [styles.lowerStat, styles.higherStat];
+        } else {
+            return [styles.statValue, styles.statValue];
         }
-        return [styles.statValue, styles.statValue]; // stats are equal
-    };
+    };    
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
@@ -57,24 +76,34 @@ const GodDetailScreen: React.FC = () => {
             
             {showStats && (
                 <>
+                    <Text style={styles.statName}>Compare to:</Text>
                     <Picker
                         selectedValue={selectedComparison}
                         onValueChange={(itemValue) => setSelectedComparison(itemValue)}
                         style={styles.picker}
                     >
+                        <Picker.Item label="None" value="Average" />
                         {Object.keys(averageStats).map(key => (
-                            <Picker.Item label={key} value={key} key={key} />
+                            <Picker.Item label={`Average ${key}`} value={key} key={key} />
+                        ))}
+                        <Picker.Item label="Gods" value="Gods" enabled={false} />
+                        {gods.map(god => (
+                            <Picker.Item label={god.Name} value={god.Name} key={god.Name} />
                         ))}
                     </Picker>
 
+
                     <Grid style={styles.grid}>
                         {statKeysToShow.map(statKey => {
-                            const [godStyle, avgStyle] = statValueStyle(god.Attributes[statKey], averageStats[selectedComparison][statKey]);
+                            const godStat = god.Attributes[statKey];
+                            const comparisonStat = comparisonStats ? comparisonStats[statKey] : "N/A";
+                            const [godStyle, comparisonStyle] = statValueStyle(godStat, comparisonStat);
+                            
                             return (
                                 <Row key={statKey}>
                                     <Cell><Text style={styles.statName}>{statKey}</Text></Cell>
-                                    <Cell><Text style={godStyle}>{god.Attributes[statKey]}</Text></Cell>
-                                    <Cell><Text style={avgStyle}>{averageStats[selectedComparison][statKey]}</Text></Cell>
+                                    <Cell><Text style={godStyle}>{godStat}</Text></Cell>
+                                    <Cell><Text style={comparisonStyle}>{comparisonStat}</Text></Cell>
                                 </Row>
                             );
                         })}
@@ -194,6 +223,7 @@ function getStyles(theme) {
         picker: {
             width: '100%',
             backgroundColor: 'white',
+            maxWidth: 400
         },
         higherStat: {
             color: 'green',
